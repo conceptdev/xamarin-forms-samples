@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RogetHierarchy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Roget 1911">
+  <Classes>
+    <RogetClass Name="Abstract Relations">
+          <Sections>
+            <RogetSection Name="Existence">
+              <Sections>
+                <RogetSection Name="Being, In The Abstract" StartCategory="1" EndCategory="2" />
+                <RogetSection Name="Being, In The Concrete" StartCategory="3" EndCategory="4" />
+                <RogetSection Name="Formal Existence" StartCategory="5" EndCategory="6" />
+                <RogetSection Name="Modal Existence" StartCategory="7" EndCategory="8" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Relation">
+              <Sections>
+                <RogetSection Name="Absolute Relation" StartCategory="9" EndCategory="15" />
+                <RogetSection Name="Continuous Relation" StartCategory="16" EndCategory="16a" />
+                <RogetSection Name="Partial Relation" StartCategory="17" EndCategory="22" />
+                <RogetSection Name="General Relation" StartCategory="23" EndCategory="24" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Quantity">
+              <Sections>
+                <RogetSection Name="Simple Quantity" StartCategory="25" EndCategory="26" />
+                <RogetSection Name="Comparative Quantity" StartCategory="27" EndCategory="36" />
+                <RogetSection Name="Conjunctive Quantity" StartCategory="37" EndCategory="49" />
+                <RogetSection Name="Concrete Quantity" StartCategory="50" EndCategory="57" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Order">
+              <Sections>
+                <RogetSection Name="Order" StartCategory="58" EndCategory="61" />
+                <RogetSection Name="Consecutive Order" StartCategory="62" EndCategory="71" />
+                <RogetSection Name="Collective Order" StartCategory="72" EndCategory="74" />
+                <RogetSection Name="Distributive Order" StartCategory="75" EndCategory="79" />
+                <RogetSection Name="Order As Regards Categories" StartCategory="80" EndCategory="83" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Number">
+              <Sections>
+                <RogetSection Name="Number, In The Abstract" StartCategory="84" EndCategory="86" />
+                <RogetSection Name="Determinate Number" StartCategory="87" EndCategory="99" />
+                <RogetSection Name="Indeterminate Number" StartCategory="100" EndCategory="105" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Time">
+              <Sections>
+                <RogetSection Name="Absolute Time" StartCategory="106" EndCategory="115" />
+                <RogetSection Name="Relative Time">
+                  <Sections>
+                    <RogetSection Name="to Succession" StartCategory="116" EndCategory="122" />
+                    <RogetSection Name="to a Period" StartCategory="123" EndCategory="131" />
+                    <RogetSection Name="to an Effect or Purpose" StartCategory="132" EndCategory="135" />
+                  </Sections>
+                </RogetSection>
+                <RogetSection Name="Recurrent Time" StartCategory="136" EndCategory="139" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Change">
+              <Sections>
+                <RogetSection Name="Simple Change" StartCategory="140" EndCategory="148" />
+                <RogetSection Name="Complex Change" StartCategory="149" EndCategory="152" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Causation">
+              <Sections>
+                <RogetSection Name="Constancy Of Sequence In Events" StartCategory="153" EndCategory="156" />
+                <RogetSection Name="Connection Between Cause And Effect" StartCategory="157" EndCategory="160" />
+                <RogetSection Name="Power In Operation" StartCategory="161" EndCategory="174" />
+                <RogetSection Name="Indirect Power" StartCategory="175" EndCategory="177" />
+                <RogetSection Name="Combinations Of Causes" StartCategory="178" EndCategory="179" />
+              </Sections>
+            </RogetSection>
+          </Sections>
+    </RogetClass>
+    <RogetClass Name="Space">
+          <Sections>
+            <RogetSection Name="Space In General">
+              <Sections>
+                <RogetSection Name="Abstract Space" StartCategory="180" EndCategory="182" />
+                <RogetSection Name="Relative Space" StartCategory="183" EndCategory="185" />
+                <RogetSection Name="Existence In Space" StartCategory="186" EndCategory="191" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Dimensions">
+              <Sections>
+                <RogetSection Name="General Dimensions" StartCategory="192" EndCategory="199" />
+                <RogetSection Name="Linear Dimensions" StartCategory="200" EndCategory="219" />
+                <RogetSection Name="Centrical Dimensions">
+                  <Sections>
+                    <RogetSection Name="General" StartCategory="220" EndCategory="233" />
+                    <RogetSection Name="Special" StartCategory="234" EndCategory="239" />
+                  </Sections>
+                </RogetSection>
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Form">
+              <Sections>
+                <RogetSection Name="General Form" StartCategory="240" EndCategory="243" />
+                <RogetSection Name="Special Form" StartCategory="244" EndCategory="249" />
+                <RogetSection Name="Superficial Form" StartCategory="250" EndCategory="263" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Motion">
+              <Sections>
+                <RogetSection Name="Motion In General" StartCategory="264" EndCategory="273" />
+                <RogetSection Name="Degrees Of Motion" StartCategory="274" EndCategory="275" />
+                <RogetSection Name="Motion Conjoined With Force" StartCategory="276" EndCategory="277" />
+                <RogetSection Name="Motion With Reference To Direction" StartCategory="278" EndCategory="315" />
+              </Sections>
+            </RogetSection>
+          </Sections>
+    </RogetClass>
+    <RogetClass Name="Matter">
+          <Sections>
+            <RogetSection Name="Matter In General" StartCategory="316" EndCategory="320" />
+            <RogetSection Name="Inorganic Matter">
+              <Sections>
+                <RogetSection Name="Solid Matter" StartCategory="321" EndCategory="332" />
+                <RogetSection Name="Fluid Matter">
+                  <Sections>
+                    <RogetSection Name="In General" StartCategory="333" EndCategory="336" />
+                    <RogetSection Name="Specific"   StartCategory="337" EndCategory="346" />
+                    <RogetSection Name="In Motion"  StartCategory="347" EndCategory="351" />
+                  </Sections>
+                </RogetSection>
+                <RogetSection Name="Imperfect Fluids" StartCategory="352" EndCategory="356a" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Organic Matter">
+              <Sections>
+                <RogetSection Name="Vitality">
+                  <Sections>
+                    <RogetSection Name="In General" StartCategory="357" EndCategory="363" />
+                    <RogetSection Name="Special"    StartCategory="364" EndCategory="374a" />
+                  </Sections>
+                </RogetSection>
+                <RogetSection Name="Sensation">
+                  <Sections>
+                    <RogetSection Name="General" StartCategory="375" EndCategory="378" />
+                    <RogetSection Name="Special">
+                      <Sections>
+                        <RogetSection Name="Touch" StartCategory="379" EndCategory="381" />
+                        <RogetSection Name="Heat"  StartCategory="382" EndCategory="389" />
+                        <RogetSection Name="Taste" StartCategory="390" EndCategory="397" />
+                        <RogetSection Name="Odor"  StartCategory="398" EndCategory="401" />
+                        <RogetSection Name="Sound">
+                          <Sections>
+                            <RogetSection Name="Sound in General" StartCategory="402" EndCategory="405" />
+                            <RogetSection Name="Specific Sounds"  StartCategory="406" EndCategory="412" />
+                            <RogetSection Name="Musical Sounds"   StartCategory="413" EndCategory="417" />
+                            <RogetSection Name="Perception of Sounds" StartCategory="418" EndCategory="419" />
+                          </Sections>
+                        </RogetSection>
+                        <RogetSection Name="Light">
+                          <Sections>
+                            <RogetSection Name="Light in General" StartCategory="420" EndCategory="427" />
+                            <RogetSection Name="Specific Light"   StartCategory="428" EndCategory="440" />
+                            <RogetSection Name="Perception of Light" StartCategory="441" EndCategory="449" />
+                          </Sections>
+                        </RogetSection>
+                      </Sections>
+                    </RogetSection>
+                  </Sections>
+                </RogetSection>
+              </Sections>
+            </RogetSection>
+          </Sections>
+    </RogetClass>
+    <RogetClass Name="Intellect">
+      <Divisions>
+        <RogetDivision Name="Formation Of Ideas">
+          <Sections>
+            <RogetSection Name="Operations Of Intellect In General" StartCategory="450" EndCategory="454" />
+            <RogetSection Name="Precursory Conditions And Operations" StartCategory="455" EndCategory="466" />
+            <RogetSection Name="Materials For Reasoning" StartCategory="467" EndCategory="475" />
+            <RogetSection Name="Reasoning Processes" StartCategory="476" EndCategory="479" />
+            <RogetSection Name="Results Of Reasoning" StartCategory="480" EndCategory="504" />
+            <RogetSection Name="Extension Of Thought">
+              <Sections>
+                <RogetSection Name="To the Past" StartCategory="505" EndCategory="506" />
+                <RogetSection Name="To the Future" StartCategory="507" EndCategory="513" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Creative Thought" StartCategory="514" EndCategory="515" />
+          </Sections>
+        </RogetDivision>
+        <RogetDivision Name="Communication Of Ideas">
+          <Sections>
+            <RogetSection Name="Nature Of Ideas Communicated" StartCategory="516" EndCategory="524" />
+            <RogetSection Name="Modes Of Communication" StartCategory="525" EndCategory="549" />
+            <RogetSection Name="Means Of Communication">
+              <Sections>
+                <RogetSection Name="Natural Means" StartCategory="550" EndCategory="559" />
+                <RogetSection Name="Conventional Means">
+                  <Sections>
+                    <RogetSection Name="Language Generally" StartCategory="560" EndCategory="579" />
+                    <RogetSection Name="Spoken Language" StartCategory="580" EndCategory="589" />
+                    <RogetSection Name="Written Language" StartCategory="590" EndCategory="599" />
+                  </Sections>
+                </RogetSection>
+              </Sections>
+            </RogetSection>
+          </Sections>
+        </RogetDivision>
+      </Divisions>
+    </RogetClass>
+    <RogetClass Name="Volition">
+      <Divisions>
+        <RogetDivision Name="Individual Volition">
+          <Sections>
+            <RogetSection Name="Volition In General">
+              <Sections>
+                <RogetSection Name="Acts Of Volition" StartCategory="600" EndCategory="614" />
+                <RogetSection Name="Causes Of Volition" StartCategory="615" EndCategory="617" />
+                <RogetSection Name="Objects Of Volition" StartCategory="618" EndCategory="619" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Prospective Volition">
+              <Sections>
+                <RogetSection Name="Conceptional Volition" StartCategory="620" EndCategory="630" />
+                <RogetSection Name="Subservience To Ends">
+                  <Sections>
+                    <RogetSection Name="Actual Subservience" StartCategory="631" EndCategory="641" />
+                    <RogetSection Name="Degree of Subservience" StartCategory="642" EndCategory="663" />
+                    <RogetSection Name="Contingent Subservicne" StartCategory="664" EndCategory="672" />
+                  </Sections>
+                </RogetSection>
+                <RogetSection Name="Precursory Measures" StartCategory="673" EndCategory="679" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Voluntary Action">
+              <Sections>
+                <RogetSection Name="Simple Voluntary Action" StartCategory="680" EndCategory="691" />
+                <RogetSection Name="Complex Voluntary Action" StartCategory="692" EndCategory="703" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Antagonism">
+              <Sections>
+                <RogetSection Name="Conditional Antagonism" StartCategory="704" EndCategory="705" />
+                <RogetSection Name="Active Antagonism" StartCategory="706" EndCategory="728" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Results Of Voluntary Action" StartCategory="729" EndCategory="736" />
+          </Sections>
+        </RogetDivision>
+        <RogetDivision Name="Intersocial Volition">
+          <Sections>
+            <RogetSection Name="General Intersocial Volition" StartCategory="737" EndCategory="759" />
+            <RogetSection Name="Special Intersocial Volition" StartCategory="760" EndCategory="767" />
+            <RogetSection Name="Conditional Intersocial Volition" StartCategory="768" EndCategory="774" />
+            <RogetSection Name="Possessive Relations">
+              <Sections>
+                <RogetSection Name="Property In General" StartCategory="775" EndCategory="782" />
+                <RogetSection Name="Transfer Of Property" StartCategory="783" EndCategory="793" />
+                <RogetSection Name="Interchange Of Property" StartCategory="794" EndCategory="799b" />
+                <RogetSection Name="Monetary Relations" StartCategory="800" EndCategory="819" />
+              </Sections>
+            </RogetSection>
+          </Sections>
+        </RogetDivision>
+      </Divisions>
+    </RogetClass>
+    <RogetClass Name="Affections">
+          <Sections>
+            <RogetSection Name="Affections In General" StartCategory="820" EndCategory="826" />
+            <RogetSection Name="Personal Affections">
+              <Sections>
+                <RogetSection Name="Passive Affections" StartCategory="827" EndCategory="844" />
+                <RogetSection Name="Discriminative Affections" StartCategory="845" EndCategory="857" />
+                <RogetSection Name="Prospective Affections" StartCategory="858" EndCategory="869" />
+                <RogetSection Name="Contemplative  Affections" StartCategory="870" EndCategory="872" />
+                <RogetSection Name="Extrinsic Affections" StartCategory="873" EndCategory="887" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Sympathetic Affections">
+              <Sections>
+                <RogetSection Name="Social Affections" StartCategory="888" EndCategory="905" />
+                <RogetSection Name="Diffusive Sympathetic Affections" StartCategory="906" EndCategory="913" />
+                <RogetSection Name="Special Sympathetic Affections" StartCategory="914" EndCategory="915" />
+                <RogetSection Name="Retrospective Sympathetic Affections" StartCategory="916" EndCategory="921" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Moral  Affections">
+              <Sections>
+                <RogetSection Name="Moral Obligations" StartCategory="922" EndCategory="927a" />
+                <RogetSection Name="Moral Sentiments" StartCategory="928" EndCategory="938" />
+                <RogetSection Name="Moral Conditions" StartCategory="939" EndCategory="952" />
+                <RogetSection Name="Moral Practice" StartCategory="953" EndCategory="962" />
+                <RogetSection Name="Institutions" StartCategory="963" EndCategory="975" />
+              </Sections>
+            </RogetSection>
+            <RogetSection Name="Religious Affections">
+              <Sections>
+                <RogetSection Name="Superhuman Beings And Regions" StartCategory="976" EndCategory="982" />
+                <RogetSection Name="Religious Doctrines" StartCategory="983" EndCategory="986" />
+                <RogetSection Name="Religious Sentiments" StartCategory="987" EndCategory="989" />
+                <RogetSection Name="Acts Of Religion" StartCategory="990" EndCategory="994" />
+                <RogetSection Name="Religious Institutions" StartCategory="995" EndCategory="1000" />
+              </Sections>
+            </RogetSection>
+          </Sections>
+    </RogetClass>
+  </Classes>
+</RogetHierarchy>

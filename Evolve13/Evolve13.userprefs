@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Evolve13/Views/FavoritesPage.cs">
+    <Files>
+      <File FileName="Evolve13/Views/MenuPage.cs" Line="44" Column="7" />
+      <File FileName="Evolve13/Views/SessionsPage.cs" Line="30" Column="25" />
+      <File FileName="Evolve13/Views/SpeakersPage.cs" Line="23" Column="18" />
+      <File FileName="Evolve13/Views/SpeakerPage.cs" Line="50" Column="19" />
+      <File FileName="Evolve13/Views/SessionPage.cs" Line="44" Column="19" />
+      <File FileName="Evolve13/Views/FavoritesPage.cs" Line="29" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Targets.Evolve13.Android AndroidDeviceId-Debug="emulator-5554" />
+</Properties>

@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Roget1911/Views/3CategoryListPage.cs">
+    <Files>
+      <File FileName="Roget1911/Views/TodoItemPage.cs" Line="54" Column="29" />
+      <File FileName="Roget1911/Views/1MainListPage.cs" Line="48" Column="18" />
+      <File FileName="Roget1911/Views/2SectionListPage.cs" Line="32" Column="26" />
+      <File FileName="Roget1911/Views/3CategoryListPage.cs" Line="27" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Targets.Roget1911.Android AndroidDeviceId-Debug="emulator-5554" />
+</Properties>

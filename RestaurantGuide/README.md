@@ -10,3 +10,8 @@ I'll spend a little more time formatting the list, but this literally took 10 mi
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/RestaurantGuide/Screenshots/ios_small.png "iOS")
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/RestaurantGuide/Screenshots/android_sml.png "Android")
+
+History
+------
+
+The original [blog post](http://conceptdev.blogspot.com/2010/09/monotouch-meet-windowsphone7.html) for the sample was in September 2010, with a follow-up in [March 2011](http://conceptdev.blogspot.com/2011/03/monodroid-meet-monotouch-windowsphone7.html).

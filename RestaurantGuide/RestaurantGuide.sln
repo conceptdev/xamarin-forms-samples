@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantGuide", "RestaurantGuide\RestaurantGuide.csproj", "{C4C79EBE-86A1-4048-ACBB-870BED1C274A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{5F1798A5-582A-49C7-A202-7F0C4A1F0A0B}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantGuide.iOS", "iOS\RestaurantGuide.iOS.csproj", "{D8789EBA-DFFA-4D13-AE8B-1E8C03091763}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantGuide.Android", "Android\RestaurantGuide.Android.csproj", "{F1B34403-AA50-41AB-AC28-B5307FAB104F}"
@@ -67,6 +69,10 @@ Global
 		{F1B34403-AA50-41AB-AC28-B5307FAB104F}.Release|iPhone.Build.0 = Release|Any CPU
 		{F1B34403-AA50-41AB-AC28-B5307FAB104F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{F1B34403-AA50-41AB-AC28-B5307FAB104F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8789EBA-DFFA-4D13-AE8B-1E8C03091763} = {5F1798A5-582A-49C7-A202-7F0C4A1F0A0B}
+		{F1B34403-AA50-41AB-AC28-B5307FAB104F} = {5F1798A5-582A-49C7-A202-7F0C4A1F0A0B}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = iOS\RestaurantGuide.iOS.csproj

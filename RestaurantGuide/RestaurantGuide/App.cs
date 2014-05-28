@@ -15,7 +15,7 @@ namespace RestaurantGuide
 
 		public static Page GetMainPage ()
 		{	
-			return new RestaurantList (restaurants);
+			return new NavigationPage(new RestaurantList (restaurants));
 		}
 	}
 }

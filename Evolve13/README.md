@@ -3,7 +3,7 @@ Evolve13 (Xamarin.Forms)
 
 This sample is a quick demo of the slide-out (MasterDetailPage) navigation in [Xamarin.Forms](http://xamarin.com/forms). Not *all* the functionality is fully re-implemented as I write this...
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/Evolve13/Screenshots/ios-all "iOS")
+![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/Evolve13/Screenshots/ios-all.png "iOS")
 
 
 History

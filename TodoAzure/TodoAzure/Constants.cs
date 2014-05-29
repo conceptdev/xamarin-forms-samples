@@ -4,8 +4,8 @@ namespace TodoXaml
 {
 	public static class Constants
 	{
-		public static string Url = "https://xamarin-todo-cd2.azure-mobile.net/";
-		public static string Key = "wkCSybccGiVzsHSQwcyVtMEFejEQwa25";
+		public static string Url = "https://XXXXXXX.azure-mobile.net/";
+		public static string Key = "XXXXXXXXXX";
 	}
 }
 

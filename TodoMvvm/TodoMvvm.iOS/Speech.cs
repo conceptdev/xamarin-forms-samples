@@ -1,5 +1,8 @@
 ﻿using System;
 using MonoTouch.AVFoundation;
+using Xamarin.Forms;
+
+[assembly: Dependency (typeof (TodoMvvm.Speech))]
 
 namespace TodoMvvm
 {

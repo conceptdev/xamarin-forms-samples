@@ -82,12 +82,7 @@ namespace TodoMvvm
 		/// <summary>Can only speak if there is some text</summary>
 		public bool CanSpeak
 		{
-			get { 
-				if (Device.OS == TargetPlatform.iOS)
-					return (!string.IsNullOrEmpty(todo.Name)) | (!string.IsNullOrEmpty(todo.Notes)); 
-				else
-					return false; // not on Android yet
-				}
+			get { return (!string.IsNullOrEmpty (todo.Name)) | (!string.IsNullOrEmpty (todo.Notes)); }
 		}
 
 		public ICommand SaveCommand

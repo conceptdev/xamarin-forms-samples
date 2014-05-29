@@ -11,6 +11,8 @@ Many of the Xamarin.Forms samples in this repo are discussed in **Intro_To_Xamar
 
 * **TodoXaml** - same todo list application logic, but using XAML to declaratively build the screen layouts (rather than C# code, uses SQLite.Net-PCL Nuget).
 
+* **TodoAzure** - same todo list application logic XAML, and using [Windows Azure Mobile Services](http://windowsazure.com) for cloud data storage (Windows Azure Nuget/Component).
+
 * **TodoMvvm** - same todo list application logic, demonstrating Mvvm architecture with Xamarin.Forms. Uses data-binding and the command pattern to wire up model, view and view model objects (uses SQLite.Net-PCL Nuget).
  
 * **Roget1911** - port of an old Silverlight sample, demonstrating a deep navigation structure generated from parsed XML files (uses PCLStorage Nuget).

@@ -33,7 +33,7 @@ namespace Evolve13
 					var intent = new Intent(Intent.ActionSend);
 					intent.PutExtra(Intent.ExtraText,message);
 					intent.SetType("text/plain");
-					Activity1.ShareActivityContext.StartActivity(Intent.CreateChooser(intent, tweetButton.Tweet));
+					Forms.Context.StartActivity(Intent.CreateChooser(intent, tweetButton.Tweet));
 
 				} catch(Exception ex) {
 					System.Diagnostics.Debug.WriteLine (ex);

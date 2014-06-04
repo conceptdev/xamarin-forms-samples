@@ -35,9 +35,11 @@ namespace EmployeeDirectory
 
 		SearchViewModel viewModel;
 		IFavoritesRepository favoritesRepository;
-
-		void OnValueChanged (object sender, EventArgs e) {
+		SearchBar sb;
+		void OnValueChanged (object sender, TextChangedEventArgs e) {
+			var t = e.NewTextValue;
 			// perform search on each keypress
+			viewModel.SearchText = t; // WHY isn't binding working for SearchBar ??
 			viewModel.Search ();
 		}
 
@@ -48,6 +50,11 @@ namespace EmployeeDirectory
 			var pvm = new PersonViewModel (p, favoritesRepository);
 			em.BindingContext = pvm;
 			Navigation.PushAsync(em);
+		}
+
+		public void OnSearch (object sender, EventArgs e) {
+			viewModel.SearchText = SearchFor.Text;
+			viewModel.Search ();
 		}
 	}
 }

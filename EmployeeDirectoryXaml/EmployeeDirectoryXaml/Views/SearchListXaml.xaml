@@ -6,9 +6,11 @@
     <ContentPage.Content>
 	    <StackLayout>
 
-		    <Entry x:Name="SearchEntry" Placeholder="search for" 
-				    Text="{Binding Path=SearchText}" 
-				    TextChanged="OnValueChanged" />
+    		<SearchBar x:Name="SearchFor"
+    			Placeholder="search for"
+				Text="{Binding Path=SearchText}"
+				TextChanged="OnValueChanged" 
+				SearchButtonPressed="OnSearch" />
 
 	        <ListView x:Name="listView" ItemSelected="OnItemSelected" IsGroupingEnabled="true">
 		        <ListView.GroupHeaderTemplate>

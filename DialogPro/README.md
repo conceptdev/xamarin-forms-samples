@@ -24,6 +24,4 @@ This is a (currently, very basic) example of how Xamarin.Forms can be used to ex
 		},
 	};
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/DialogPro/Screenshots/iOS.png "iOS")
-
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/DialogPro/Screenshots/Android.png "Android")
+![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/DialogPro/Screenshots/iOS-sml.png "iOS") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/DialogPro/Screenshots/Android-sml.png "Android")

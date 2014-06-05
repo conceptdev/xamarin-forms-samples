@@ -11,9 +11,9 @@ namespace PlatformSpecific
 		{
 			InitializeComponent ();
 
-			// HACK: workaround issue #894 for now
-			if (Device.OS == TargetPlatform.iOS)
-				listView.ItemsSource = new string [1] {""};
+			// same as the Xaml, but in code
+			this.Padding = 
+				new Thickness(5, Device.OnPlatform(20, 0, 0), 0, 0);
 
 			var tbi = new ToolbarItem ("+", null, () => {
 				//TODO: something

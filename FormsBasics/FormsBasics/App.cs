@@ -24,6 +24,8 @@ namespace FormsBasics
 
 //			var mainNav = new MyControls ();
 
+//			var mainNav = new MyRelativeLayoutXaml ();
+
 			return mainNav;
 		}
 	}

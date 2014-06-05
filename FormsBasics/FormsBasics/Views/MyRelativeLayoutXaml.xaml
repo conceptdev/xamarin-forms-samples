@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FormsBasics.MyRelativeLayoutXaml">
+   
+    <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
+
+  <RelativeLayout>
+
+    <BoxView Color="Red" x:Name="Red"
+    		WidthRequest="200" 
+    		HeightRequest="200"
+             RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=10}"
+             
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=20}" />
+    <BoxView Color="Green"
+             RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Width,
+                                        Factor=0.5}"
+             
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToView,
+                 						Property=Y, 
+                                        ElementName=Red,
+                                        Constant=-5}" />
+
+    <BoxView Color="Yellow"
+			WidthRequest="100" 
+    		HeightRequest="100"
+             RelativeLayout.XConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Width,
+                                        Factor=0.4}"
+             
+             RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=RelativeToParent, 
+                                        Property=Height,
+                                        Factor=0.3}" />
+  </RelativeLayout>
+</ContentPage>

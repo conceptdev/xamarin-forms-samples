@@ -13,12 +13,12 @@
 
 	<StackLayout Orientation="Vertical">
 		
-		<!-- this breaks -->
+		<!-- this breaks 
 		<OnPlatform x:TypeArguments="View">
 			<OnPlatform.iOS><Button Text="iOS"/></OnPlatform.iOS>
 			<OnPlatform.Android><Button Text="Android"/></OnPlatform.Android>
 			<OnPlatform.WinPhone><Button Text="WinPhone"/></OnPlatform.WinPhone>
-		</OnPlatform>
+		</OnPlatform>-->
 
 
         <ListView x:Name="listView" >

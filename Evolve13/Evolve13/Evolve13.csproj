@@ -6,7 +6,7 @@
     <ProjectGuid>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>QuickEvolve13</RootNamespace>
+    <RootNamespace>Evolve13</RootNamespace>
     <AssemblyName>QuickEvolve13</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
@@ -49,6 +49,7 @@
     <Compile Include="Views\FloorplanPage.cs" />
     <Compile Include="Views\MenuHeader.cs" />
     <Compile Include="Models\SessionSpeaker.cs" />
+    <Compile Include="Controls\TweetButton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -69,6 +70,7 @@
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Data\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

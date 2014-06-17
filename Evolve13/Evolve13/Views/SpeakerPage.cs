@@ -8,13 +8,6 @@ using System.Diagnostics;
 
 namespace Evolve13
 {
-	public class TweetButton : Button 
-	{
-		public string Tweet;
-
-		public static string TwitterHashtag = "#xamarin";
-	}
-
 	public class SpeakerPage : ContentPage
 	{
 		TweetButton tweetButton;

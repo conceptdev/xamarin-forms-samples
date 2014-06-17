@@ -15,6 +15,11 @@ namespace EmployeeDirectory.iOS
 		// class-level declarations
 		UIWindow window;
 
+		// for Mail Composer, see http://stackoverflow.com/questions/24136464/access-viewcontroller-in-dependecyservice-to-present-mfmailcomposeviewcontroller/24159484#24159484
+		public UIWindow Window {
+			get { return window; }
+		}
+
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();

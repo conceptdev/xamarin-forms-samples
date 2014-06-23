@@ -2,9 +2,10 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:local="clr-namespace:RestaurantGuide;assembly=RestaurantGuide"
     x:Class="RestaurantGuide.RestaurantDetail">
     <ContentPage.Content>
-       <WebView x:Name="webView" />
+       <local:MyWebView x:Name="webView" />
     </ContentPage.Content>
 </ContentPage>
 

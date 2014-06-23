@@ -23,8 +23,10 @@ namespace RestaurantGuide
 			var page = template.GenerateString ();
 
 			var html = new HtmlWebViewSource {Html = page};
-// TODO: set the BaseUrl when bug is fixed
-//			html.BaseUrl = DependencyService.Get<IBaseUrl> ().Get ();
+			if (Device.OS != TargetPlatform.iOS) {
+				// iOS bug means we're using a custom renderer for now, Android and WP need to implement IBaseUrl
+				html.BaseUrl = DependencyService.Get<IBaseUrl> ().Get ();
+			}
 			webView.Source = html;
 		}
 	}

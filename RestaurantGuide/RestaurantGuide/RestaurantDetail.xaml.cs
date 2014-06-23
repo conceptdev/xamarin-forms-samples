@@ -21,7 +21,11 @@ namespace RestaurantGuide
 
 			var template = new RestaurantInfo () { Model = r };
 			var page = template.GenerateString ();
-			webView.Source = new HtmlWebViewSource {Html = page};
+
+			var html = new HtmlWebViewSource {Html = page};
+// TODO: set the BaseUrl when bug is fixed
+//			html.BaseUrl = DependencyService.Get<IBaseUrl> ().Get ();
+			webView.Source = html;
 		}
 	}
 }

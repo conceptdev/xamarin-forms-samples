@@ -52,7 +52,13 @@ WriteLiteral(">");
 
 #line default
 #line hidden
-WriteLiteral("</span>\n\n\t<br/>\n\t<span");
+WriteLiteral("</span> <img");
+
+WriteLiteral(" src=\"X.png\"");
+
+WriteLiteral(" alt=\"demonstrate BaseUrl\"");
+
+WriteLiteral(" />\n\n\t<br/>\n\t<span");
 
 WriteLiteral(" style=\'color:#8CBF26;size:10px\'");
 

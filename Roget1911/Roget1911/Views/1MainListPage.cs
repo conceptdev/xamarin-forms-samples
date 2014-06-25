@@ -23,6 +23,9 @@ namespace Roget1911
 			};
 
 			listView.ItemSelected += (sender, e) => {
+				if (e.SelectedItem == null) return;
+				listView.SelectedItem = null; // clear out for next rendering of list
+
 				var @class = (RogetClass)e.SelectedItem;
 				var categoryPage = new SectionListPage();
 				categoryPage.Title = @class.Name;

@@ -19,6 +19,9 @@ namespace Roget1911
 			};
 
 			listView.ItemSelected += (sender, e) => {
+				if (e.SelectedItem == null) return;
+				listView.SelectedItem = null; // clear out for next rendering of list
+
 				var section = (RogetSection)e.SelectedItem;
 				if (section.Sections.Count == 0)
 				{ // show workds

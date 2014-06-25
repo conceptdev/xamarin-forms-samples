@@ -21,6 +21,9 @@ namespace Roget1911
 			};
 
 			listView.ItemSelected += (sender, e) => {
+				if (e.SelectedItem == null) return;
+				listView.SelectedItem = null; // clear out for next rendering of list
+
 				var cat = (RogetCategory)e.SelectedItem;
 				var posPage = new PartsOfSpeechPage(cat);
 				posPage.Title = cat.Name;

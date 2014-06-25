@@ -12,7 +12,7 @@ namespace RestaurantGuide.Android
 
 		public string Get ()
 		{
-			throw new NotImplementedException ("Once bug is fixed in Xamarin.Forms, implement this!"); 
+			return Forms.Context.ApplicationInfo.DataDir;
 		}
 
 		#endregion

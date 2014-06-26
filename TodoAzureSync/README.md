@@ -3,7 +3,7 @@ TodoAzureSync (Xamarin.Forms)
 
 This sample is a quick demo of combining [Windows Azure Mobile Services](http://windowsazure.com) OFFLINE/SYNC with [Xamarin.Forms](http://xamarin.com/forms) PCL. It also uses Xaml for the layout of the screens.
 
-Check out these links for more info on t
+Check out these links for more info on Azure offline support:
 
 * [Get started with Offline Data in Mobile Services](http://azure.microsoft.com/en-us/documentation/articles/mobile-services-xamarin-android-get-started-offline-data/)
 
@@ -17,7 +17,7 @@ Tips for Offline in Azure Mobile Services on Xamarin.iOS](http://www.michaelridl
 
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoAzureSync/Screenshots/AzureSync-iOS.png "iOS")
 
-
+![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoAzureSync/Screenshots/AzureSync-Android.png "Android")
 History
 ------
 

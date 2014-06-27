@@ -6,10 +6,11 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Android.Content.PM;
 
 namespace Evolve13
 {
-	[Activity (Label = "Evolve13", MainLauncher = true)]
+	[Activity (Label = "Evolve13", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
 	{
 		// I apologize in advance for this awful hack, I'm sure there's a better way...

@@ -28,6 +28,7 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <ConsolePause>false</ConsolePause>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -90,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MenuTableViewRenderer.cs" />
     <Compile Include="TweetButtonRenderer.cs" />
+    <Compile Include="SplashScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -107,6 +109,9 @@
     <AndroidResource Include="Resources\drawable\slideout.png" />
     <AndroidResource Include="Resources\drawable\slideout2x.png" />
     <AndroidResource Include="Resources\raw\EvolveSQLite.db3" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\Default_568h_2x.png" />
+    <AndroidResource Include="Resources\drawable\splashscreen.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.1.0.6188/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />

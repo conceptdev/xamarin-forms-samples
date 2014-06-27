@@ -8,10 +8,11 @@ namespace Evolve13
 {
 	public class MenuTableViewRenderer : TableViewRenderer 
 	{
-		protected override void OnModelSet (VisualElement view)
-		{
-			base.OnModelSet (view);
 
+		protected override void OnElementChanged (ElementChangedEventArgs<TableView> e)
+		{
+			base.OnElementChanged (e);
+		
 			var tableView = Control as UITableView;
 
 			tableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;

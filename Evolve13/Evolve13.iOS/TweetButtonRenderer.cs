@@ -10,15 +10,16 @@ namespace Evolve13
 {
 	public class TweetButtonRenderer : ButtonRenderer
 	{
-		protected override void OnModelSet (VisualElement view)
-		{
-			base.OnModelSet (view);
 
-			var tweetButton = view as TweetButton;
+		protected override void OnElementChanged (ElementChangedEventArgs<Button> e)
+		{
+			base.OnElementChanged (e);
+		
+			var tweetButton = e.NewElement as TweetButton;
 
 			var button = Control as UIButton;
 
-			button.TouchUpInside += (object sender, EventArgs e) => {
+			button.TouchUpInside += (object sender, EventArgs ea) => {
 				var tweetController = new TWTweetComposeViewController();
 				tweetController.SetInitialText (tweetButton.Tweet); 
 

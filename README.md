@@ -35,3 +35,13 @@ Nugets used in this repo:
 
 [PCLStorage](http://www.nuget.org/packages/PCLStorage/0.9.4)
 
+
+Other Interesting Repos
+-----------------------
+
+###[XForms](https://github.com/XForms/Xamarin-Forms-Labs)
+Community-driven controls and extensions for Xamarin.Forms
+
+###[acr-xamarin-forms](https://github.com/aritchie/acr-xamarin-forms#acr-xamarin-forms)
+Another source of controls written by Allan Ritchie
+

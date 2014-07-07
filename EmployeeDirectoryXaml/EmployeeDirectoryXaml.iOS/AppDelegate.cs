@@ -42,8 +42,6 @@ namespace EmployeeDirectory.iOS
 			}
 			#endregion
 
-			App.PhoneFeatureService = new iOSPhoneFeatureService ();
-
 			// If you have defined a view, add it here:
 			window.RootViewController = App.GetMainPage().CreateViewController ();
 

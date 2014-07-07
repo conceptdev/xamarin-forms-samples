@@ -17,8 +17,6 @@ namespace EmployeeDirectory
 		/// </remarks>
 		public static IDirectoryService Service;
 
-		public static IPhoneFeatureService PhoneFeatureService;
-
 		/// <summary>
 		/// last time the device was used
 		/// </summary>

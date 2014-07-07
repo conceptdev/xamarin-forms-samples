@@ -3,6 +3,9 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.MessageUI;
 using Xamarin.Forms;
+using EmployeeDirectory.iOS;
+
+[assembly:Dependency(typeof(iOSPhoneFeatureService))]
 
 namespace EmployeeDirectory.iOS
 {

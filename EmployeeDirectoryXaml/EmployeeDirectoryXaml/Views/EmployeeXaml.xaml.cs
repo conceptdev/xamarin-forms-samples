@@ -8,10 +8,14 @@ namespace EmployeeDirectory
 {
 	public partial class EmployeeXaml : ContentPage
 	{
+		IPhoneFeatureService PhoneFeatureService;
+
 		public EmployeeXaml () {
 			InitializeComponent ();	
 
 			NameLabel.Font = Font.BoldSystemFontOfSize (NamedSize.Large);
+
+			PhoneFeatureService = DependencyService.Get<IPhoneFeatureService> ();
 		}
 
 		protected override void OnBindingContextChanged ()
@@ -33,19 +37,22 @@ namespace EmployeeDirectory
 
 			switch (property.Type) {
 			case PersonViewModel.PropertyType.Email:
-				App.PhoneFeatureService.Email (property.Value);
+				// use OpenUri
+//				Device.OpenUri (new Uri ("mailto:"+property.Value));
+				// or use platform-specific code
+				PhoneFeatureService.Email (property.Value);
 				break;
 			case PersonViewModel.PropertyType.Twitter:
-				App.PhoneFeatureService.Tweet (property.Value);
+				PhoneFeatureService.Tweet (property.Value);
 				break;
 			case PersonViewModel.PropertyType.Url:
-				App.PhoneFeatureService.Browse (property.Value);
+				PhoneFeatureService.Browse (property.Value);
 				break;
 			case PersonViewModel.PropertyType.Phone:
-				App.PhoneFeatureService.Call (property.Value);
+				PhoneFeatureService.Call (property.Value);
 				break;
 			case PersonViewModel.PropertyType.Address:
-				App.PhoneFeatureService.Map (property.Value);
+				PhoneFeatureService.Map (property.Value);
 				break;
 			}
 		}

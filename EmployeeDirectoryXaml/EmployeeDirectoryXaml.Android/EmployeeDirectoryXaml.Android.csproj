@@ -88,6 +88,8 @@
     <AndroidResource Include="Resources\raw\XamarinDirectory.csv" />
     <AndroidResource Include="Resources\raw\XamarinFavorites.xml" />
     <AndroidResource Include="Resources\drawable\Search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <Import Project="../packages/Xamarin.Forms.1.0.6188/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
@@ -99,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamandroidsupportv4-18">

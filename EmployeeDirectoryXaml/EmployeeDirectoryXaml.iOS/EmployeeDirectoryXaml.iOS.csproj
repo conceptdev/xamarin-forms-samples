@@ -126,6 +126,8 @@
     <BundleResource Include="Resources\DetailsPlaceholder%402x.jpg" />
     <BundleResource Include="Resources\Placeholder.jpg" />
     <BundleResource Include="Resources\Placeholder%402x.jpg" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

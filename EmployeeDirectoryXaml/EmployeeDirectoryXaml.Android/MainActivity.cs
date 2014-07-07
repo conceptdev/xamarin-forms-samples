@@ -42,8 +42,6 @@ namespace EmployeeDirectory.Android
 			}
 			#endregion
 
-			App.PhoneFeatureService = new AndroidPhoneFeatureService ();
-
 			SetPage (App.GetMainPage ());
 		}
 

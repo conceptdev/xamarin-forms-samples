@@ -63,8 +63,11 @@ namespace Evolve13
 				master.Detail = sessions;
 				break;
 			case "Speakers":
-				if (speakers == null)
+				if (speakers == null) {
 					speakers = new NavigationPage (new SpeakersPage ()) { Tint = App.NavTint };
+					//TODO: finish WrapLayout demo
+					//speakers = new NavigationPage (new SpeakersPageWrap ()) { Tint = App.NavTint };
+				}
 				master.Detail = speakers;
 				break;
 			case "Favorites":

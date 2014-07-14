@@ -13,7 +13,7 @@ namespace Xamarin.Forms
 		/// </summary>
 		public static readonly BindableProperty OrientationProperty = 
 			BindableProperty.Create<WrapLayout, StackOrientation> (w => w.Orientation, StackOrientation.Vertical, 
-				bindingPropertyChanged: (bindable, oldvalue, newvalue) => ((WrapLayout)bindable).OnSizeChanged ());
+				propertyChanged: (bindable, oldvalue, newvalue) => ((WrapLayout)bindable).OnSizeChanged ());
 
 		/// <summary>
 		/// Orientation (Horizontal or Vertical)
@@ -28,7 +28,7 @@ namespace Xamarin.Forms
 		/// </summary>
 		public static readonly BindableProperty SpacingProperty = 
 			BindableProperty.Create<WrapLayout, double> (w => w.Spacing, 6, 
-				bindingPropertyChanged: (bindable, oldvalue, newvalue) => ((WrapLayout)bindable).OnSizeChanged());
+				propertyChanged: (bindable, oldvalue, newvalue) => ((WrapLayout)bindable).OnSizeChanged());
 
 		/// <summary>
 		/// Spacing added between elements (both directions)
@@ -47,6 +47,17 @@ namespace Xamarin.Forms
 		{
 			this.ForceLayout();
 		}
+
+		//http://forums.xamarin.com/discussion/17961/stacklayout-with-horizontal-orientation-how-to-wrap-vertically#latest
+//		protected override void OnPropertyChanged
+//		(string propertyName = null)
+//		{
+//			base.OnPropertyChanged(propertyName);
+//			if ((propertyName == WrapLayout.OrientationProperty.PropertyName) ||
+//				(propertyName == WrapLayout.SpacingProperty.PropertyName)) {
+//				this.OnSizeChanged();
+//			}
+//		}
 
 		/// <summary>
 		/// This method is called during the measure pass of a layout cycle to get the desired size of an element.

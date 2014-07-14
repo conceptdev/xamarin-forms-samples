@@ -19,15 +19,15 @@ namespace Evolve13
 {
 	public class TweetButtonRenderer : ButtonRenderer
 	{
-		protected override void OnModelChanged (VisualElement oldModel, VisualElement newModel)
+		protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.Button> e)
 		{
-			base.OnModelChanged (oldModel, newModel);
+			base.OnElementChanged (e);
 
-			var tweetButton = newModel as TweetButton;
+			var tweetButton = e.NewElement as TweetButton;
 
 			var button = Control as global::Android.Widget.Button;
 
-			button.Click += (sender, e) => {
+			button.Click += (sender, e1) => {
 				var message = "";
 				try {
 					var intent = new Intent(Intent.ActionSend);

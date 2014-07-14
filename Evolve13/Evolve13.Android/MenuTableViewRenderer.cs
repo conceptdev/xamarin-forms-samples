@@ -17,10 +17,10 @@ namespace Evolve13
 {
 	public class MenuTableViewRenderer : TableViewRenderer 
 	{
-		protected override void OnModelChanged (VisualElement oldModel, VisualElement newModel)
+		protected override void OnElementChanged (ElementChangedEventArgs<TableView> e)
 		{
-			base.OnModelChanged (oldModel, newModel);
-
+			base.OnElementChanged (e);
+		
 			var tableView = Control as global::Android.Widget.ListView;
 			tableView.DividerHeight = 0;
 			tableView.SetBackgroundColor (new global::Android.Graphics.Color(0x2C, 0x3E, 0x50));

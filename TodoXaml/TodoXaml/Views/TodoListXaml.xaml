@@ -5,6 +5,8 @@
     Title="TodoXaml">
     <ContentPage.Content>
         <ListView x:Name="listView" ItemSelected="OnItemSelected">
+          <!-- You can embed the custom cell like this, or in a separate Xaml file -->
+          <!--
 		  <ListView.ItemTemplate>
 		    <DataTemplate>
 		      <ViewCell>
@@ -15,6 +17,7 @@
 		      </ViewCell>
 		    </DataTemplate>
 		  </ListView.ItemTemplate>
+		  -->
 		</ListView>
     </ContentPage.Content>
 </ContentPage>	

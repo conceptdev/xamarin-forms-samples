@@ -11,9 +11,7 @@ namespace TodoXaml
 		{
 			InitializeComponent ();
 
-			// HACK: workaround issue #894 for now
-			if (Device.OS == TargetPlatform.iOS)
-				listView.ItemsSource = new string [1] {""};
+			listView.ItemTemplate = new DataTemplate (typeof(TodoCell));
 
 			var tbi = new ToolbarItem ("+", null, () => {
 				var todoItem = new TodoItem();

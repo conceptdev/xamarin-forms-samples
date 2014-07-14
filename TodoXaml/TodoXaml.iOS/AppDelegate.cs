@@ -51,7 +51,6 @@ namespace TodoXaml
 			App.SetTextToSpeech (new Speech ());
 
 			// If you have defined a view, add it here:
-			// window.RootViewController  = navigationController;
 			window.RootViewController = App.GetMainPage ().CreateViewController ();
 
 			// make the window visible

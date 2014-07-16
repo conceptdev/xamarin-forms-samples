@@ -19,7 +19,7 @@ namespace Evolve13
 			listView = new ListView {
 				RowHeight = 40
 			};
-			listView.ItemsSource = new string [] { "Session 1", "Session 2" };
+			listView.ItemsSource = new Session [] { new Session {Title = "test", Location="somewhere"} };
 			listView.ItemTemplate = new DataTemplate (typeof (SessionCell));
 
 			listView.ItemSelected += (sender, e) => {

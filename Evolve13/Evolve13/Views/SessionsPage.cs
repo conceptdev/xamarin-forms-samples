@@ -17,9 +17,11 @@ namespace Evolve13
 			NavigationPage.SetHasNavigationBar (this, true);
 
 			listView = new ListView {
-				RowHeight = 60
+				RowHeight = 40
 			};
-//			listView.ItemSource = new string [] { "Keynote", "Party", "Closing" };
+			// see the SessionCell implementation for how the variable row height is calculated
+			listView.HasUnevenRows = true;
+
 			listView.ItemsSource = App.Database.GetSessions ();
 			listView.ItemTemplate = new DataTemplate (typeof (SessionCell));
 

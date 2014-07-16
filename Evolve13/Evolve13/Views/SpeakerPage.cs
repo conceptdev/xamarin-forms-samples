@@ -18,6 +18,8 @@ namespace Evolve13
 
 			NavigationPage.SetHasNavigationBar (this, true);
 
+			var image = new Image ();
+			image.SetBinding(Image.SourceProperty, "HeadshotUrl");
 
 			var name = new Label { 
 				Text = "Name",
@@ -30,6 +32,7 @@ namespace Evolve13
 //				BackgroundImage = "tweet.png", 
 				Text = "Tweet",
 			};
+			tweetButton.SetBinding (Button.TextProperty, "TwitterHandle");
 			tweetButton.SetBinding (Button.IsVisibleProperty, "HasTwitter");
 
 			var bio = new Label { 
@@ -43,7 +46,7 @@ namespace Evolve13
 				Content = new StackLayout {
 					VerticalOptions = LayoutOptions.StartAndExpand,
 					Padding = new Thickness(20),
-					Children = { name, tweetButton, bio }
+					Children = { image, name, tweetButton, bio }
 				}
 			};
 			Content = scroll;

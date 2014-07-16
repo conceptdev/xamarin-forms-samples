@@ -5,14 +5,16 @@ namespace Evolve13
 {
 	public class SessionCell : ViewCell
 	{
+		Label title, label;
+		StackLayout layout;
 		public SessionCell ()
 		{
-			var title = new Label {
+			title = new Label {
 				YAlign = TextAlignment.Center
 			};
 			title.SetBinding (Label.TextProperty, "Title");
 
-			var label = new Label {
+			label = new Label {
 				YAlign = TextAlignment.Center,
 				Font = Font.SystemFontOfSize(10)
 			};
@@ -31,13 +33,30 @@ namespace Evolve13
 				Children = {title, label}
 			};
 
-			var layout = new StackLayout {
+			layout = new StackLayout {
 				Padding = new Thickness(20, 0, 0, 0),
 				Orientation = StackOrientation.Horizontal,
 				HorizontalOptions = LayoutOptions.StartAndExpand,
 				Children = {text, fav}
 			};
 			View = layout;
+		}
+
+		protected override void OnBindingContextChanged ()
+		{
+			base.OnBindingContextChanged ();
+			var session = (Session)BindingContext;
+
+			// rough translation of character-count to cell height
+			// doesn't always work, but close enough for now
+			if (session.Title.Length > 75)
+				this.Height = 110;
+			else if (session.Title.Length > 60)
+				this.Height = 80; 
+			else if (session.Title.Length > 30)
+				this.Height = 60;
+			else
+				this.Height = 40;
 		}
 	}
 }

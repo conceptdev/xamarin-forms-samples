@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using QuickTodo;
 using Xamarin.Forms;
 using System.IO;
 

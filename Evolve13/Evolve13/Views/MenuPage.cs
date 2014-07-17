@@ -64,9 +64,9 @@ namespace Evolve13
 				break;
 			case "Speakers":
 				if (speakers == null) {
-					speakers = new NavigationPage (new SpeakersPage ()) { Tint = App.NavTint };
+//					speakers = new NavigationPage (new SpeakersPage ()) { Tint = App.NavTint };
 					//TODO: finish WrapLayout demo
-					//speakers = new NavigationPage (new SpeakersPageWrap ()) { Tint = App.NavTint };
+					speakers = new NavigationPage (new SpeakersPageWrap ()) { Tint = App.NavTint };
 				}
 				master.Detail = speakers;
 				break;

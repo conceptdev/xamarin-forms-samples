@@ -7,6 +7,7 @@ It has the [`Vernacular.Catalog.XamarinForms`](https://github.com/rdio/vernacula
 
 Refer to [these slides on Vernacular](https://dl.dropboxusercontent.com/u/10397738/vernacular.pdf) and this [MonkeySpace talk video](http://vimeo.com/album/2142123/video/55647621) by [@abock](https://twitter.com/abock) for more info on Vernacular.
 
+**SEE ALSO** the [RESX example](https://github.com/conceptdev/xamarin-forms-samples/tree/master/TodoL10nResx) of localizing Xamarin.Forms.
 
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Franc%CC%A7ais-sml.png "iOS French") ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Deutsch-sml.png "iOS German")
 

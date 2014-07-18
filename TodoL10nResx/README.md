@@ -7,9 +7,7 @@ The [DependencyService](http://developer.xamarin.com/guides/cross-platform/xamar
 
 **SEE ALSO** the [Vernacular example](https://github.com/conceptdev/xamarin-forms-samples/tree/master/TodoL10nVernacular) of localizing Xamarin.Forms.
 
-![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Japanese-sml.png "iOS Japanese")
-
-![screenshot](https://raw.githubusercontent.com/xamarin/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/Android-PortugeseBrazil-sml.png "Android Brazilian Portuguese")
+![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nResx/Screenshots/iOS-Japanese-sml.png "iOS Japanese")  ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nResx/Screenshots/Android-PortugeseBrazil-sml.png "Android Brazilian Portuguese")
 
 
 

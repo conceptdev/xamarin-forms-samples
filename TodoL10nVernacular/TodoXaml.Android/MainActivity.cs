@@ -6,6 +6,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Vernacular;
+using Xamarin.Forms;
 
 namespace TodoXaml
 {
@@ -42,6 +44,8 @@ namespace TodoXaml
 			App.SetDatabaseConnection (conn);
 
 			App.SetTextToSpeech (new Speech ());
+
+			Catalog.Implementation = new AndroidCatalog (Forms.Context.Resources, typeof(TodoXaml.Resource.String) );
 
 			SetPage (App.GetMainPage ());
 		}

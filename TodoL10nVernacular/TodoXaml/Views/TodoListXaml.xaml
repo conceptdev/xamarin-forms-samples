@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     x:Class="TodoXaml.TodoListXaml"
-    Title="TodoXaml">
+    xmlns:i18n="clr-namespace:QuickTodo;assembly=QuickTodo"
+    Title="{i18n:Translate ApplicationHeading}">
     <ContentPage.Content>
         <ListView x:Name="listView" ItemSelected="OnItemSelected">
 		  <ListView.ItemTemplate>

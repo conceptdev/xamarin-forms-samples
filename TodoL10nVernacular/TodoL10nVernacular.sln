@@ -9,6 +9,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoXaml.iOS", "TodoXaml.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoXaml.Android", "TodoXaml.Android\TodoXaml.Android.csproj", "{B746C87C-7335-4830-AAE2-ACACE4D69DB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Translations", "Translations", "{600F3062-863C-48C4-B3AB-B414FA5568C3}"
+	ProjectSection(SolutionItems) = preProject
+		Translations\commands.txt = Translations\commands.txt
+		Translations\de.mo = Translations\de.mo
+		Translations\de.po = Translations\de.po
+		Translations\es.po = Translations\es.po
+		Translations\fr.mo = Translations\fr.mo
+		Translations\fr.po = Translations\fr.po
+		Translations\ja.po = Translations\ja.po
+		Translations\pt-BR.po = Translations\pt-BR.po
+		Translations\ru.po = Translations\ru.po
+		Translations\source.pot = Translations\source.pot
+		Translations\zh-Hans.po = Translations\zh-Hans.po
+		Translations\zh-Hant.po = Translations\zh-Hant.po
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +91,6 @@ Global
 		{B746C87C-7335-4830-AAE2-ACACE4D69DB5} = {205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = TodoXaml.iOS\TodoXaml.iOS.csproj
+		StartupItem = TodoXaml.Android\TodoXaml.Android.csproj
 	EndGlobalSection
 EndGlobal

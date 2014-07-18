@@ -1,0 +1,47 @@
+/Library/Frameworks/Mono.framework/Versions/3.2.7/bin/mono /Users/craigdunn/ProjectsGit/vernacular/Vernacular.Tool/bin/Debug/Vernacular.exe --generator=po --pot --input=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/iOS/bin/iPhoneSimulator/Debug --output=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/source.pot --meta="Project-Id-Version=LionTodo" 
+
+
+/Library/Frameworks/Mono.framework/Versions/3.2.7/bin/mono /Users/craigdunn/ProjectsGit/vernacular/Vernacular.Tool/bin/Debug/Vernacular.exe --generator=po --pot --input=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/iOS/bin/iPhoneSimulator/Debug --input=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Android/Resources/values/Strings.xml --analyze --output=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/LionTodo.pot --meta="Project-Id-Version=LionTodo" 
+
+--analyzer-config=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/LionTodoAnalyzerConfig.xml
+
+
+
+  mono vernacular --input==iOS/bin/Debug --output=Translations/LionTodo.pot 
+
+
+  --generator=po --pot 
+
+
+ ==== MERGE =====
+
+/Library/Frameworks/Mono.framework/Versions/3.2.7/bin/mono /Users/craigdunn/ProjectsGit/vernacular/Vernacular.Tool/bin/Debug/Vernacular.exe --output=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/fr.po --input=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/source.pot --generator=po
+
+
+  mono vernacular --input==Translations/fr.po 
+
+
+
+
+  --output=Translations/iOS/Resources/fr.lproj/Localizable.strings 
+
+
+  --generator=ios
+
+
+ ==== MERGE =====
+
+-- iOS -- fr --
+
+/Library/Frameworks/Mono.framework/Versions/3.2.7/bin/mono /Users/craigdunn/ProjectsGit/vernacular/Vernacular.Tool/bin/Debug/Vernacular.exe --output=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/iOS/Resources/fr.lproj/Localizable.strings --input=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/fr.po --generator=ios
+
+
+-- iOS -- de --
+
+/Library/Frameworks/Mono.framework/Versions/3.2.7/bin/mono /Users/craigdunn/ProjectsGit/vernacular/Vernacular.Tool/bin/Debug/Vernacular.exe --output=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/iOS/Resources/de.lproj/Localizable.strings --input=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/de.po --generator=ios
+
+
+
+-- Android -- fr --
+
+/Library/Frameworks/Mono.framework/Versions/3.2.7/bin/mono /Users/craigdunn/ProjectsGit/vernacular/Vernacular.Tool/bin/Debug/Vernacular.exe --output=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Android/Resources/values-fr/vernacular_Strings.xml --input==/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Translations/fr.po --generator=android --android-input-strings-xml=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Android/Resources/values/Strings.xml --android-output-strings-xml=/Users/craigdunn/ProjectsGit/xamarin-docs/L10n/Vernacular/Android/Resources/values-fr/Strings.xml 

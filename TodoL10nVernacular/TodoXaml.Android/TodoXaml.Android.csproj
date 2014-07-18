@@ -61,11 +61,11 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.2.2.6238-pre1\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="Vernacular.Catalog.XamarinForms">
-      <HintPath>..\Dependencies\Vernacular.Catalog.XamarinForms.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Vernacular.Catalog.Android">
+      <HintPath>..\Dependencies\Vernacular.Catalog.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +88,9 @@
     <AndroidResource Include="Resources\raw\TodoSQLite.db3" />
     <AndroidResource Include="Resources\drawable\plus.png" />
     <AndroidResource Include="Resources\drawable\check2x.png" />
+    <AndroidResource Include="Resources\values-es\Strings.xml" />
+    <AndroidResource Include="Resources\values-fr\Strings.xml" />
+    <AndroidResource Include="Resources\values-ja\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -98,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\values-es\" />
+    <Folder Include="Resources\values-fr\" />
+    <Folder Include="Resources\values-ja\" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamandroidsupportv4-18">

@@ -1,5 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">QuickTodo.Android</string>
+	<string name="app_name">AndroidTodo</string>
+	<string name="Hello">Hello World, Click Me!</string>
+	<string name="ApplicationName">AndroidTodo</string>
+
+
+	<string name="AppName">LionTodo</string>
+	<string name="NewTaskPlaceholder">&lt;new task&gt;</string>
+	<string name="NameLabel">Name</string>
+	<string name="NamePlacholder">task name</string>
+	<string name="NotesLabel">Notes</string>
+	<string name="NotesPlaceholder">other task info</string>
+	<string name="DoneLabel">Done</string>
+	<string name="SaveButton">Save</string>
+	<string name="DeleteButton">Delete</string>
+	<string name="AddButton">Add Task</string>
+
 </resources>

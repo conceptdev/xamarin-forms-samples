@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">AndroidTodo</string>
+	<string name="Hello">Hello World, Click Me!</string>
+	<string name="ApplicationName">AndroidTodo</string>
+
+
+	<string name="AppName">ライオンTodo</string>
+	<string name="NewTaskPlaceholder">&lt;新しいタスク&gt;</string>
+	<string name="NameLabel">タイトル</string>
+	<string name="NamePlacholder">タスク名</string>
+	<string name="NotesLabel">注釈</string>
+	<string name="NotesPlaceholder">他のタスクの情報</string>
+	<string name="DoneLabel">削除する</string>
+	<string name="SaveButton">はい</string>
+	<string name="DeleteButton">削除する</string>
+	<string name="AddButton">Add 削除</string>
+
+</resources>

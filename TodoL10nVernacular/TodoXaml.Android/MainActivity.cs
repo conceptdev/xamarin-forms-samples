@@ -49,11 +49,6 @@ namespace TodoXaml
 			// configure Vernacular
 			Catalog.Implementation = new AndroidCatalog (this.Resources, typeof(TodoXaml.Resource.String) );
 
-			Console.WriteLine ("cat:" + Catalog.GetString ("NewTaskPlaceholder"));
-			Console.WriteLine ("cat:" + Catalog.GetString ("DeleteButton"));
-			Console.WriteLine ("cat:" + Catalog.GetString ("Save"));
-			Console.WriteLine ("cat:" + Catalog.GetString ("Delete"));
-
 			SetPage (App.GetMainPage ());
 		}
 

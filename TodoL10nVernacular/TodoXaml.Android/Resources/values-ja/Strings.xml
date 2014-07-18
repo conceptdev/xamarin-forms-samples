@@ -3,18 +3,14 @@
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">AndroidTodo</string>
 	<string name="Hello">Hello World, Click Me!</string>
-	<string name="ApplicationName">AndroidTodo</string>
+	<string name="ApplicationName">TodoL10nVernacular-JA</string>
 
-
-	<string name="AppName">ライオンTodo</string>
-	<string name="NewTaskPlaceholder">&lt;新しいタスク&gt;</string>
-	<string name="NameLabel">タイトル</string>
-	<string name="NamePlacholder">タスク名</string>
-	<string name="NotesLabel">注釈</string>
-	<string name="NotesPlaceholder">他のタスクの情報</string>
-	<string name="DoneLabel">削除する</string>
-	<string name="SaveButton">はい</string>
-	<string name="DeleteButton">削除する</string>
-	<string name="AddButton">Add 削除</string>
+	<string name="Vernacular_P0_60newtask62">&lt;新しいタスク&gt;</string>
+	<string name="Vernacular_P0_ApplicationHeading">ライオンTodo</string>
+	<string name="Vernacular_P0_Delete">削除する</string>
+	<string name="Vernacular_P0_Done">削除する</string>
+	<string name="Vernacular_P0_Name">タイトル</string>
+	<string name="Vernacular_P0_Notes">注釈</string>
+	<string name="Vernacular_P0_Save">はい</string>
 
 </resources>

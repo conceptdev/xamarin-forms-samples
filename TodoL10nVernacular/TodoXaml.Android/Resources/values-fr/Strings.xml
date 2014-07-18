@@ -3,18 +3,8 @@
   <string name="hello">Hello World, Click Me!</string>
   <string name="app_name">AndroidTodo</string>
   <string name="Hello">Hello World, Click Me!</string>
-  <string name="ApplicationName">AndroidTodo</string>
-  <string name="AppName">LionTodo</string>
-  <string name="NewTaskPlaceholder">&lt;new task&gt;</string>
-  <string name="NameLabel">Name</string>
-  <string name="NamePlacholder">task name</string>
-  <string name="NotesLabel">Notes</string>
-  <string name="NotesPlaceholder">other task info</string>
-  <string name="DoneLabel">Terminer</string>
-  <string name="SaveButton">Save</string>
-  <string name="DeleteButton">Supprimer</string>
-  <string name="AddButton">Add Task</string>
-
+  <string name="ApplicationName">ToDoL10nVernacular-FR</string>
+ 
 	<string name="Vernacular_P0_60newtask62">&lt;nouveau&gt;</string>
 	<string name="Vernacular_P0_ApplicationHeading">LéonTodo</string>
 	<string name="Vernacular_P0_Delete">Supprimer</string>

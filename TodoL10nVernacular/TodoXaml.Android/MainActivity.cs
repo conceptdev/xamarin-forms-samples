@@ -43,9 +43,16 @@ namespace TodoXaml
 			// Set the database connection string
 			App.SetDatabaseConnection (conn);
 
+			// configure text-to-speech
 			App.SetTextToSpeech (new Speech ());
 
-			Catalog.Implementation = new AndroidCatalog (Forms.Context.Resources, typeof(TodoXaml.Resource.String) );
+			// configure Vernacular
+			Catalog.Implementation = new AndroidCatalog (this.Resources, typeof(TodoXaml.Resource.String) );
+
+			Console.WriteLine ("cat:" + Catalog.GetString ("NewTaskPlaceholder"));
+			Console.WriteLine ("cat:" + Catalog.GetString ("DeleteButton"));
+			Console.WriteLine ("cat:" + Catalog.GetString ("Save"));
+			Console.WriteLine ("cat:" + Catalog.GetString ("Delete"));
 
 			SetPage (App.GetMainPage ());
 		}

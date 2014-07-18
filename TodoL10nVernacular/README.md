@@ -5,14 +5,16 @@ This sample uses [Vernacular by rdio](https://github.com/rdio/vernacular)
 
 It has the [`Vernacular.Catalog.XamarinForms`](https://github.com/rdio/vernacular/tree/master/Vernacular.Catalog) assembly embedded (built agains Xamarin.Forms 1.2.2.6238). You can get that [code](https://github.com/rdio/vernacular/tree/master/Vernacular.Catalog) from github and build it yourself against newer releases of Xamarin.Forms.
 
+Refer to [these slides on Vernacular](https://dl.dropboxusercontent.com/u/10397738/vernacular.pdf) by [@abock](https://twitter.com/abock) for more info on Vernacular.
 
 
+![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Franc%CC%A7ais-sml.png "iOS French")
 
-![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Français.png "iOS French")
+![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Deutsch-sml.png "iOS German")
 
-![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/iOS-Deutsch "iOS German")
+![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/Android-Español-sml.png "Android Spanish")
 
-
+![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nVernacular/Screenshots/Android-Franc%CC%A7ais-sml.png "Android French")
 
 
 History

@@ -62,10 +62,13 @@
       <HintPath>..\packages\Xamarin.Forms.1.2.2.6238-pre1\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\Components\xamandroidsupportv4-18-4.19.0.1\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
-    <Reference Include="Vernacular.Catalog.Android">
-      <HintPath>..\Dependencies\Vernacular.Catalog.Android.dll</HintPath>
+    <Reference Include="Vernacular.Catalog.XamarinForms.Android">
+      <HintPath>..\Dependencies\Vernacular.Catalog.XamarinForms.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Vernacular.Catalog.XamarinForms">
+      <HintPath>..\Dependencies\Vernacular.Catalog.XamarinForms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

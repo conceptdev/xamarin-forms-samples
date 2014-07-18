@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using Vernacular;
 
 namespace TodoXaml
 {

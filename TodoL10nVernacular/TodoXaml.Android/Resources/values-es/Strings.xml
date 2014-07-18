@@ -17,4 +17,13 @@
 	<string name="DeleteButton">Borra</string>
 	<string name="AddButton">Add tarea</string>
 
+
+	<string name="Vernacular_P0_60newtask62">&lt;nueva tarea&gt;</string>
+	<string name="Vernacular_P0_ApplicationHeading">LeónTodo</string>
+	<string name="Vernacular_P0_Delete">Borra</string>
+	<string name="Vernacular_P0_Done">Completa</string>
+	<string name="Vernacular_P0_Name">nombre de la tarea</string>
+	<string name="Vernacular_P0_Notes">Notas</string>
+	<string name="Vernacular_P0_Save">Guarda</string>
+
 </resources>

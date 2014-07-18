@@ -51,14 +51,13 @@ namespace TodoXaml
 
 			App.SetTextToSpeech (new Speech ());
 
-
+			// configure Vernacular
 			Catalog.Implementation = new ResourceCatalog { GetResourceById = id => {
 					var resource =
 						NSBundle.MainBundle.LocalizedString(id, null);
 					return resource == id ? null : resource;
 				},
 			};
-
 
 			// If you have defined a view, add it here:
 			// window.RootViewController  = navigationController;

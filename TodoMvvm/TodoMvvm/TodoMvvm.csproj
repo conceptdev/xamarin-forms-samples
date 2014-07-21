@@ -48,15 +48,16 @@
     <Compile Include="ITextToSpeech.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.2.2.6238-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6238-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <ItemGroup>
     <Reference Include="SQLite.Net">
-      <HintPath>..\packages\SQLite.Net-PCL.2.1.0\lib\portable-net4+sl4+wp7+win8+monotouch+MonoAndroid\SQLite.Net.dll</HintPath>
+      <HintPath>..\packages\SQLite.Net-PCL.2.3.0\lib\portable-net4+sl5+netcore45+wp8+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.1.0.6188\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6238-pre1\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.1.0.6188\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.1.2.2.6238-pre1\lib\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -73,5 +74,4 @@
     <None Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <None Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
-  <Import Project="../packages/Xamarin.Forms.1.0.6188/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets" />
 </Project>

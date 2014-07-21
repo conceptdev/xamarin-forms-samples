@@ -62,6 +62,11 @@ namespace Todo
 			saveButton.Text = L10n.Localize ("SaveButton", "Save");
 			deleteButton.Text = L10n.Localize ("DeleteButton", "Delete");
 
+			// TODO: included as a 'test' for localizing the picker
+			// currently iOS fails to localize the month names.
+			var dueDateLabel = new Label { Text = "Due" };
+			var dueDatePicker = new DatePicker ();
+
 
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
@@ -70,6 +75,7 @@ namespace Todo
 					nameLabel, nameEntry, 
 					notesLabel, notesEntry,
 					doneLabel, doneEntry,
+					dueDateLabel, dueDatePicker,
 					saveButton, deleteButton, cancelButton,
 					speakButton
 				}

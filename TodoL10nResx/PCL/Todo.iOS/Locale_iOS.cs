@@ -27,6 +27,11 @@ namespace Todo.iOS
 
 			Console.WriteLine ("ios:" + iosLanguage + " " + iosLocale);
 			Console.WriteLine ("net:" + netLanguage + " " +  netLocale);
+
+			// doesn't seem to affect anything (well, i didn't expect it to affect UIKit controls)
+//			var ci = new System.Globalization.CultureInfo ("JA-jp");
+//			System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+
 			#endregion
 
 			// HACK: not sure why NSLocale isn't ever returning correct data

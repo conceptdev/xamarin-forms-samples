@@ -7,10 +7,12 @@ using Android.Widget;
 using Android.OS;
 using System.IO;
 using Android.Speech.Tts;
+using Android.Content.PM;
 
 namespace Todo
 {
-	[Activity (Label = "Todo", MainLauncher = true)]
+	[Activity (Label = "Todo", MainLauncher = true, 
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

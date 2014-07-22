@@ -63,7 +63,7 @@ namespace Todo
 			deleteButton.Text = L10n.Localize ("DeleteButton", "Delete");
 
 			// TODO: included as a 'test' for localizing the picker
-			// currently iOS fails to localize the month names.
+			// currently not saved to database
 			var dueDateLabel = new Label { Text = "Due" };
 			var dueDatePicker = new DatePicker ();
 

@@ -21,12 +21,13 @@ namespace Evolve13
 				RowHeight = 40
 			};
 			listView.ItemsSource = App.Database.GetSpeakers ();
-			listView.ItemTemplate = new DataTemplate (typeof (ImageCell)){
-				Bindings = {
-					{ ImageCell.TextProperty, new Binding ("Name") },
-					{ ImageCell.ImageSourceProperty, new Binding ("HeadshotUrl") }
-				}
-			};
+//			listView.ItemTemplate = new DataTemplate (typeof (ImageCell)){
+//				Bindings = {
+//					{ ImageCell.TextProperty, new Binding ("Name") },
+//					{ ImageCell.ImageSourceProperty, new Binding ("HeadshotUrl") }
+//				}
+//			};
+			listView.ItemTemplate = new DataTemplate (typeof (SpeakerCell));
 
 			listView.ItemSelected += (sender, e) => {
 				var speaker = e.SelectedItem as Speaker;

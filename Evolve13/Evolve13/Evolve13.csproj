@@ -52,6 +52,7 @@
     <Compile Include="Controls\TweetButton.cs" />
     <Compile Include="Controls\WrapLayout.cs" />
     <Compile Include="Views\SpeakersPageWrap.cs" />
+    <Compile Include="Views\SpeakerCell.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

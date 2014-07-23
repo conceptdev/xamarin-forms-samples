@@ -12,7 +12,7 @@ namespace Roget1911
 		{
 			NavigationPage.SetHasNavigationBar (this, true);
 
-			var web = new WebView {
+			web = new WebView {
 				WidthRequest = 400,
 				HeightRequest = 800
 			}; // want this to just always go full-screen...
@@ -21,9 +21,15 @@ namespace Roget1911
 			htmlSource.Html = FormatText(cat.PartsOfSpeech);
 			web.Source = htmlSource;
 
+			// test PopToRootAsync bugfix in 1.2.2-pre2
+			var b = new Button { Text = "Main Menu" };
+			b.Clicked += (sender, e) => {
+				Navigation.PopToRootAsync();
+			};
+
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
-				Children = {web}
+				Children = {b, web}
 			};
 
 		}

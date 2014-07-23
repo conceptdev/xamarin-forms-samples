@@ -10,15 +10,16 @@ namespace Todo
 	public class TodoListPage : ContentPage
 	{
 		ListView listView;
+		Image newImage;
+		RelativeLayout layout;
+
 		public TodoListPage ()
 		{
 			Title = "Todo";
 
 			NavigationPage.SetHasNavigationBar (this, true);
 
-			listView = new ListView {
-			    RowHeight = 40
-			};
+			listView = new ListView ();
 			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
 
 //			listView.ItemSource = new string [] { "Buy pears", "Buy oranges", "Buy mangos", "Buy apples", "Buy bananas" };
@@ -30,10 +31,6 @@ namespace Todo
 //				new TodoItem {Name = "Buy bananas`", Done=true}
 //			};
 
-			// HACK: workaround issue #894 for now
-			if (Device.OS == TargetPlatform.iOS)
-				listView.ItemsSource = new string [1] {""};
-
 			listView.ItemSelected += (sender, e) => {
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
@@ -41,11 +38,37 @@ namespace Todo
 				Navigation.PushAsync(todoPage);
 			};
 
-			Content = new StackLayout {
-				VerticalOptions = LayoutOptions.FillAndExpand,
-				Children = {listView}
-			};
+			var tap = new TapGestureRecognizer ((View obj) => {
+				var todoItem = new TodoItem();
+				var todoPage = new TodoItemPage();
+				todoPage.BindingContext = todoItem;
+				Navigation.PushAsync(todoPage);
+			});
 
+			newImage = new Image ();
+			newImage.Source = "new.png";
+			newImage.WidthRequest = 40;
+			newImage.GestureRecognizers.Add (tap);
+
+			layout = new RelativeLayout ();
+			layout.Children.Add (listView, 
+				xConstraint: Constraint.Constant(0), 
+				yConstraint: Constraint.Constant(0), 
+				widthConstraint: Constraint.RelativeToParent ((parent) => {return parent.Width;}),
+				heightConstraint: Constraint.RelativeToParent ((parent) => {return parent.Height;}));
+			layout.Children.Add (newImage, 
+				xConstraint: Constraint.RelativeToParent((parent) =>
+					{
+						return (parent.Width / 2) - 20; // center of image (which is 40 wide)
+					}),
+				yConstraint: Constraint.RelativeToParent((parent) =>
+					{
+						return parent.Height - 60;
+					}));
+			Content = layout;
+
+
+			#region toolbar
 			var tbi = new ToolbarItem ("+", null, () => {
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
@@ -74,7 +97,7 @@ namespace Todo
 				}, 0, 0);
 				ToolbarItems.Add (tbi2);
 			}
-
+			#endregion
 		}
 
 		protected override void OnAppearing ()

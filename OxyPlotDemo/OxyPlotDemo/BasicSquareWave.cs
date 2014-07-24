@@ -9,12 +9,15 @@ namespace OxyPlotDemo
 	/// <summary>
 	/// chart data from OxyPlot WPF example
 	/// https://oxyplot.codeplex.com/wikipage?title=WpfExample1
+	/// and forums post
+	/// http://forums.xamarin.com/discussion/21031/oxyplot-chart-inside-a-contentpage
 	/// </summary>
 	public class BasicSquareWave : ContentPage
 	{
 		public BasicSquareWave ()
-		{	this.Title = "Gráfico";
-			this.Icon = "Icon.png";
+		{
+			this.Title = "Gráfico";
+			//this.Icon = "Icon.png";
 
 			PlotModel myModel = new PlotModel("Square wave");
 			var ls = new LineSeries("sin(x)+sin(3x)/3+sin(5x)/5+...");

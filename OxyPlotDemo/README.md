@@ -38,7 +38,7 @@ The core can be used in Xamarin.Forms and the platform-specific assemblies used 
 			};
 
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/iOS-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/Android-sml.png "Android")
+![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/iOS-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/Android-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/WinPhone-sml.png "Android")
 
 ##WARNING
 

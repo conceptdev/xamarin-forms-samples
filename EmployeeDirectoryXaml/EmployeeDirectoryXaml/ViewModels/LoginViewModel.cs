@@ -25,13 +25,21 @@ namespace EmployeeDirectory.ViewModels
 		public string Username { get; set; }
 		public string Password { get; set; }
 		public string ValidationErrors { get; private set; }
-		IDirectoryService service;
+//		IDirectoryService service;
 
 		static readonly TimeSpan ForceLoginTimespan = TimeSpan.FromMinutes (5);
 
+		public LoginViewModel ()
+		{
+			Username = "";
+			Password = "";
+		}
+
+		public IDirectoryService Service { get; set;}
+
 		public LoginViewModel (IDirectoryService service)
 		{
-			this.service = service;
+			Service = service;
 
 			Username = "";
 			Password = "";
@@ -53,7 +61,7 @@ namespace EmployeeDirectory.ViewModels
 		public Task LoginAsync (CancellationToken cancellationToken)
 		{
 			IsBusy = true;
-			return service
+			return Service
 				.LoginAsync (Username, Password, cancellationToken)
 				.ContinueWith (t => {
 					IsBusy = false;

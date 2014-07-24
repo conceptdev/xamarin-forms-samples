@@ -8,20 +8,23 @@ namespace EmployeeDirectory
 	public partial class LoginXaml : ContentPage
 	{
 		LoginViewModel viewModel;
+		ContentPage parent;
 
-		public LoginXaml ()
+		public LoginXaml (ContentPage parent)
 		{
 			InitializeComponent ();	
-			viewModel = new LoginViewModel (App.Service);
-
+			viewModel = new LoginViewModel ();
+			this.parent = parent;
 			BindingContext = viewModel;
-
 		}
 
-		protected override void OnAppearing ()
+		protected async override void OnAppearing ()
 		{
 			base.OnAppearing ();
-
+			if (App.Service == null) {
+				App.Service = await MemoryDirectoryService.FromCsv ("XamarinDirectory.csv");
+				viewModel.Service = App.Service;
+			}
 		}
 		void OnLoginClicked (object sender, EventArgs e)
 		{
@@ -30,19 +33,19 @@ namespace EmployeeDirectory
 				.LoginAsync (System.Threading.CancellationToken.None)
 				.ContinueWith (_ => {
 					App.LastUseTime = System.DateTime.UtcNow;
-
+						parent.Title = "Employee Directory"; // remove " Login"
 						Navigation.PopModalAsync ();
 				});
-
+				parent.Title = "Employee Directory"; // remove " Login"
 				Navigation.PopModalAsync ();
 			} else {
-				DisplayAlert ("Error", viewModel.ValidationErrors, "OK", null);
+				DisplayAlert ("Error", viewModel.ValidationErrors, "OK");
 			}
 		}
 
 		void OnHelpClicked (object sender, EventArgs e)
 		{
-			DisplayAlert ("Help", "Enter any username and password", "OK", null);
+			DisplayAlert ("Help", "Enter any username and password", "OK");
 		}
 	}
 }

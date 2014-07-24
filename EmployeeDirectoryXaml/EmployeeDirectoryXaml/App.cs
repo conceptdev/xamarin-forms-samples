@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using EmployeeDirectory.Data;
 using System.Threading.Tasks;
 using System.Linq;
+using System.IO;
 
 namespace EmployeeDirectory
 {
@@ -30,7 +31,7 @@ namespace EmployeeDirectory
 
 			//
 			// Local CSV file
-			Service = MemoryDirectoryService.FromCsv ("XamarinDirectory.csv").Result;
+//			Service = await MemoryDirectoryService.FromCsv ("XamarinDirectory.csv");
 
 			//
 			// LDAP service - uncomment to try it out.

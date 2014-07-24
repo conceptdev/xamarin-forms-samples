@@ -10,7 +10,7 @@ using EmployeeDirectory;
 
 namespace EmployeeDirectory.Android
 {
-	[Activity (Label = "EmployeeDirectory", MainLauncher = true)]
+	[Activity (Label = "Employee Directory", MainLauncher = true)]
 	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)
@@ -58,6 +58,23 @@ namespace EmployeeDirectory.Android
 			}
 			readStream.Close();
 			writeStream.Close();
+		}
+
+		public override bool OnKeyDown (Keycode keyCode, KeyEvent e)
+		{          
+			Console.WriteLine ("OnKeyDown:" + this.ActionBar.Title);
+			if (keyCode == Keycode.Back) 
+			{
+				if (this.ActionBar.Title.Contains("Login")) {
+					// The ROOT page is initially set to have 'Login' in .Title
+					// when the app starts (ie. it's hardcoded).
+					// If we're on the login page, swallow the back button.
+					// Note that when login occurs successfully, the .Title
+					// of the page is changed so that the back button works.
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 }

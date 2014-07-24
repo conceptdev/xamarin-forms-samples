@@ -29,7 +29,7 @@ namespace EmployeeDirectory
 			base.OnAppearing ();
 
 			if (LoginViewModel.ShouldShowLogin (App.LastUseTime)) {
-				Navigation.PushModalAsync (new LoginXaml ());
+				await Navigation.PushModalAsync (new LoginXaml (this));
 			}
 
 			//

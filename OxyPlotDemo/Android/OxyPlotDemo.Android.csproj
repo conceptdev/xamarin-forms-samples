@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{C5490C09-2456-4530-A5C6-A43086056A70}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>OxyPlot.Android</RootNamespace>
+    <RootNamespace>OxyPlotDemo.Android</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OxyPlot\OxyPlotDemo.csproj">
+    <ProjectReference Include="..\OxyPlotDemo\OxyPlotDemo.csproj">
       <Project>{9B510A00-2AC7-42CE-8C82-4D743762EC8F}</Project>
       <Name>OxyPlotDemo</Name>
     </ProjectReference>

@@ -22,7 +22,9 @@ namespace OxyPlotDemo.iOS
 		{
 			base.OnElementChanged (e);
 
-			SetNativeControl (new PlotView ());
+			var plotView = new PlotView ();
+
+			SetNativeControl (plotView);
 
 //			var Points = new List<DataPoint>
 //			{
@@ -40,6 +42,10 @@ namespace OxyPlotDemo.iOS
 //			var s = new LineSeries ();
 //			s.ItemsSource = Points;
 //			m.Series.Add (s);
+
+			Element.OnInvalidateDisplay = (s,ea) => {
+				plotView.SetNeedsDisplay();
+			};
 
 			Control.Model = Element.Model;
 

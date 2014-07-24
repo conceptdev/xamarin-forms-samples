@@ -11,6 +11,8 @@ namespace OxyPlotDemo
 			HeightRequest = 40;
 		}
 
+		public EventHandler OnInvalidateDisplay;
+
 		public static readonly BindableProperty BackgroundColorProperty = 
 			BindableProperty.Create ("BackgroundColor", typeof(Color), typeof(OxyPlotView), Color.Default);
 
@@ -27,6 +29,10 @@ namespace OxyPlotDemo
 			set { SetValue (ModelProperty, value); } 
 		}
 
+		public void InvalidateDisplay () {
+			if (OnInvalidateDisplay != null)
+				OnInvalidateDisplay (this, null);
+		}
 	}
 }
 

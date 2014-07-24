@@ -26,6 +26,11 @@ namespace OxyPlot.Android
 			base.OnElementChanged (e);
 
 			var plotView = new PlotView (Context);
+
+			NativeElement.OnInvalidateDisplay = (s,ea) => {
+				plotView.Invalidate();
+			};
+
 			SetNativeControl (plotView);
 
 			NativeControl.Model = NativeElement.Model;

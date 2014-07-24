@@ -56,7 +56,7 @@ namespace OxyPlotDemo.iOS
 		protected override void OnElementPropertyChanged (object sender, PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged (sender, e);
-			if (e.PropertyName == BoxView.ColorProperty.PropertyName) {
+			if (e.PropertyName == OxyPlotView.BackgroundColorProperty.PropertyName) {
 				Control.BackgroundColor = Element.BackgroundColor.ToUIColor ();
 			}
 		}

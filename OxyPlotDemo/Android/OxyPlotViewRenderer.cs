@@ -42,7 +42,7 @@ namespace OxyPlot.Android
 		{
 			base.OnElementPropertyChanged (sender, e);
 		
-			if (e.PropertyName == BoxView.ColorProperty.PropertyName) {
+			if (e.PropertyName == OxyPlotView.BackgroundColorProperty.PropertyName) {
 				NativeControl.SetBackgroundColor (NativeElement.BackgroundColor.ToAndroid ());
 			}
 		}

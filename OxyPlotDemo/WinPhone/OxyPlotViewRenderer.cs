@@ -18,7 +18,6 @@ namespace OxyPlotDemo.WinPhone
 {
     public class OxyPlotViewRenderer : ViewRenderer<OxyPlotView, PlotView>
     {
-
         protected override void OnElementChanged(ElementChangedEventArgs<OxyPlotView> e)
         {
             base.OnElementChanged(e);
@@ -27,9 +26,9 @@ namespace OxyPlotDemo.WinPhone
         
             var plotView = new PlotView();
 
-            plotView.Model = Element.Model;
-            
-            SetNativeControl(plotView);
+			plotView.Model = Element.Model;
+			plotView.Background = new SolidColorBrush(System.Windows.Media.Colors.White);
+			SetNativeControl(plotView);
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)

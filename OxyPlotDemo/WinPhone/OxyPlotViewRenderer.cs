@@ -28,6 +28,10 @@ namespace OxyPlotDemo.WinPhone
 
 			plotView.Model = Element.Model;
 			plotView.Background = new SolidColorBrush(System.Windows.Media.Colors.White);
+            Element.OnInvalidateDisplay = (s, ea) =>
+            {
+                plotView.InvalidatePlot(true);
+            };
 			SetNativeControl(plotView);
         }
 

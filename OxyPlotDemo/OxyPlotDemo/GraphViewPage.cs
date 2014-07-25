@@ -75,16 +75,16 @@ namespace OxyPlotDemo
 				};
 
 				Content = new StackLayout {
-					BackgroundColor = Color.White,
 					Orientation = StackOrientation.Vertical,
-					VerticalOptions = LayoutOptions.StartAndExpand,
+					VerticalOptions = LayoutOptions.FillAndExpand,
 					Children = {
 						opv,
 						label,
 						new StackLayout {
-							HorizontalOptions = LayoutOptions.CenterAndExpand,
+							HorizontalOptions = LayoutOptions.Center,
+                            VerticalOptions = LayoutOptions.StartAndExpand,
 							Orientation = StackOrientation.Horizontal,
-							Children = { stepButton, startButton, stopButton }
+                            Children = { stepButton, startButton, stopButton }
 						}
 
 					}

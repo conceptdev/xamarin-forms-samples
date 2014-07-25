@@ -65,7 +65,7 @@ namespace EmployeeDirectory.Android
 			Console.WriteLine ("OnKeyDown:" + this.ActionBar.Title);
 			if (keyCode == Keycode.Back) 
 			{
-				if (this.ActionBar.Title.Contains("Login")) {
+				if (this.ActionBar.Title != null && this.ActionBar.Title.Contains("Login")) {
 					// The ROOT page is initially set to have 'Login' in .Title
 					// when the app starts (ie. it's hardcoded).
 					// If we're on the login page, swallow the back button.
@@ -74,7 +74,13 @@ namespace EmployeeDirectory.Android
 					return false;
 				}
 			}
-			return true;
+			return base.OnKeyDown (keyCode, e);
+		}
+
+		public override void OnBackPressed ()
+		{
+			// could do something in this method instead of OnKeyDown above
+			base.OnBackPressed ();
 		}
 	}
 }

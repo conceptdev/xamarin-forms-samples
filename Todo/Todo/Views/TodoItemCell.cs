@@ -14,6 +14,7 @@ namespace Todo
 
 			var tick = new Image {
 				Source = FileImageSource.FromFile ("check"),
+				HorizontalOptions = LayoutOptions.End
 			};
 			tick.SetBinding (Image.IsVisibleProperty, "Done");
 

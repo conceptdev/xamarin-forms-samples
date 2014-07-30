@@ -10,7 +10,8 @@ namespace LoginPattern
 		public static Page GetLoginPage (ILoginManager ilm)
 		{	
 			loginManager = ilm;
-			return new LoginPage (ilm);
+//			return new LoginPage (ilm);
+			return new LoginModalPage (ilm);
 		}
 
 		public static Page GetMainPage ()

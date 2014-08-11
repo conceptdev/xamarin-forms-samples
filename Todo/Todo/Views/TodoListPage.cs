@@ -51,7 +51,8 @@ namespace Todo
 			});
 			newImage = new Image {
 				Source = "newitem.png",
-				WidthRequest = 40
+				WidthRequest = 40,
+				Opacity = 0.8f
 			};
 			newImage.GestureRecognizers.Add (tap);
 

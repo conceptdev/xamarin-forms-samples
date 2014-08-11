@@ -32,22 +32,27 @@ namespace Todo
 //			};
 
 			listView.ItemSelected += (sender, e) => {
+				if (e.SelectedItem == null) {
+					return; // ensures we ignore this handler when the selection is just being cleared
+				}
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
+				((ListView)sender).SelectedItem = null; // clears the 'selected' background
 			};
 
+			// make floating (+) image at bottom of screen
 			var tap = new TapGestureRecognizer ((View obj) => {
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
 			});
-
-			newImage = new Image ();
-			newImage.Source = "new.png";
-			newImage.WidthRequest = 40;
+			newImage = new Image {
+				Source = "newitem.png",
+				WidthRequest = 40
+			};
 			newImage.GestureRecognizers.Add (tap);
 
 			layout = new RelativeLayout ();
@@ -69,25 +74,17 @@ namespace Todo
 
 
 			#region toolbar
-			var tbi = new ToolbarItem ("+", null, () => {
+			var tbi = new ToolbarItem ("+", "plus.png", () => {
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
 			}, 0, 0);
-			if (Device.OS == TargetPlatform.Android) { // BUG: Android doesn't support the icon being null
-				tbi = new ToolbarItem ("+", "plus", () => {
-					var todoItem = new TodoItem();
-					var todoPage = new TodoItemPage();
-					todoPage.BindingContext = todoItem;
-					Navigation.PushAsync(todoPage);
-				}, 0, 0);
-			}
 
 			ToolbarItems.Add (tbi);
 
 			if (Device.OS == TargetPlatform.iOS) {
-				var tbi2 = new ToolbarItem ("?", null, () => {
+				var tbi2 = new ToolbarItem ("?", "chat.png", () => {
 					var todos = App.Database.GetItemsNotDone();
 					var tospeak = "";
 					foreach (var t in todos)

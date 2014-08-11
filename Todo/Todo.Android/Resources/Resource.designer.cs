@@ -24,12 +24,6 @@ namespace Todo
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::Todo.Resource.String.ApplicationName;
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::Todo.Resource.String.Hello;
-		}
-		
 		public partial class Attribute
 		{
 			
@@ -47,16 +41,22 @@ namespace Todo
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int check = 2130837504;
+			public const int chat = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int check2x = 2130837505;
+			public const int check = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int check2x = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int plus = 2130837507;
+			public const int Icon = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int newitem = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int plus = 2130837509;
 			
 			static Drawable()
 			{
@@ -120,16 +120,10 @@ namespace Todo
 		{
 			
 			// aapt resource value: 0x7f050001
-			public const int ApplicationName = 2131034113;
+			public const int app_name = 2131034113;
 			
 			// aapt resource value: 0x7f050000
-			public const int Hello = 2131034112;
-			
-			// aapt resource value: 0x7f050003
-			public const int app_name = 2131034115;
-			
-			// aapt resource value: 0x7f050002
-			public const int hello = 2131034114;
+			public const int hello = 2131034112;
 			
 			static String()
 			{

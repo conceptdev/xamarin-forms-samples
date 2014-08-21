@@ -43,10 +43,18 @@ namespace Todo
 			};
 
 			// make floating (+) image at bottom of screen
-			var tap = new TapGestureRecognizer ((View obj) => {
+			var tap = new TapGestureRecognizer (async (View obj) => {
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
+
+				var b = newImage.Bounds;
+				b.Y = b.Y - 50;
+
+				await newImage.LayoutTo(b,250, Easing.SinIn);
+				b.Y = b.Y + 50;
+				await newImage.LayoutTo(b,250, Easing.SinOut);
+
 				Navigation.PushAsync(todoPage);
 			});
 			newImage = new Image {

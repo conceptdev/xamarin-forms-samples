@@ -14,6 +14,9 @@ Tips for Offline in Azure Mobile Services on Xamarin.iOS](http://www.michaelridl
 
 * [Carlos Figueira: Deep dive on the offline support in the Azure Mobile Service managed client SDK](http://blogs.msdn.com/b/carlosfigueira/archive/2014/04/07/deep-dive-on-the-offline-support-in-the-azure-mobile-service-managed-client-sdk.aspx)
 
+Finally, here is a great link/essay on the issues with offline data & synchronization:
+
+* [Dealing with Disconnected Operation in a Mobile Business Application: Issues and Techniques for Supporting Offline Usage](http://bricklin.com/offline.htm)
 
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoAzureSync/Screenshots/AzureSync-iOS.png "iOS")
 

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="OxyPlot.Android">
+	<uses-sdk />
+	<application android:label="OxyPlot.Android">
+	</application>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+</manifest>

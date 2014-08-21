@@ -26,30 +26,13 @@ namespace OxyPlotDemo.iOS
 
 			SetNativeControl (plotView);
 
-//			var Points = new List<DataPoint>
-//			{
-//				new DataPoint(0, 4),
-//				new DataPoint(10, 13),
-//				new DataPoint(20, 15),
-//				new DataPoint(30, 16),
-//				new DataPoint(40, 12),
-//				new DataPoint(50, 12)
-//			};
-//
-//			var m = new PlotModel ("Titleee");
-//			m.PlotType = PlotType.XY;
-//
-//			var s = new LineSeries ();
-//			s.ItemsSource = Points;
-//			m.Series.Add (s);
-
-			Element.OnInvalidateDisplay = (s,ea) => {
+			Element.OnInvalidateDisplay += (s,ea) => {
+				Control.Model.InvalidatePlot(true);
+				Control.InvalidatePlot(true);
 				plotView.SetNeedsDisplay();
 			};
 
 			Control.Model = Element.Model;
-
-			Control.BackgroundColor = Element.BackgroundColor.ToUIColor ();
 		}
 
 		public override void LayoutSubviews ()
@@ -62,8 +45,9 @@ namespace OxyPlotDemo.iOS
 		protected override void OnElementPropertyChanged (object sender, PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged (sender, e);
-			if (e.PropertyName == OxyPlotView.BackgroundColorProperty.PropertyName) {
-				Control.BackgroundColor = Element.BackgroundColor.ToUIColor ();
+			if (e.PropertyName == OxyPlotView.ModelProperty.PropertyName) {
+				Control.Model.InvalidatePlot(true);
+				Control.InvalidatePlot(true);
 			}
 		}
 

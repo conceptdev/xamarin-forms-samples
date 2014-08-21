@@ -22,7 +22,7 @@ namespace OxyPlotDemo
 		}
 
 		public static readonly BindableProperty ModelProperty = 
-			BindableProperty.Create ("ModelProperty", typeof(OxyPlot.PlotModel), typeof(OxyPlotView), null);
+			BindableProperty.Create ("Model", typeof(OxyPlot.PlotModel), typeof(OxyPlotView), null);
 
 		public OxyPlot.PlotModel Model {
 			get { return (OxyPlot.PlotModel)GetValue (ModelProperty); }

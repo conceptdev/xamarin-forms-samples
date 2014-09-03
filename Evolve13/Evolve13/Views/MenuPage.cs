@@ -59,30 +59,30 @@ namespace Evolve13
 			switch (item) {
 			case "Sessions":
 				if (sessions == null)
-					sessions = new NavigationPage (new SessionsPage ()) { Tint = App.NavTint };
+					sessions = new NavigationPage (new SessionsPage ()) { BarBackgroundColor = App.NavTint };
 				master.Detail = sessions;
 				break;
 			case "Speakers":
 				if (speakers == null) {
-					speakers = new NavigationPage (new SpeakersPage ()) { Tint = App.NavTint };
+					speakers = new NavigationPage (new SpeakersPage ()) { BarBackgroundColor = App.NavTint };
 					//TODO: finish WrapLayout demo
-//					speakers = new NavigationPage (new SpeakersPageWrap ()) { Tint = App.NavTint };
+//					speakers = new NavigationPage (new SpeakersPageWrap ()) { BarBackgroundColor = App.NavTint };
 				}
 				master.Detail = speakers;
 				break;
 			case "Favorites":
 				if (favorites == null)
-					favorites = new NavigationPage (new FavoritesPage ()) { Tint = App.NavTint };
+					favorites = new NavigationPage (new FavoritesPage ()) { BarBackgroundColor = App.NavTint };
 				master.Detail = favorites;
 				break;
 			case "Room Plan":
-				master.Detail = new NavigationPage(new FloorplanPage()) {Tint = App.NavTint};
+				master.Detail = new NavigationPage(new FloorplanPage()) {BarBackgroundColor = App.NavTint};
 				break;
 			case "Map":
-				master.Detail = new NavigationPage(new MapPage()) {Tint = App.NavTint};
+				master.Detail = new NavigationPage(new MapPage()) {BarBackgroundColor = App.NavTint};
 				break;
 			case "About":
-				master.Detail = new NavigationPage(new AboutPage()) {Tint = App.NavTint};
+				master.Detail = new NavigationPage(new AboutPage()) {BarBackgroundColor = App.NavTint};
 				break;
 			};
 			master.IsPresented = false;  // close the slide-out

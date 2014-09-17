@@ -17,8 +17,12 @@ namespace Todo
 		{
 			var c = Forms.Context; 
 			toSpeak = text;
-			if (speaker == null)
+			if (speaker == null) {
 				speaker = new TextToSpeech (c, this);
+				var languageIso = "en_GB";
+				var locale = new Java.Util.Locale(languageIso);// languageIso is locale string
+				speaker.SetLanguage (locale);
+			}
 			else
 			{
 				var p = new Dictionary<string,string> ();

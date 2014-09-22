@@ -25,7 +25,8 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchSdkVersion>8.0</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -136,6 +137,9 @@
     <BundleResource Include="Resources\check1%402x.png" />
     <BundleResource Include="Resources\checkbox.png" />
     <BundleResource Include="Resources\checkbox%402x.png" />
+    <BundleResource Include="Resources\Default-667h%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Default-736h%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

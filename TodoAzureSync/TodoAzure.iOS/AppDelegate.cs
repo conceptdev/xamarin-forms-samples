@@ -49,7 +49,7 @@ namespace TodoXaml
 			InitializeStoreAsync().Wait();
 			#endregion
 
-			todoTable = Client.GetSyncTable<TodoItem>(); 
+			todoTable = Client.GetSyncTable<TodoItem>();
 			todoItemManager = new TodoItemManager(Client, todoTable);
 
 			App.SetTodoItemManager (todoItemManager);
@@ -72,9 +72,10 @@ namespace TodoXaml
 		public async Task InitializeStoreAsync()
 		{
 			string path = "syncstore.db";
-			var store = new MobileServiceSQLiteStore(path);
-			store.DefineTable<TodoItem>();
-			await Client.SyncContext.InitializeAsync(store);
+			var store = new MobileServiceSQLiteStore (path);
+			store.DefineTable<TodoItem> ();
+			await Client.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler());
+//				await Client.SyncContext.InitializeAsync (store);
 		}
 	}
 }

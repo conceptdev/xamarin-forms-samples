@@ -25,7 +25,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>CFBundleDisplayName</key>
-	<string>TodoAzure</string>
+	<string>TodoAzureSync</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x</string>

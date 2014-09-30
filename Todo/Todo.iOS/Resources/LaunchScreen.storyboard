@@ -23,10 +23,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint id="18" firstItem="yd7-JS-zBw" firstAttribute="centerX" secondItem="0q6-MR-edx" secondAttribute="centerX" constant="0.0"/>
-                            <constraint id="19" firstItem="0q6-MR-edx" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="0.0"/>
+                            <constraint id="19" firstItem="0q6-MR-edx" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="0.0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,5 +37,11 @@
     <resources>
         <image name="Icon-Small-40.png" width="80" height="80"/>
         <image name="Icon-60.png" width="120" height="120"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="Icon.png" width="29" height="29"/>
+        <image name="check.png" width="16" height="18"/>
+        <image name="newitem.png" width="40" height="40"/>
+        <image name="plus.png" width="15" height="15"/>
+        <image name="chat.png" width="18" height="16"/>
     </resources>
 </document>

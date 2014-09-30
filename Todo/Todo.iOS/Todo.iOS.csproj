@@ -152,4 +152,7 @@
       <Name>Todo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

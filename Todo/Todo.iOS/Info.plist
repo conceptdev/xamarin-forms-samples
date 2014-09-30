@@ -31,5 +31,7 @@
 		<string>Icon-60@2x</string>
 		<string>Icon@2x</string>
 	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>

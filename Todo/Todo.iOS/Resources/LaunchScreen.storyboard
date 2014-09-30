@@ -16,16 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xamarin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-MR-edx" misplaced="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Xamarin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-MR-edx">
                                 <rect key="frame" x="201" y="300" width="194" height="39"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint id="18" firstItem="yd7-JS-zBw" firstAttribute="centerX" secondItem="0q6-MR-edx" secondAttribute="centerX" constant="0.0"/>
-                            <constraint id="19" firstItem="0q6-MR-edx" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="0.0"/>
+                            <constraint firstAttribute="centerX" secondItem="0q6-MR-edx" secondAttribute="centerX" id="18"/>
+                            <constraint firstItem="0q6-MR-edx" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" id="19"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,14 +35,4 @@
             <point key="canvasLocation" x="349" y="339"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Icon-Small-40.png" width="80" height="80"/>
-        <image name="Icon-60.png" width="120" height="120"/>
-        <image name="Default-568h.png" width="640" height="1136"/>
-        <image name="Icon.png" width="29" height="29"/>
-        <image name="check.png" width="16" height="18"/>
-        <image name="newitem.png" width="40" height="40"/>
-        <image name="plus.png" width="15" height="15"/>
-        <image name="chat.png" width="18" height="16"/>
-    </resources>
 </document>

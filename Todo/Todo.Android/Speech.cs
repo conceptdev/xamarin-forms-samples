@@ -2,6 +2,9 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Java.Lang;
+using Todo;
+
+[assembly: Xamarin.Forms.Dependency (typeof (Speech))]
 
 namespace Todo
 {

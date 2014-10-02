@@ -53,14 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Default-568h.png" width="640" height="1136"/>
-        <image name="Icon-60.png" width="120" height="120"/>
-        <image name="Icon.png" width="114" height="114"/>
-        <image name="Search.png" width="24" height="24"/>
-        <image name="DetailsPlaceholder.jpg" width="88" height="88"/>
-        <image name="Placeholder.jpg" width="44" height="44"/>
-        <image name="Icon-Small-40.png" width="80" height="80"/>
-        <image name="Default.png" width="640" height="960"/>
         <image name="LaunchScreen-center.png" width="150" height="132"/>
         <image name="LaunchScreen-left.png" width="154" height="198"/>
         <image name="LaunchScreen-right.png" width="171" height="207"/>

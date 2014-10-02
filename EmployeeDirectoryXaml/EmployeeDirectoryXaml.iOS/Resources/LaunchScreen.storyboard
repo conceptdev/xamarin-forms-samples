@@ -16,10 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="24" translatesAutoresizingMaskIntoConstraints="NO" image="LaunchScreen-right.png">
+                                <rect key="frame" x="429" y="0.0" width="171" height="207"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="25" translatesAutoresizingMaskIntoConstraints="NO" image="LaunchScreen-left.png">
                                 <rect key="frame" x="0.0" y="402" width="154" height="198"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xamarin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-MR-edx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xamarin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0q6-MR-edx" misplaced="YES">
                                 <rect key="frame" x="203" y="350" width="194" height="39"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -32,9 +35,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="23" translatesAutoresizingMaskIntoConstraints="NO" image="LaunchScreen-center.png" horizontalContentHuggingPriority="1" verticalContentHuggingPriority="1">
                                 <rect key="frame" x="225" y="210" width="150" height="132"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="24" translatesAutoresizingMaskIntoConstraints="NO" image="LaunchScreen-right.png">
-                                <rect key="frame" x="429" y="0.0" width="171" height="207"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.45098039215686275" green="0.50588235294117645" blue="0.50980392156862742" alpha="1"/>
                         <constraints>
@@ -43,7 +43,9 @@
                             <constraint firstItem="24" firstAttribute="trailing" secondItem="yd7-JS-zBw" secondAttribute="trailing" constant="0.0" id="59"/>
                             <constraint id="81" firstItem="yd7-JS-zBw" firstAttribute="centerX" secondItem="23" secondAttribute="centerX" constant="0.0" priority="1"/>
                             <constraint firstItem="yd7-JS-zBw" firstAttribute="centerX" secondItem="0q6-MR-edx" secondAttribute="centerX" constant="0.0" id="89" priority="434"/>
-                            <constraint id="90" firstItem="yd7-JS-zBw" firstAttribute="top" secondItem="0q6-MR-edx" secondAttribute="top" constant="-350" priority="659"/>
+                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" constant="0.0" id="97"/>
+                            <constraint firstItem="yd7-JS-zBw" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" constant="24" id="99"/>
+                            <constraint firstItem="0q6-MR-edx" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" constant="69" id="106"/>
                         </constraints>
                     </view>
                 </viewController>

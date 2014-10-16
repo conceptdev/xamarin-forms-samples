@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace Magic8Ball
 {
+	// Magic Eight Ball 🎱
     public partial class MagicBallPage : ContentPage
     {
         public MagicBallPage()

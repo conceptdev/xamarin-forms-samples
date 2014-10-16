@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 					   x:Class="Magic8Ball.MagicBallPage">
-  <StackLayout>
-    <Label Text="(8)" Font="72"/>
+  <StackLayout Padding="0,20,0,0">
+    <Label Text="🎱" Font="72" XAlign="Center" />
     <Button Text="Shake" Clicked="ShakeClicked"/>
-    <Label x:Name="output"/>
+    <Label x:Name="output" XAlign="Center" />
   </StackLayout>
   
 </ContentPage>

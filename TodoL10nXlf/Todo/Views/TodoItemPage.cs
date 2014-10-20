@@ -65,6 +65,8 @@ namespace Todo
 			// using ResourceManager
 			saveButton.Text = AppResources.SaveButton;
 			deleteButton.Text = L10n.Localize ("DeleteButton", "Delete");
+			cancelButton.Text = L10n.Localize ("CancelButton", "Cancel");
+			speakButton.Text = L10n.Localize ("SpeakButton", "Speak");
 
 			// HACK: included as a 'test' for localizing the picker
 			// currently not saved to database

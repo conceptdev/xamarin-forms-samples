@@ -7,7 +7,7 @@
     	<StackLayout VerticalOptions="StartAndExpand" Padding="10,10,10,0">
  
 	        <Label Text="{i18n:Translate NameLabel}" />
-	        <Entry Text="" x:Name="nameEntry" Placeholder="task name" />
+	        <Entry Text="{Binding Path=Name}" x:Name="nameEntry" Placeholder="task name" />
  
 			<Label Text="{i18n:Translate NotesLabel}" />
 	        <Entry Text="{Binding Path=Notes}" x:Name="notesEntry" />

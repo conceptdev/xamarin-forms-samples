@@ -45,7 +45,6 @@ namespace Todo
 							
 			var cancelButton = new Button (); // no Text! localized later
 			cancelButton.Clicked += (sender, e) => {
-				var todoItem = (TodoItem)BindingContext;
                 this.Navigation.PopAsync();
 			};
 
@@ -69,8 +68,8 @@ namespace Todo
 
 			// HACK: included as a 'test' for localizing the picker
 			// currently not saved to database
-			var dueDateLabel = new Label { Text = "Due" };
-			var dueDatePicker = new DatePicker ();
+			//var dueDateLabel = new Label { Text = "Due" };
+			//var dueDatePicker = new DatePicker ();
 
 
 			Content = new StackLayout {
@@ -80,7 +79,7 @@ namespace Todo
 					nameLabel, nameEntry, 
 					notesLabel, notesEntry,
 					doneLabel, doneEntry,
-					dueDateLabel, dueDatePicker,
+					//dueDateLabel, dueDatePicker,
 					saveButton, deleteButton, cancelButton, speakButton
 				}
 			};

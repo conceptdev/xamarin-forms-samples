@@ -124,7 +124,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="add.png" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -150,6 +149,8 @@
     <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+    <Content Include="plus.png" />
+    <Content Include="chat.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AppResources.fr.resx" />

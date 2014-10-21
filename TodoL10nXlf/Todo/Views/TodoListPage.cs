@@ -41,55 +41,34 @@ namespace Todo
 			Content = layout;
 
 
-			ToolbarItem tbi = null;
-			if (Device.OS == TargetPlatform.iOS)
-			{
-				tbi = new ToolbarItem("+", null, () =>
-					{
-						var todoItem = new TodoItem();
-						var todoPage = new TodoItemPage();
-						todoPage.BindingContext = todoItem;
-						Navigation.PushAsync(todoPage);
-					}, 0, 0);
-			}
-			if (Device.OS == TargetPlatform.Android) { // BUG: Android doesn't support the icon being null
-				tbi = new ToolbarItem ("+", "plus", () => {
+			var tbiAdd = new ToolbarItem("Add", "plus.png", () =>
+				{
 					var todoItem = new TodoItem();
 					var todoPage = new TodoItemPage();
 					todoPage.BindingContext = todoItem;
 					Navigation.PushAsync(todoPage);
 				}, 0, 0);
-			}
-			if (Device.OS == TargetPlatform.WinPhone)
-			{
-				tbi = new ToolbarItem("Add", "add.png", () =>
-					{
-						var todoItem = new TodoItem();
-						var todoPage = new TodoItemPage();
-						todoPage.BindingContext = todoItem;
-						Navigation.PushAsync(todoPage);
-					}, 0, 0);
-			}
 
-			ToolbarItems.Add (tbi);
 
-			if (Device.OS == TargetPlatform.iOS) {
-				var tbi2 = new ToolbarItem ("?", null, () => {
-					var todos = App.Database.GetItemsNotDone();
-					var tospeak = "";
-					foreach (var t in todos)
-						tospeak += t.Name + " ";
-					if (tospeak == "") tospeak = "there are no tasks to do";
+			ToolbarItems.Add (tbiAdd);
 
-					if (todos.Count () > 0) {
-						var s = L10n.Localize("SpeakTaskCount", "Number of tasks to do");
-						tospeak = String.Format(s, todos.Count()) + tospeak;
-					}
 
-					DependencyService.Get<ITextToSpeech>().Speak(tospeak);
-				}, 0, 0);
-				ToolbarItems.Add (tbi2);
-			}
+			var tbiSpeak = new ToolbarItem ("Speak", "chat.png", () => {
+				var todos = App.Database.GetItemsNotDone();
+				var tospeak = "";
+				foreach (var t in todos)
+					tospeak += t.Name + " ";
+				if (tospeak == "") tospeak = "there are no tasks to do";
+
+				if (todos.Any ()) {
+					var s = L10n.Localize ("SpeakTaskCount", "Number of tasks to do");
+					tospeak = String.Format (s, todos.Count ()) + tospeak;
+				}
+
+				DependencyService.Get<ITextToSpeech>().Speak(tospeak);
+			}, 0, 0);
+			ToolbarItems.Add (tbiSpeak);
+
 
 		}
 

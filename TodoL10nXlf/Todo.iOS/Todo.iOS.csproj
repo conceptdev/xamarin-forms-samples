@@ -129,6 +129,8 @@
     <BundleResource Include="Resources\Icon-Small.png" />
     <BundleResource Include="Resources\Icon-Spotlight-40.png" />
     <BundleResource Include="Resources\Icon-Spotlight-40%402x.png" />
+    <BundleResource Include="Resources\chat.png" />
+    <BundleResource Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

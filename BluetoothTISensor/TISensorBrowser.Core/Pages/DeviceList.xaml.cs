@@ -16,6 +16,7 @@ namespace TISensorBrowser
 		public DeviceList (IAdapter adapter)
 		{
 			InitializeComponent ();
+
 			this.adapter = adapter;
 			this.devices = new ObservableCollection<IDevice> ();
 			listView.ItemsSource = devices;

@@ -37,7 +37,9 @@ namespace TISensorBrowser
 							}
 						});
 				};
-				IsBusy = false;
+				Device.BeginInvokeOnMainThread (() => {
+					IsBusy = false;
+				});
 				// start looking for services
 				device.DiscoverServices ();
 

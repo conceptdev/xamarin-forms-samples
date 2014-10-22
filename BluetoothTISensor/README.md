@@ -6,9 +6,13 @@ Here's a device shown next to the app running on an iPhone:
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/BluetoothTISensor/Screenshots/phone_plus_tag-sml.jpg "device and phone")
 
-Here is the complete screenflow for the iOS app:
+Here is the complete screenflow for the iOS app (showing the Magnometer sensor):
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/BluetoothTISensor/Screenshots/ios-all-sml.png "iOS screen flow")
+
+Here is the complete screenflow for the Android app (showing the Magnometer sensor):
+
+![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/BluetoothTISensor/Screenshots/android-all-sml.png "Android screen flow")
 
 The Xamarin.Forms common code has a direct assembly reference to **Robotics.Mobile.Core.dll** in the **Components** directory, because components cannot be added to PCL projects.
 

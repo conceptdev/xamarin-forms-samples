@@ -21,3 +21,7 @@ The **Monkey.Robotics** component (and this app!) is in 'beta' and is provided t
 ## Get a SensorTag
 
 You can buy the TI SensorTag on [Amazon](http://www.amazon.com/INSTRUMENTS-CC2541DK-SENSOR-CC2541-2-4GHZ-BLUETOOTH/dp/B00HVOOP6S/), and they also have their own app for [iOS](https://itunes.apple.com/us/app/ti-sensortag/id552918064?mt=8), [Android](https://play.google.com/store/apps/details?id=com.ti.ble.sensortag), and [Windows](http://apps.microsoft.com/windows/en-us/app/ti-sensor-tag-reader/c5218f45-f779-41d9-a5ca-4624df94613d) (to play with and compare data outputs).
+
+## Monkey.Robotics Source
+
+The component that contains the Bluetooth LE abstraction for Xamarin.Forms is open-source, and is [available on github](https://github.com/xamarin/Monkey.Robotics). As noted on the [component page](https://components.xamarin.com/view/Monkey.Robotics) it is still in *beta*.

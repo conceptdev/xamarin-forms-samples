@@ -71,13 +71,21 @@
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" />
   <ItemGroup>
     <XliffResource Include="MultilingualResources\TodoResx.de.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.es.xlf" />
+    <XliffResource Include="MultilingualResources\TodoResx.es.xlf">
+      <SubType>Designer</SubType>
+    </XliffResource>
     <XliffResource Include="MultilingualResources\TodoResx.fr.xlf" />
     <XliffResource Include="MultilingualResources\TodoResx.it.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.ja.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.ko-KR.xlf" />
+    <XliffResource Include="MultilingualResources\TodoResx.ja.xlf">
+      <SubType>Designer</SubType>
+    </XliffResource>
+    <XliffResource Include="MultilingualResources\TodoResx.ko.xlf">
+      <SubType>Designer</SubType>
+    </XliffResource>
     <XliffResource Include="MultilingualResources\TodoResx.pt-BR.xlf" />
-    <XliffResource Include="MultilingualResources\TodoResx.ru.xlf" />
+    <XliffResource Include="MultilingualResources\TodoResx.ru.xlf">
+      <SubType>Designer</SubType>
+    </XliffResource>
     <XliffResource Include="MultilingualResources\TodoResx.zh-Hans.xlf" />
     <XliffResource Include="MultilingualResources\TodoResx.zh-Hant.xlf" />
   </ItemGroup>
@@ -91,12 +99,15 @@
       <LastGenOutput>AppResources.it.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
-    <EmbeddedResource Include="Resx\AppResources.ru.resx" />
+    <EmbeddedResource Include="Resx\AppResources.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.zh-Hans.resx" />
     <EmbeddedResource Include="Resx\AppResources.zh-Hant.resx" />
     <EmbeddedResource Include="Resx\AppResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewsXaml\TodoItemXaml.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +115,7 @@
     <EmbeddedResource Include="Resx\AppResources.ko.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.ko-KR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.ja.resx">
       <Generator>ResXFileCodeGenerator</Generator>

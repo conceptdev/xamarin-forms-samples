@@ -189,7 +189,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\TodoResx.csproj">
+    <ProjectReference Include="..\Todo\TodoXlf.csproj">
       <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
       <Name>TodoL10nResx</Name>
     </ProjectReference>

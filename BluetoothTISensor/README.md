@@ -1,12 +1,12 @@
 # Bluetooth TI Sensor Browser (Xamarin.Forms)
 
-This sample uses the [Monkey.Robotics component](https://components.xamarin.com/view/Monkey.Robotics) to connect using Bluetooth LE to the [TI SensorTag](http://www.ti.com/ww/en/wireless_connectivity/sensortag/index.shtml) and access data from various sensors including temperature, accelerometer, pressure, humidity, and gyroscope (NOTE: code for parsing the barometer data is currently incomplete).
+This sample uses the [Monkey.Robotics component](https://components.xamarin.com/view/Monkey.Robotics) in a [Xamarin.Forms](http://xamarin.com/forms) app to connect using Bluetooth LE to the [TI SensorTag](http://www.ti.com/ww/en/wireless_connectivity/sensortag/index.shtml) and access data from various sensors including temperature, accelerometer, pressure, humidity, and gyroscope (NOTE: code for parsing the barometer data is currently incomplete).
 
-Here's a device shown next to the app running on an iPhone:
+Here's a device shown next to the app running on an iPhone 6:
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/BluetoothTISensor/Screenshots/phone_plus_tag-sml.jpg "device and phone")
 
-Here is the complete screenflow for the iOS app (showing the Magnometer sensor):
+The complete screenflow for the iOS app (showing the Magnometer sensor) is below. The app works like a 'browser', first locating Bluetooth LE devices to connect to, then connecting and discovering services and their characteristics, finally allowing you to set and query specific characteristics. This app example has hardcoded references to the characteristics exposed by the [TI SensorTag](http://www.ti.com/ww/en/wireless_connectivity/sensortag/index.shtml).
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/BluetoothTISensor/Screenshots/ios-all-sml.png "iOS screen flow")
 

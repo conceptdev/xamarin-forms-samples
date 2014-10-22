@@ -8,48 +8,48 @@
       <group id="TODORESX/RESX/APPRESOURCES.RESX">
         <trans-unit id="AddButton" translate="yes" xml:space="preserve">
           <source>Add</source>
-          <target state="new">Add</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">添加</target>
           <note from="MultilingualBuild" annotates="source" priority="2">machine translation</note>
           </trans-unit>
         <trans-unit id="ApplicationHeading" translate="yes" xml:space="preserve">
           <source>LionTodo</source>
-          <target state="new">LionTodo</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">LionTodo</target>
         </trans-unit>
         <trans-unit id="ApplicationTitle" translate="yes" xml:space="preserve">
           <source>LionTodo</source>
-          <target state="new">LionTodo</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">LionTodo</target>
         </trans-unit>
         <trans-unit id="DeleteButton" translate="yes" xml:space="preserve">
           <source>Delete</source>
-          <target state="new">Delete</target>
+          <target state="translated" state-qualifier="tm-suggestion">Delete</target>
         </trans-unit>
         <trans-unit id="DoneLabel" translate="yes" xml:space="preserve">
           <source>Done</source>
-          <target state="new">Done</target>
+          <target state="translated" state-qualifier="tm-suggestion">完成</target>
         </trans-unit>
         <trans-unit id="NameLabel" translate="yes" xml:space="preserve">
           <source>Name</source>
-          <target state="new">Name</target>
+          <target state="translated" state-qualifier="tm-suggestion">name</target>
         </trans-unit>
         <trans-unit id="NotesLabel" translate="yes" xml:space="preserve">
           <source>Notes</source>
-          <target state="new">Notes</target>
+          <target state="translated" state-qualifier="tm-suggestion">笔记</target>
         </trans-unit>
         <trans-unit id="SaveButton" translate="yes" xml:space="preserve">
           <source>Save</source>
-          <target state="new">Save</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">保存</target>
         </trans-unit>
         <trans-unit id="CancelButton" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="new">Cancel</target>
+          <target state="translated" state-qualifier="tm-suggestion">Cancel</target>
         </trans-unit>
         <trans-unit id="SpeakButton" translate="yes" xml:space="preserve">
           <source>Speak</source>
-          <target state="new">Speak</target>
+          <target state="translated" state-qualifier="tm-suggestion">朗读</target>
         </trans-unit>
         <trans-unit id="SpeakTaskCount" translate="yes" xml:space="preserve">
           <source>There are {0} tasks.</source>
-          <target state="new">There are {0} tasks.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">有 {0} 个任务。</target>
         </trans-unit>
               </group>
     </body>

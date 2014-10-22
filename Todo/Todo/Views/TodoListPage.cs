@@ -17,28 +17,17 @@ namespace Todo
 		{
 			Title = "Todo";
 
-			NavigationPage.SetHasNavigationBar (this, true);
-
 			listView = new ListView ();
 			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
 
-//			listView.ItemSource = new string [] { "Buy pears", "Buy oranges", "Buy mangos", "Buy apples", "Buy bananas" };
-//			listView.ItemSource = new TodoItem [] { 
-//				new TodoItem {Name = "Buy pears`"}, 
-//				new TodoItem {Name = "Buy oranges`", Done=true},
-//				new TodoItem {Name = "Buy mangos`"}, 
-//				new TodoItem {Name = "Buy apples`", Done=true},
-//				new TodoItem {Name = "Buy bananas`", Done=true}
-//			};
-
-			listView.ItemSelected += (sender, e) => {
+			listView.ItemSelected += async (sender, e) => {
 				if (e.SelectedItem == null) {
 					return; // ensures we ignore this handler when the selection is just being cleared
 				}
 				var todoItem = (TodoItem)e.SelectedItem;
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
-				Navigation.PushAsync(todoPage);
+				await Navigation.PushAsync(todoPage);
 				((ListView)sender).SelectedItem = null; // clears the 'selected' background
 			};
 
@@ -55,7 +44,7 @@ namespace Todo
 				b.Y = b.Y + 50;
 				await newImage.LayoutTo(b,250, Easing.SinOut);
 
-				Navigation.PushAsync(todoPage);
+				await Navigation.PushAsync(todoPage);
 			});
 			newImage = new Image {
 				Source = "newitem.png",
@@ -89,23 +78,23 @@ namespace Todo
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
 			}, 0, 0);
-
+			//tbi.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbi);
 
-			if (Device.OS == TargetPlatform.iOS) {
-				var tbi2 = new ToolbarItem ("?", "chat.png", () => {
-					var todos = App.Database.GetItemsNotDone();
-					var tospeak = "";
-					foreach (var t in todos)
-						tospeak += t.Name + " ";
-					if (tospeak == "") tospeak = "there are no tasks to do";
-					//App.Speech.Speak(tospeak);
+			var tbi2 = new ToolbarItem ("?", "chat.png", () => {
+				var todos = App.Database.GetItemsNotDone();
+				var tospeak = "";
+				foreach (var t in todos)
+					tospeak += t.Name + " ";
+				if (tospeak == "") tospeak = "there are no tasks to do";
 
-					DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
+				DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
-				}, 0, 0);
-				ToolbarItems.Add (tbi2);
-			}
+			}, 0, 0);
+			// demonstrate toolbar/optionmenu
+			tbi2.Order = ToolbarItemOrder.Secondary;
+			ToolbarItems.Add (tbi2);
+
 			#endregion
 		}
 
@@ -116,4 +105,3 @@ namespace Todo
 		}
 	}
 }
-

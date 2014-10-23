@@ -5,7 +5,7 @@ This sample uses **RESX** resource files to localize a Xamarin.Forms application
 
 The [DependencyService](http://developer.xamarin.com/guides/cross-platform/xamarin-forms/dependency-service/) is used to obtain the correct language/culture info from the current platform so that the correct strings are displayed.
 
-**SEE ALSO** the [Vernacular example](https://github.com/conceptdev/xamarin-forms-samples/tree/master/TodoL10nVernacular) of localizing Xamarin.Forms.
+**SEE ALSO** the [Vernacular example](https://github.com/conceptdev/xamarin-forms-samples/tree/master/TodoL10nVernacular) of localizing Xamarin.Forms, and also the [XLIFF example](https://github.com/conceptdev/xamarin-forms-samples/tree/master/TodoL10nXlf) using Microsoft's [Multilingual App Toolkit](https://dev.windows.com/en-us/develop/multilingual-app-toolkit).
 
 ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nResx/Screenshots/iOS-Japanese-sml.png "iOS Japanese")  ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nResx/Screenshots/Android-PortugeseBrazil-sml.png "Android Brazilian Portuguese")  ![screenshot](https://raw.githubusercontent.com/conceptdev/xamarin-forms-samples/master/TodoL10nResx/Screenshots/WinPhone-Spanish-sml.png "WinPhone Spanish")
 

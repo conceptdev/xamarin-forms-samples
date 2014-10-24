@@ -122,9 +122,9 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <None Include="chat.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="add.png" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -150,6 +150,7 @@
     <BundleResource Include="Toolkit.Content\ApplicationBar.Cancel.png" />
     <BundleResource Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="README_FIRST.txt" />
+    <Content Include="plus.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AppResources.fr.resx" />
@@ -197,11 +198,6 @@
       <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
       <Name>TodoL10nResx</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="SQLite.WP80, Version=3.8.5">
-      <Name>SQLite for Windows Phone</Name>
-    </SDKReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

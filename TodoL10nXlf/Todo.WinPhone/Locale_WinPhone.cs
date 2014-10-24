@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -25,7 +26,21 @@ namespace Todo.WinPhone
 
         public void SetLocale()
         {
-            throw new NotImplementedException();
+           
+            //System.Globalization.CultureInfo ci;
+            //try
+            //{
+            //    ci = new System.Globalization.CultureInfo(netLocale);
+            //}
+            //catch
+            //{
+            //    ci = new System.Globalization.CultureInfo(GetCurrent());
+            //}
+            Console.WriteLine("culture: "+Thread.CurrentThread.CurrentCulture);
+            Console.WriteLine("ui:      " + Thread.CurrentThread.CurrentUICulture);
+            //Thread.CurrentThread.CurrentCulture = ci;
+            //Thread.CurrentThread.CurrentUICulture = ci;
+            
         }
     }
 }

@@ -24,6 +24,13 @@ namespace Todo.WinPhone
             Forms.Init();
 
             Content = Todo.App.GetMainPage().ConvertPageToUIElement(this);
+
+            // Make appbar transparent or hidden... MUST be placed *after* setting the Content, otherwise ApplicationBar appears to be 'null'
+            // http://forums.xamarin.com/discussion/comment/84173/#Comment_84173
+            // 1) hides app bar
+            //ApplicationBar.Mode = ApplicationBarMode.Minimized;
+            // 2) sets transparency
+            ApplicationBar.Opacity = 0.5;
         }
     }
 }

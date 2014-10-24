@@ -56,26 +56,8 @@ namespace TISensorBrowser
 					select i.ToString ("X").PadRight(2, '0')).ToArray ();
 			RawValue.Text = string.Join (":", s);
 
-			if (c.ID == 0x2A37.UuidFromPartial ()) {
-				// heart rate
-				StringValue.Text = DecodeHeartRateCharacteristicValue (c.Value);
-				StringValue.TextColor = Color.Red;
-			} else {
-				StringValue.Text = c.StringValue;
-				StringValue.TextColor = Color.Default;
-			}
-
-		}
-
-		string DecodeHeartRateCharacteristicValue(byte[] data) {
-			ushort bpm = 0;
-			if ((data [0] & 0x01) == 0) {
-				bpm = data [1];
-			} else {
-				bpm = (ushort)data [1];
-				bpm = (ushort)(((bpm >> 8) & 0xFF) | ((bpm << 8) & 0xFF00));
-			}
-			return bpm.ToString () + " bpm";
+			StringValue.Text = c.StringValue;
+			StringValue.TextColor = Color.Default;
 		}
 	}
 }

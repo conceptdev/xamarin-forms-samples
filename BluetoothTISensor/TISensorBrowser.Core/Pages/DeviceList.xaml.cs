@@ -28,10 +28,10 @@ namespace TISensorBrowser
 			};
 
 			adapter.ScanTimeoutElapsed += (sender, e) => {
-				IsBusy = false;
 				adapter.StopScanningForDevices(); // not sure why it doesn't stop already, if the timeout elapses... or is this a fake timeout we made?
 				Device.BeginInvokeOnMainThread ( () => {
-					DisplayAlert("Timeout", "Bluetooth scan timeout elapsed", "OK", "");
+					IsBusy = false;
+					DisplayAlert("Timeout", "Bluetooth scan timeout elapsed", "OK");
 				});
 			};
 
@@ -39,10 +39,6 @@ namespace TISensorBrowser
 				InfoFrame.IsVisible = false;
 				StartScanning();
 			};
-
-//			ScanHrmButton.Activated += (sender, e) => {
-//				StartScanning (0x180D.UuidFromPartial());
-//			};
 		}
 
 		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {

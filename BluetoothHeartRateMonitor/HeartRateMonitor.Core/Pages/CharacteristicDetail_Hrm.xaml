@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="HeartRateMonitor.CharacteristicDetail_Hrm"
+			 Title="HeartRate Characteristic">
+
+	<StackLayout>
+		<StackLayout.Padding>10,10,10,10</StackLayout.Padding>
+		<Label Text="Heart rate info." />
+		<BoxView HeightRequest="3" WidthRequest="600" Color="Red" HorizontalOptions="CenterAndExpand" />
+
+		<Label Text="Name" TextColor="Gray" />
+		<Label x:Name="Name" Text="-" />
+
+		<Label Text="ID" TextColor="Gray" />
+		<Label x:Name="ID" Text="-" />
+
+		<Label Text="Raw Value" TextColor="Gray" />
+		<Label x:Name="RawValue" Text="-" />
+
+		<Label Text="String Value" TextColor="Gray" />
+		<Label x:Name="StringValue" Text="-" />
+	</StackLayout>
+</ContentPage>

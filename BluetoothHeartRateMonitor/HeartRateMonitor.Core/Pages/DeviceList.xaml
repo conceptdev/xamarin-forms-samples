@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:local="clr-namespace:HeartRateMonitor;assembly=HeartRateMonitor"
+			 x:Class="HeartRateMonitor.DeviceList"
+			 Title="Device List">
+	<ContentPage.Resources>
+	    <ResourceDictionary>
+	        <local:GuidConverter x:Key="guidConverter"/>
+	        <local:EmptyStringConverter x:Key="strConverter"/>
+	    </ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem x:Name="ScanHrmButton" Name="Scan" Icon="glyphish_29_heart.png"/>    
+	</ContentPage.ToolbarItems>
+
+	<AbsoluteLayout>
+		<ListView x:Name="listView" ItemSelected="OnItemSelected"
+			AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All" >
+		  <ListView.ItemTemplate>
+		    <DataTemplate>
+		      <ViewCell>
+		      	<StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">	
+			     	<StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+			        	<Label Text="{Binding Name, Converter={StaticResource strConverter}}" 
+			        		YAlign="Center" 
+			        		Font="Medium"
+			        		LineBreakMode="TailTruncation"
+			        		TextColor="Red" />
+			        	<Label Text="{Binding Path=ID, Converter={StaticResource guidConverter}}" 
+				        	YAlign="Center" 
+				        	Font="Micro" 
+				        	TextColor="Red"
+				        	Opacity="0.5" />
+			        </StackLayout>
+		         </StackLayout>
+		      </ViewCell>
+		    </DataTemplate>
+		  </ListView.ItemTemplate>
+		</ListView>
+
+		<Frame x:Name="InfoFrame"
+			BackgroundColor="#CC0000"
+			AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.8, 0.2"
+            AbsoluteLayout.LayoutFlags="All">
+			<Label 
+				Text="Click the Heart icon to scan for monitors." 
+				TextColor="White"
+				Font="Large" />
+		</Frame>
+	</AbsoluteLayout>
+</ContentPage>

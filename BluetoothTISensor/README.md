@@ -16,7 +16,7 @@ Here is the complete screenflow for the Android app (showing the Magnometer sens
 
 The Xamarin.Forms common code has a direct assembly reference to **Robotics.Mobile.Core.dll** in the **Components** directory, because components cannot be added to PCL projects.
 
-The **Monkey.Robotics** component (and this app!) is in 'beta' and is provided to learn about using Bluetooth LE wiht Xamarin.Forms.
+The **Monkey.Robotics** component (and this app!) is in 'beta' and is provided to learn about using Bluetooth LE with Xamarin.Forms.
 
 ## Get a SensorTag
 

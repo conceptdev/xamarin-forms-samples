@@ -35,6 +35,9 @@ namespace Todo.WinPhone
             // Language display initialization
             InitializeLanguage();
 
+            // NuGet Windows Phone Theme Manager
+            ThemeManager.ToLightTheme();
+
             // Show graphics profiling information while debugging.
             if (Debugger.IsAttached)
             {

@@ -165,6 +165,9 @@
     <BundleResource Include="Resources\AppResources.zh-Hant.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="JeffWilcox.PhoneThemeManager">
+      <HintPath>..\packages\PhoneThemeManager.2.1.2\lib\windowsphone8\JeffWilcox.PhoneThemeManager.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Phone.Controls.Toolkit">
       <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
     </Reference>

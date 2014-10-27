@@ -12,8 +12,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <resheader name="source-language">
+    <value>en</value>
+  </resheader>
   <data name="AddButton" xml:space="preserve">
-    <value>Add</value>
+    <value>添加</value>
     <comment>machine translation</comment>
   </data>
   <data name="ApplicationHeading" xml:space="preserve">
@@ -26,24 +29,24 @@
     <value>Delete</value>
   </data>
   <data name="DoneLabel" xml:space="preserve">
-    <value>Done</value>
+    <value>完成</value>
   </data>
   <data name="NameLabel" xml:space="preserve">
-    <value>Name</value>
+    <value>name</value>
   </data>
   <data name="NotesLabel" xml:space="preserve">
-    <value>Notes</value>
+    <value>笔记</value>
   </data>
   <data name="SaveButton" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
   <data name="CancelButton" xml:space="preserve">
     <value>Cancel</value>
   </data>
   <data name="SpeakButton" xml:space="preserve">
-    <value>Speak</value>
+    <value>朗读</value>
   </data>
   <data name="SpeakTaskCount" xml:space="preserve">
-    <value>There are {0} tasks.</value>
+    <value>有 {0} 个任务。</value>
   </data>
 </root>

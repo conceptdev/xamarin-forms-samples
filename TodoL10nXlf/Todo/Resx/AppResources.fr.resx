@@ -12,6 +12,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <resheader name="source-language">
+    <value>en</value>
+  </resheader>
   <data name="AddButton" xml:space="preserve">
     <value>Ajouter</value>
     <comment>machine translation</comment>
@@ -23,8 +26,7 @@
     <value>LionTodo</value>
   </data>
   <data name="DeleteButton" xml:space="preserve">
-    <value>suppression
-</value>
+    <value>suppression</value>
   </data>
   <data name="DoneLabel" xml:space="preserve">
     <value>Terminé</value>

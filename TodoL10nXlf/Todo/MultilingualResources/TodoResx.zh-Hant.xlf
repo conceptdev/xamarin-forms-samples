@@ -21,7 +21,7 @@
         </trans-unit>
         <trans-unit id="DeleteButton" translate="yes" xml:space="preserve">
           <source>Delete</source>
-          <target state="translated" state-qualifier="tm-suggestion">Delete</target>
+          <target state="translated">刪除</target>
         </trans-unit>
         <trans-unit id="DoneLabel" translate="yes" xml:space="preserve">
           <source>Done</source>
@@ -41,7 +41,7 @@
         </trans-unit>
         <trans-unit id="CancelButton" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="translated" state-qualifier="tm-suggestion">Cancel</target>
+          <target state="translated">取消</target>
         </trans-unit>
         <trans-unit id="SpeakButton" translate="yes" xml:space="preserve">
           <source>Speak</source>

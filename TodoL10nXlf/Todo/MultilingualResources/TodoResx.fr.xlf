@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en" target-language="fr" original="TODORESX/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en" target-language="fr" original="TODO/RESX/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1087.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="TODORESX/RESX/APPRESOURCES.RESX">
+      <group id="TODO/RESX/APPRESOURCES.RESX">
         <trans-unit id="AddButton" translate="yes" xml:space="preserve">
           <source>Add</source>
           <target state="translated" state-qualifier="tm-suggestion">Ajouter</target>
@@ -21,8 +21,7 @@
         </trans-unit>
         <trans-unit id="DeleteButton" translate="yes" xml:space="preserve">
           <source>Delete</source>
-          <target state="translated">suppression
-</target>
+          <target state="translated">suppression</target>
         </trans-unit>
         <trans-unit id="DoneLabel" translate="yes" xml:space="preserve">
           <source>Done</source>
@@ -55,4 +54,4 @@
               </group>
     </body>
   </file>
-<file datatype="xml" source-language="en" target-language="en" original="TODORESX/VIEWSXAML/TODOITEMXAML.XAML" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a"><header><tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1087.0" tool-company="Microsoft" /></header><body><group id="TODORESX/VIEWSXAML/TODOITEMXAML.XAML" /></body></file></xliff>
+</xliff>

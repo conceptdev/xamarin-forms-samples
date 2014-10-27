@@ -24,11 +24,10 @@ namespace UITestDemo
 
 			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
 			Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
+
+				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
 				if (null != e.View.StyleId) {
 					e.NativeView.AccessibilityIdentifier = e.View.StyleId;
-//					var intPtr = NSString.CreateNative(e.View.StyleId);
-//					Messaging.void_objc_msgSend_IntPtr(e.NativeView.Handle, setAccessibilityIdentifier_Handle, intPtr);
-//					NSString.ReleaseNative(intPtr);
 					Console.WriteLine("Set AccessibilityIdentifier: " + e.View.StyleId);
 				}
 			};
@@ -41,6 +40,7 @@ namespace UITestDemo
 
 
 			#if DEBUG
+			// requires Xamarin Test Cloud Agent component
 			Xamarin.Calabash.Start();
 			#endif
 

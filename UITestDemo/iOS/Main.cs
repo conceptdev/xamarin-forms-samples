@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace CalabashDemo.iOS
+namespace UITestDemo
 {
 	public class Application
 	{

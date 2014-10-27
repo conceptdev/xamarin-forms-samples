@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace CalabashDemo
+namespace UITestDemo
 {
 	/// <summary>
 	/// Demo of setting control identifiers to use with Calabash for testing
@@ -11,13 +11,7 @@ namespace CalabashDemo
 	{
 		public static Page GetMainPage ()
 		{	
-			return new ContentPage { 
-				Content = new Label {
-					Text = "Hello, Forms!",
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
-				},
-			};
+			return new MyPage ();
 		}
 	}
 }

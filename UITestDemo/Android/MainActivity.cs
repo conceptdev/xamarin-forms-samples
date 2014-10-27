@@ -11,9 +11,9 @@ using Android.OS;
 using Xamarin.Forms.Platform.Android;
 
 
-namespace CalabashDemo.Android
+namespace UITestDemo
 {
-	[Activity (Label = "CalabashDemo.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "UITestDemo.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

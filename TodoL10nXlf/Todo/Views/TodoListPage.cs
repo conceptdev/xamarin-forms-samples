@@ -22,10 +22,10 @@ namespace Todo
 				var todoItem = (TodoItem)e.SelectedItem;
 
 				// use C# localization
-//				var todoPage = new TodoItemPage();
+				var todoPage = new TodoItemPage();
 
 				// use XAML localization
-				var todoPage = new TodoItemXaml();
+//				var todoPage = new TodoItemXaml();
 
 
 				todoPage.BindingContext = todoItem;

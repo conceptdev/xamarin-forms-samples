@@ -9,11 +9,13 @@ using System.Linq;
 
 namespace UITestDemo.UITests
 {
+	/// <summary>
+	/// iOS bootstrapper for the shared Xamarin.Forms tests
+	/// </summary>
 	[TestFixture ()]
-	public class iOSTest : Tests
+	public class iOSTest : CrossPlatformTests
 	{
 		public string PathToIPA { get; set; }
-
 
 		[TestFixtureSetUp]
 		public void TestFixtureSetup()
@@ -25,9 +27,10 @@ namespace UITestDemo.UITests
 		}
 
 		[SetUp]
-		public void SetUp()
+		public override void SetUp()
 		{
 			// an API key is required to publish on Xamarin Test Cloud for remote, multi-device testing
+			// this works fine for local simulator testing though
 			_app = ConfigureApp.iOS.AppBundle(PathToIPA).ApiKey("YOUR_API_KEY_HERE").StartApp();
 		}
 	}

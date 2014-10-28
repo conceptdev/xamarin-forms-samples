@@ -9,8 +9,11 @@ using System.Linq;
 
 namespace UITestDemo.UITests
 {
+	/// <summary>
+	/// Android bootstrapper for the shared Xamarin.Forms tests
+	/// </summary>
 	[TestFixture ()]
-	public class AndroidTest : Tests
+	public class AndroidTest : CrossPlatformTests
 	{
 	
 		public string PathToAPK { get; set; }
@@ -26,9 +29,10 @@ namespace UITestDemo.UITests
 		}
 
 		[SetUp]
-		public void SetUp()
+		public override void SetUp()
 		{
 			// an API key is required to publish on Xamarin Test Cloud for remote, multi-device testing
+			// this works fine for local simulator testing though
 			_app = ConfigureApp.Android.ApkFile(PathToAPK).ApiKey("YOUR_API_KEY_HERE").StartApp();
 		}
 	}

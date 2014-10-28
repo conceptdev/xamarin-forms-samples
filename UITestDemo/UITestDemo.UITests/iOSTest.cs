@@ -10,14 +10,8 @@ using System.Linq;
 namespace UITestDemo.UITests
 {
 	[TestFixture ()]
-	public class iOSTest
+	public class iOSTest : Tests
 	{
-
-		static readonly Func<AppQuery, AppQuery> Button = c => c.Marked("MyButton");
-		static readonly Func<AppQuery, AppQuery> DoneMessage = c => c.Marked("MyLabel").Text("Was clicked");
-
-		iOSApp _app;
-
 		public string PathToIPA { get; set; }
 
 
@@ -35,20 +29,6 @@ namespace UITestDemo.UITests
 		{
 			// an API key is required to publish on Xamarin Test Cloud for remote, multi-device testing
 			_app = ConfigureApp.iOS.AppBundle(PathToIPA).ApiKey("YOUR_API_KEY_HERE").StartApp();
-		}
-
-
-		[Test ()]
-		public void TestCase ()
-		{
-			// Arrange - Nothing to do because the queries have already been initialized.
-
-			// Act
-			_app.Tap(Button);
-
-			// Assert
-			AppResult[] result = _app.Query(DoneMessage);
-			Assert.IsTrue(result.Any(), "The 'clicked' message is not being displayed.");
 		}
 	}
 }

@@ -23,3 +23,5 @@ Author
 ------
 
 Charles Petzold, minor halloween modifications by Craig Dunn
+
+p.p.s. I used [MakeAppIcon.com](http://makeappicon.com) to generate the iOS and Android icons :)

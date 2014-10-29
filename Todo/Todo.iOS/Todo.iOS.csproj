@@ -131,6 +131,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Speech.cs" />
     <Compile Include="TodoItemCellRenderer.cs" />
+    <Compile Include="SQLite.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />

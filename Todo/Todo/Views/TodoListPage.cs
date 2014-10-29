@@ -72,16 +72,16 @@ namespace Todo
 
 
 			#region toolbar
-			var tbi = new ToolbarItem ("+", "plus.png", () => {
+			var tbiAdd = new ToolbarItem ("+", "plus.png", () => {
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
 			}, 0, 0);
-			//tbi.Order = ToolbarItemOrder.Secondary;
-			ToolbarItems.Add (tbi);
+			//tbiAdd.Order = ToolbarItemOrder.Secondary;
+			ToolbarItems.Add (tbiAdd);
 
-			var tbi2 = new ToolbarItem ("?", "chat.png", () => {
+			var tbiSpeak = new ToolbarItem ("?", "chat.png", () => {
 				var todos = App.Database.GetItemsNotDone();
 				var tospeak = "";
 				foreach (var t in todos)
@@ -92,8 +92,8 @@ namespace Todo
 
 			}, 0, 0);
 			// demonstrate toolbar/optionmenu
-			tbi2.Order = ToolbarItemOrder.Secondary;
-			ToolbarItems.Add (tbi2);
+			//tbiSpeak.Order = ToolbarItemOrder.Secondary;
+			ToolbarItems.Add (tbiSpeak);
 
 			#endregion
 		}

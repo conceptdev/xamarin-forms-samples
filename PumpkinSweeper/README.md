@@ -4,7 +4,7 @@ PumpkinSweeper (Xamarin.Forms)
 Halloween version of BugSweeper
 -------------------------------
 
-**This is a fork of Charles Petzold's [BugSweeper sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/BugSweeper) from [Evolve 2014](http://evolve.xamarin.com)**
+**This is a fork of [Charles Petzold's](http://www.charlespetzold.com/blog/2014/10/My-Week-at-Xamarin-Evolve-2014.html) [BugSweeper sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/BugSweeper) from [Evolve 2014](http://evolve.xamarin.com)**
 
 **It incorporates the [@glyphish](https://twitter.com/glyphish/) [free Halloween icons](https://twitter.com/glyphish/status/527491592496504832).**
 

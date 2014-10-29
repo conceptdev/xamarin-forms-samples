@@ -13,8 +13,9 @@ Thereafter, numbers indicate the number of surrounding tiles with PUMPKINS.
 If you know that a tile has a PUMPKIN, flag it (or unflag it) with a single tap.
 Avoid double-tapping a tile with a PUMPKIN!
 
-![](Images/all-sml.png)
+![](Screenshots/all-sml.png)
 
+*Listen carefully if you fail!*
 
 Author
 ------

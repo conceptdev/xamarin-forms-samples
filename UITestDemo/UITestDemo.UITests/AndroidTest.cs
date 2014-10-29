@@ -17,7 +17,7 @@ namespace UITestDemo.UITests
 	{
 	
 		public string PathToAPK { get; set; }
-
+		 
 
 		[TestFixtureSetUp]
 		public void TestFixtureSetup()

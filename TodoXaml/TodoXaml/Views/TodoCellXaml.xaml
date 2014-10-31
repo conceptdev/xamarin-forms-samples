@@ -2,8 +2,8 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 		 	 x:Class="TodoXaml.TodoCellXaml">
-	<StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
-    	<Label Text="{Binding Name}" YAlign="Center" />
-    	<Image Source="check" IsVisible="{Binding Done}" />
+	<StackLayout Padding="20,0,20,0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+    	<Label Text="{Binding Name}" YAlign="Center" HorizontalOptions="StartAndExpand" />
+    	<Image Source="check" IsVisible="{Binding Done}" HorizontalOptions="EndAndExpand" />
      </StackLayout>
 </ContentView>

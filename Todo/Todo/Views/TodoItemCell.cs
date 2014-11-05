@@ -8,7 +8,8 @@ namespace Todo
 		public TodoItemCell ()
 		{
 			var label = new Label {
-				YAlign = TextAlignment.Center
+				YAlign = TextAlignment.Center,
+				HorizontalOptions = LayoutOptions.StartAndExpand
 			};
 			label.SetBinding (Label.TextProperty, "Name");
 
@@ -19,9 +20,9 @@ namespace Todo
 			tick.SetBinding (Image.IsVisibleProperty, "Done");
 
 			var layout = new StackLayout {
-				Padding = new Thickness(20, 0, 0, 0),
+				Padding = new Thickness(20, 0, 20, 0),
 				Orientation = StackOrientation.Horizontal,
-				HorizontalOptions = LayoutOptions.StartAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 				Children = {label, tick}
 			};
 			View = layout;

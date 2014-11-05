@@ -17,7 +17,7 @@ namespace Todo
 			NavigationPage.SetHasNavigationBar (this, true);
 			var nameLabel = new Label { Text = "Name" };
 			var nameEntry = new Entry ();
-			
+
 			nameEntry.SetBinding (Entry.TextProperty, "Name");
 
 			var notesLabel = new Label { Text = "Notes" };
@@ -28,21 +28,21 @@ namespace Todo
 			var doneEntry = new Switch ();
 			doneEntry.SetBinding (Switch.IsToggledProperty, "Done");
 
-			var saveButton = new Button { Text = "Save" };
+			var saveButton = new Button { Text = "Save", BackgroundColor = Color.Green, BorderRadius = 0, TextColor = Color.White };
 			saveButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				App.Database.SaveItem(todoItem);
 				this.Navigation.PopAsync();
 			};
 
-			var deleteButton = new Button { Text = "Delete" };
+			var deleteButton = new Button { Text = "Delete", BackgroundColor = Color.Red, BorderRadius = 0, TextColor = Color.White};
 			deleteButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				App.Database.DeleteItem(todoItem.ID);
 				this.Navigation.PopAsync();
 			};
 							
-			var cancelButton = new Button { Text = "Cancel" };
+			var cancelButton = new Button { Text = "Cancel", BackgroundColor = Color.Gray, BorderRadius = 0, TextColor = Color.White };
 			cancelButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				this.Navigation.PopAsync();

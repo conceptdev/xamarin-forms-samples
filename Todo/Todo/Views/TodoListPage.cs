@@ -17,7 +17,7 @@ namespace Todo
 		{
 			Title = "Todo";
 
-			listView = new ListView ();
+			listView = new ListView {StyleId = "TodoList"};
 			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
 
 			listView.ItemSelected += async (sender, e) => {
@@ -49,7 +49,8 @@ namespace Todo
 			newImage = new Image {
 				Source = "newitem.png",
 				WidthRequest = 40,
-				Opacity = 0.8f
+				Opacity = 0.8f,
+				StyleId = "TodoAdd"
 			};
 			newImage.GestureRecognizers.Add (tap);
 

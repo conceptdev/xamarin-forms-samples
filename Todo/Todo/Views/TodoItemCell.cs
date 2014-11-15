@@ -7,13 +7,17 @@ namespace Todo
 	{
 		public TodoItemCell ()
 		{
+			StyleId = "Cell";
+
 			var label = new Label {
+				StyleId = "CellLabel",
 				YAlign = TextAlignment.Center,
 				HorizontalOptions = LayoutOptions.StartAndExpand
 			};
 			label.SetBinding (Label.TextProperty, "Name");
 
 			var tick = new Image {
+				StyleId = "CellTick",
 				Source = FileImageSource.FromFile ("check"),
 				HorizontalOptions = LayoutOptions.End
 			};

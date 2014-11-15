@@ -28,14 +28,30 @@ namespace Todo
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
+
+			#if DEBUG
+			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
+			Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
+
+				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
+				if (null != e.View.StyleId) {
+					e.NativeView.AccessibilityIdentifier = e.View.StyleId;
+					Console.WriteLine("Set AccessibilityIdentifier: " + e.View.StyleId);
+				}
+			};
+			#endif
+
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-
 			// If you have defined a view, add it here:
 			window.RootViewController = App.GetMainPage ().CreateViewController ();
-
 			// make the window visible
 			window.MakeKeyAndVisible ();
+
+
+			#if DEBUG
+			Xamarin.Calabash.Start();
+			#endif
 
 			return true;
 		}

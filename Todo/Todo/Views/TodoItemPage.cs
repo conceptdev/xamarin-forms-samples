@@ -16,40 +16,55 @@ namespace Todo
 
 			NavigationPage.SetHasNavigationBar (this, true);
 			var nameLabel = new Label { Text = "Name" };
-			var nameEntry = new Entry ();
+			var nameEntry = new Entry { StyleId = "TodoName" };
 
 			nameEntry.SetBinding (Entry.TextProperty, "Name");
 
 			var notesLabel = new Label { Text = "Notes" };
-			var notesEntry = new Entry ();
+			var notesEntry = new Entry { StyleId = "TodoNotes" };
 			notesEntry.SetBinding (Entry.TextProperty, "Notes");
 
 			var doneLabel = new Label { Text = "Done" };
-			var doneEntry = new Switch ();
+			var doneEntry = new Switch  { StyleId = "TodoDone" };
 			doneEntry.SetBinding (Switch.IsToggledProperty, "Done");
 
-			var saveButton = new Button { Text = "Save", BackgroundColor = Color.Green, BorderRadius = 0, TextColor = Color.White };
+			var saveButton = new Button { Text = "Save", 
+				BackgroundColor = Color.Green, 
+				BorderRadius = 0, 
+				TextColor = Color.White,
+				StyleId = "TodoSave"
+			};
 			saveButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				App.Database.SaveItem(todoItem);
 				this.Navigation.PopAsync();
 			};
 
-			var deleteButton = new Button { Text = "Delete", BackgroundColor = Color.Red, BorderRadius = 0, TextColor = Color.White};
+			var deleteButton = new Button { Text = "Delete", 
+				BackgroundColor = Color.Red, 
+				BorderRadius = 0, 
+				TextColor = Color.White,
+				StyleId = "TodoDelete"
+			};
 			deleteButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				App.Database.DeleteItem(todoItem.ID);
 				this.Navigation.PopAsync();
 			};
 							
-			var cancelButton = new Button { Text = "Cancel", BackgroundColor = Color.Gray, BorderRadius = 0, TextColor = Color.White };
+			var cancelButton = new Button { Text = "Cancel", 
+				BackgroundColor = Color.Gray, 
+				BorderRadius = 0, 
+				TextColor = Color.White,
+				StyleId = "TodoCancel"
+			};
 			cancelButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				this.Navigation.PopAsync();
 			};
 
 
-			var speakButton = new Button { Text = "Speak" };
+			var speakButton = new Button { Text = "Speak", StyleId = "TodoSpeak"};
 			speakButton.Clicked += (sender, e) => {
 				var todoItem = (TodoItem)BindingContext;
 				DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);

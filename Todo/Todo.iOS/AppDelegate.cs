@@ -33,6 +33,8 @@ namespace Todo
 			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
 			Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
 
+				Console.WriteLine("=== " + e.View);
+
 				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
 				if (null != e.View.StyleId) {
 					e.NativeView.AccessibilityIdentifier = e.View.StyleId;

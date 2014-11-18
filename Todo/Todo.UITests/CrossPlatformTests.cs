@@ -11,8 +11,10 @@ namespace Todo.UITests
 		protected IApp _app;
 
 		// toolbar
-		static readonly Func<AppQuery, AppQuery> Add = c => c.Marked("+");
-		static readonly Func<AppQuery, AppQuery> SpeakAll = c => c.Marked("?");
+//		static readonly Func<AppQuery, AppQuery> Add = c => c.Marked("+");
+//		static readonly Func<AppQuery, AppQuery> SpeakAll = c => c.Marked("?");
+		static readonly Func<AppQuery, AppQuery> ToolbarAdd = c => c.Marked("ToolbarAdd");
+		static readonly Func<AppQuery, AppQuery> SpeakAll = c => c.Marked("ToolbarSpeak");
 
 		// floating button
 		static readonly Func<AppQuery, AppQuery> AddButton = c => c.Marked("TodoAdd");
@@ -35,6 +37,16 @@ namespace Todo.UITests
 			Assert.Ignore ("This class requires a platform-specific bootstrapper to override the `SetUp` method");
 		}
 
+
+		#region Helpers
+
+		void TapAndDelete(string cellText) {
+			_app.Tap (j => j.Marked (cellText));
+			_app.Tap (Speak);
+			_app.Tap (Delete);
+		}
+		#endregion
+
 		[Test ()]
 		public void TestCase ()
 		{
@@ -51,34 +63,35 @@ namespace Todo.UITests
 //
 //			// Act
 //			_app.Tap(Add);
-//
-//
 
-			_app.Tap (j => j.Marked ("Buy pears"));
-			_app.Tap (Speak);
-			_app.Tap (Delete);
+			var aq = _app.Query (a => a.Marked ("Buy pears"));
+			if (aq.Length > 0) { // exists 
+				TapAndDelete ("Buy pears");
 
-			_app.Tap (j => j.Marked ("Buy orange"));
-			_app.Tap (Speak);
-			_app.Tap (Delete);
 
-			_app.Tap (j => j.Marked ("Buy milk"));
-			_app.Tap (Speak);
-			_app.Tap (Delete);
+				_app.Tap (j => j.Marked ("Buy orange"));
+				_app.Tap (Speak);
+				_app.Tap (Delete);
 
-			_app.Tap (j => j.Marked ("Buy mangos"));
-			_app.Tap (Speak);
-			_app.Tap (Delete);
+				_app.Tap (j => j.Marked ("Buy milk"));
+				_app.Tap (Speak);
+				_app.Tap (Delete);
 
-			_app.Tap (j => j.Marked ("Buy apples"));
-			_app.Tap (Speak);
-			_app.Tap (Delete);
+				_app.Tap (j => j.Marked ("Buy mangos"));
+				_app.Tap (Speak);
+				_app.Tap (Delete);
 
-			_app.Tap (j => j.Marked ("Buy bananas"));
-			_app.Tap (Speak);
-			_app.Tap (Delete);
+				_app.Tap (j => j.Marked ("Buy apples"));
+				_app.Tap (Speak);
+				_app.Tap (Delete);
 
-			_app.Tap(AddButton);
+				_app.Tap (j => j.Marked ("Buy bananas"));
+				_app.Tap (Speak);
+				_app.Tap (Delete);
+			}
+
+//			_app.Tap (ToolbarAdd); // on toolbar (BUG)
+			_app.Tap (AddButton); // on floating image button
 			_app.Tap (TodoName);
 			_app.EnterText ("Buy kale");
 			_app.Tap (TodoNotes);
@@ -89,7 +102,7 @@ namespace Todo.UITests
 
 
 
-			_app.Tap(AddButton);
+			_app.Tap (AddButton);
 			_app.Tap (TodoName);
 			_app.EnterText ("Buy broccolini");
 			_app.Tap (TodoNotes);
@@ -108,7 +121,8 @@ namespace Todo.UITests
 			_app.Tap (Save); 
 
 
-			_app.Tap (SpeakAll);
+
+//			_app.Tap (SpeakAll); // on toolbar (BUG)
 
 
 //			// Assert

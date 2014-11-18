@@ -79,6 +79,7 @@ namespace Todo
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
 			}, 0, 0);
+			tbiAdd.StyleId = "ToolbarAdd";
 			//tbiAdd.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbiAdd);
 
@@ -92,6 +93,7 @@ namespace Todo
 				DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 			}, 0, 0);
+			tbiAdd.StyleId = "ToolbarSpeak";
 			// demonstrate toolbar/optionmenu
 			//tbiSpeak.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbiSpeak);

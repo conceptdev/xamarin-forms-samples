@@ -11,10 +11,13 @@ namespace Todo
 
 		public static Page GetMainPage ()
 		{
-			L10n.SetLocale ();
+			//L10n.SetLocale ();
 
-			var netLanguage = DependencyService.Get<ILocale>().GetCurrent();
-			AppResources.Culture = new CultureInfo (netLanguage);
+            if (Device.OS != TargetPlatform.WinPhone)
+            {
+                var netLanguage = DependencyService.Get<ILocale>().GetCurrent();
+                AppResources.Culture = new CultureInfo(netLanguage);
+            }
 
 			var mainNav = new NavigationPage (new TodoListPage ());
 

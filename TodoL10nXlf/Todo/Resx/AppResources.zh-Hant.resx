@@ -26,7 +26,7 @@
     <value>LionTodo</value>
   </data>
   <data name="DeleteButton" xml:space="preserve">
-    <value>Delete</value>
+    <value>刪除</value>
   </data>
   <data name="DoneLabel" xml:space="preserve">
     <value>完成</value>
@@ -41,7 +41,7 @@
     <value>儲存</value>
   </data>
   <data name="CancelButton" xml:space="preserve">
-    <value>Cancel</value>
+    <value>取消</value>
   </data>
   <data name="SpeakButton" xml:space="preserve">
     <value>演說</value>

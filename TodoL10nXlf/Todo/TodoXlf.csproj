@@ -47,6 +47,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.ko.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resx\AppResources.pt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.pt.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsXaml\TodoItemXaml.xaml.cs">
+      <DependentUpon>TodoItemXaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TodoListPage.cs" />
     <Compile Include="Views\TodoItemPage.cs" />
     <Compile Include="Models\TodoItem.cs" />
@@ -85,8 +93,13 @@
     </XliffResource>
     <XliffResource Include="MultilingualResources\TodoResx.zh-Hans.xlf" />
     <XliffResource Include="MultilingualResources\TodoResx.zh-Hant.xlf" />
+    <XliffResource Include="MultilingualResources\TodoResx.pt.xlf" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ViewsXaml\TodoItemXaml.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resx\AppResources.de.resx" />
     <EmbeddedResource Include="Resx\AppResources.es.resx" />
@@ -96,6 +109,10 @@
       <LastGenOutput>AppResources.it.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.pt-BR.resx" />
+    <EmbeddedResource Include="Resx\AppResources.pt.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.pt.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resx\AppResources.ru.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -129,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="ViewsXaml\README.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />

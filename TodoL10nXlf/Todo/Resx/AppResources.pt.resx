@@ -16,7 +16,7 @@
     <value>en</value>
   </resheader>
   <data name="AddButton" xml:space="preserve">
-    <value>添加</value>
+    <value>Adicionar</value>
     <comment>machine translation</comment>
   </data>
   <data name="ApplicationHeading" xml:space="preserve">
@@ -26,27 +26,27 @@
     <value>LionTodo</value>
   </data>
   <data name="DeleteButton" xml:space="preserve">
-    <value>删除</value>
+    <value>Delete</value>
   </data>
   <data name="DoneLabel" xml:space="preserve">
-    <value>完成</value>
+    <value>concluído</value>
   </data>
   <data name="NameLabel" xml:space="preserve">
-    <value>名称</value>
+    <value>Name</value>
   </data>
   <data name="NotesLabel" xml:space="preserve">
-    <value>笔记</value>
+    <value>Observações</value>
   </data>
   <data name="SaveButton" xml:space="preserve">
-    <value>保存</value>
+    <value>Save</value>
   </data>
   <data name="CancelButton" xml:space="preserve">
-    <value>取消</value>
+    <value>Cancel</value>
   </data>
   <data name="SpeakButton" xml:space="preserve">
-    <value>朗读</value>
+    <value>Falar</value>
   </data>
   <data name="SpeakTaskCount" xml:space="preserve">
-    <value>有 {0} 个任务。</value>
+    <value>Há {0} tarefas.</value>
   </data>
 </root>

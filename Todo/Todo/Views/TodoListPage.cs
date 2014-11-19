@@ -17,7 +17,7 @@ namespace Todo
 		{
 			Title = "Todo";
 
-			listView = new ListView ();
+			listView = new ListView {StyleId = "TodoList"};
 			listView.ItemTemplate = new DataTemplate (typeof (TodoItemCell));
 
 			listView.ItemSelected += async (sender, e) => {
@@ -49,7 +49,8 @@ namespace Todo
 			newImage = new Image {
 				Source = "newitem.png",
 				WidthRequest = 40,
-				Opacity = 0.8f
+				Opacity = 0.8f,
+				StyleId = "TodoAdd"
 			};
 			newImage.GestureRecognizers.Add (tap);
 
@@ -72,16 +73,17 @@ namespace Todo
 
 
 			#region toolbar
-			var tbi = new ToolbarItem ("+", "plus.png", () => {
+			var tbiAdd = new ToolbarItem ("+", "plus.png", () => {
 				var todoItem = new TodoItem();
 				var todoPage = new TodoItemPage();
 				todoPage.BindingContext = todoItem;
 				Navigation.PushAsync(todoPage);
 			}, 0, 0);
-			//tbi.Order = ToolbarItemOrder.Secondary;
-			ToolbarItems.Add (tbi);
+			tbiAdd.StyleId = "ToolbarAdd";
+			//tbiAdd.Order = ToolbarItemOrder.Secondary;
+			ToolbarItems.Add (tbiAdd);
 
-			var tbi2 = new ToolbarItem ("?", "chat.png", () => {
+			var tbiSpeak = new ToolbarItem ("?", "chat.png", () => {
 				var todos = App.Database.GetItemsNotDone();
 				var tospeak = "";
 				foreach (var t in todos)
@@ -91,9 +93,10 @@ namespace Todo
 				DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 			}, 0, 0);
+			tbiAdd.StyleId = "ToolbarSpeak";
 			// demonstrate toolbar/optionmenu
-			tbi2.Order = ToolbarItemOrder.Secondary;
-			ToolbarItems.Add (tbi2);
+			//tbiSpeak.Order = ToolbarItemOrder.Secondary;
+			ToolbarItems.Add (tbiSpeak);
 
 			#endregion
 		}

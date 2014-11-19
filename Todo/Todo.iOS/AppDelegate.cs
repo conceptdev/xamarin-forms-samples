@@ -9,6 +9,7 @@ using System.IO;
 
 namespace Todo
 {
+
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
@@ -27,34 +28,32 @@ namespace Todo
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
+
+			#if DEBUG
+			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
+			Forms.ViewInitialized += (object sender, ViewInitializedEventArgs e) => {
+
+				Console.WriteLine("=== " + e.View);
+
+				// http://developer.xamarin.com/recipes/testcloud/set-accessibilityidentifier-ios/
+				if (null != e.View.StyleId) {
+					e.NativeView.AccessibilityIdentifier = e.View.StyleId;
+					Console.WriteLine("Set AccessibilityIdentifier: " + e.View.StyleId);
+				}
+			};
+			#endif
+
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-
-			var sqliteFilename = "TodoSQLite.db3";
-			string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
-			string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library folder
-			var path = Path.Combine(libraryPath, sqliteFilename);
-
-			// This is where we copy in the prepopulated database
-			Console.WriteLine (path);
-			if (!File.Exists (path)) {
-				File.Copy (sqliteFilename, path);
-			}
-
-			var plat = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
-			var conn = new SQLite.Net.SQLiteConnection(plat, path);
-
-			// Set the database connection string
-			App.SetDatabaseConnection (conn);
-
-			App.SetTextToSpeech (new Speech ());
-
 			// If you have defined a view, add it here:
-			// window.RootViewController  = navigationController;
 			window.RootViewController = App.GetMainPage ().CreateViewController ();
-
 			// make the window visible
 			window.MakeKeyAndVisible ();
+
+
+			#if DEBUG
+			Xamarin.Calabash.Start();
+			#endif
 
 			return true;
 		}

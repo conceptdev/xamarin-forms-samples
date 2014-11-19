@@ -11,9 +11,9 @@ using Android.Content.PM;
 
 namespace Todo
 {
-	[Activity (Label = "TodoXLF", MainLauncher = true, 
+	[Activity (Label = "@string/app_name", MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
-        ScreenOrientation = ScreenOrientation.Portrait,
+		ScreenOrientation = ScreenOrientation.Portrait,
 		Theme = "@android:style/Theme.Holo.Light")]
 	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
 	{

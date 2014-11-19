@@ -19,9 +19,6 @@ namespace Evolve13
 			{
 				MapType = MapType.Street,
 				HeightRequest = 508
-//				X=0, Y=0,
-//				Width = 320,
-//				Height = 420
 			};
 			map.BackgroundColor = Color.White;
 
@@ -40,12 +37,6 @@ namespace Evolve13
 
 				}
 			};
-//			Content = new AbsoluteLayout {
-//				//BackgroundColor = Color.Gray,
-//				Children = {
-//					map
-//				}
-//			};
 		}
 	}
 }

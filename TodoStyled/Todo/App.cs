@@ -1,15 +1,29 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Todo
 {
-	public static class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{
 			var mainNav = new NavigationPage (new TodoListPage ());
 			mainNav.BarBackgroundColor = Color.FromHex ("a97946");
-			return mainNav;
+			MainPage = mainNav;
+		}
+
+		protected override void OnStart ()
+		{
+			// Handle when your app starts
+		}
+
+		protected override void OnSleep ()
+		{
+			// Handle when your app sleeps
+		}
+
+		protected override void OnResume ()
+		{
+			// Handle when your app resumes
 		}
 
 		static SQLite.Net.SQLiteConnection conn;

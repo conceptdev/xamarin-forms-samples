@@ -11,7 +11,7 @@ using Android.Speech.Tts;
 namespace Todo
 {
 	[Activity (Label = "Todo", MainLauncher = true)]
-	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
+	public class Activity1 : Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		// I apologize in advance for this awful hack, I'm sure there's a better way...
 		public static Activity1 SpeakingActivityContext; 
@@ -19,8 +19,6 @@ namespace Todo
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			SpeakingActivityContext = this; // HACK: for SpeakButtonRenderer to get an Activity/Context reference
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 
@@ -44,12 +42,13 @@ namespace Todo
 			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
 			var conn = new SQLite.Net.SQLiteConnection(plat, path);
 
+
+			var a = new App ();
 			// Set the database connection string
 			App.SetDatabaseConnection (conn);
-
 			App.SetTextToSpeech (new Speech ());
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (a);
 		}
 
 		/// <summary>

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using Todo;
 using Todo.iOS;
-using MonoTouch.UIKit;
+using UIKit;
 
 [assembly:ExportRenderer(typeof(NotesListView), typeof(NotesListViewRenderer))]
 

@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Content.PM;
 
 using Xamarin.Forms.Platform.Android;
 using System.Xml.Serialization;
@@ -15,8 +16,10 @@ using System.IO;
 
 namespace RestaurantGuide.Android
 {
-	[Activity (Label = "RestaurantGuide.Android.Android", MainLauncher = true)]
-	public class MainActivity : AndroidActivity
+	[Activity (Label = "RestaurantGuide", 
+		MainLauncher = true,
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class MainActivity : FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -26,7 +29,7 @@ namespace RestaurantGuide.Android
 
 			App.SetContent (LoadXml ());
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 
 

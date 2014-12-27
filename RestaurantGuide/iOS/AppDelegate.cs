@@ -9,12 +9,13 @@ using Xamarin.Forms;
 using RestaurantGuide;
 using System.IO;
 using System.Xml.Serialization;
+using Xamarin.Forms.Platform.iOS;
 
 
 namespace RestaurantGuide.iOS
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
 		UIWindow window;
 
@@ -26,10 +27,9 @@ namespace RestaurantGuide.iOS
 
 			App.SetContent (LoadXml());
 
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			window.MakeKeyAndVisible ();
+			LoadApplication (new App ());
 			
-			return true;
+			return base.FinishedLaunching(app, options);
 		}
 
 		List<Restaurant> LoadXml() {

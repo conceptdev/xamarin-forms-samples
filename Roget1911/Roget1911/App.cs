@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 
 namespace Roget1911
 {
-	public static class App
+	public class App : Application
 	{
 		public static XmlLoader XmlData;
 
-		public static Page GetMainPage ()
+		public App ()
 		{
 			var mainNav = new NavigationPage (new MainListPage ());
 
@@ -20,7 +20,7 @@ namespace Roget1911
 			//
 			XmlData = new XmlLoader();
 
-			return mainNav;
+			MainPage = mainNav;
 		}
 
 		public static async Task LoadXml() {

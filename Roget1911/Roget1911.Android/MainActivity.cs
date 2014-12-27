@@ -6,11 +6,14 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Android.Content.PM;
 
 namespace Roget1911
 {
-	[Activity (Label = "Roget1911", MainLauncher = true)]
-	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
+	[Activity (Label = "Roget1911", 
+		MainLauncher = true,
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class Activity1 : Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -51,7 +54,7 @@ namespace Roget1911
 
 //			App.SetTextToSpeech (new Speech ());
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 
 		void ReadWriteStream(Stream readStream, Stream writeStream)

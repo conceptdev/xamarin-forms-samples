@@ -5,6 +5,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
 using System.IO;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Roget1911
 {
@@ -12,7 +13,7 @@ namespace Roget1911
 	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
 		// class-level declarations
 		UIWindow window;
@@ -54,14 +55,9 @@ namespace Roget1911
 
 			App.SetTextToSpeech (new Speech ());
 
-			// If you have defined a view, add it here:
-			// window.RootViewController  = navigationController;
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
+			LoadApplication (new App ());
 
-			// make the window visible
-			window.MakeKeyAndVisible ();
-
-			return true;
+			return base.FinishedLaunching(app, options);
 		}
 	}
 }

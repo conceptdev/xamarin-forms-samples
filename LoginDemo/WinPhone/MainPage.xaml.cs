@@ -13,24 +13,16 @@ using Xamarin.Forms;
 
 namespace LoginPattern.WinPhone
 {
-    public partial class MainPage : PhoneApplicationPage, ILoginManager
+	public partial class MainPage : Xamarin.Forms.Platform.WinPhone.FormsApplicationPage
     {
         public MainPage()
         {
             InitializeComponent();
+			SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             Forms.Init();
-            Content = LoginPattern.App.GetLoginPage(this).ConvertPageToUIElement(this);
-        }
-
-        public void ShowMainPage()
-        {
-            Content = LoginPattern.App.GetMainPage().ConvertPageToUIElement(this);
-        }
-
-        public void Logout()
-        {
-            Content = LoginPattern.App.GetLoginPage(this).ConvertPageToUIElement(this);
+         
+			LoadApplication(new LoginPattern.App());
         }
     }
 }

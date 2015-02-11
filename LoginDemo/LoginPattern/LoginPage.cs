@@ -14,6 +14,8 @@ namespace LoginPattern
 				{
 					DisplayAlert("Validation Error", "Username and Password are required", "Re-try");
 				} else {
+					// REMEMBER LOGIN STATUS!
+					App.Current.Properties["IsLoggedIn"] = true;
 					ilm.ShowMainPage();
 				}
 			};
@@ -27,7 +29,7 @@ namespace LoginPattern
 			Content = new StackLayout {
 				Padding = new Thickness (10, 40, 10, 10),
 				Children = {
-					new Label { Text = "Login", Font = Font.SystemFontOfSize(NamedSize.Large) }, 
+					new Label { Text = "Login", FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)) }, 
 					new Label { Text = "Username" },
 					username,
 					new Label { Text = "Password" },

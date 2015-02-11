@@ -32,7 +32,7 @@ namespace LoginPattern
 
 			var logoutButton = new Button { Text = "Logout" };
 			logoutButton.Clicked += (sender, e) => {
-				App.Logout();
+				App.Current.Logout();
 			};
 
 			Content = new StackLayout {

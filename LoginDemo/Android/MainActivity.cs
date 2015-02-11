@@ -15,7 +15,7 @@ using LoginPattern;
 namespace LoginPattern.Android
 {
 	[Activity (Label = "LoginPattern.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity, ILoginManager
+	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -23,22 +23,8 @@ namespace LoginPattern.Android
 
 			Xamarin.Forms.Forms.Init (this, bundle);
 
-			SetPage (App.GetLoginPage (this));
+			LoadApplication (new App ());
 		}
-
-	
-		#region ILoginManager implementation
-
-		public void ShowMainPage ()
-		{
-			SetPage (App.GetMainPage ()); 
-		}
-
-		public void Logout() 
-		{
-			SetPage (App.GetLoginPage (this)); 
-		}
-		#endregion
 	}
 }
 

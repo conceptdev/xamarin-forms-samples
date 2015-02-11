@@ -3,25 +3,33 @@ using Xamarin.Forms;
 
 namespace LoginPattern
 {
-	public static class App
+	public class App : Application, ILoginManager
 	{
 		static ILoginManager loginManager;
+		public static App Current;
 
-		public static Page GetLoginPage (ILoginManager ilm)
+		public App ()
 		{	
-			loginManager = ilm;
-//			return new LoginPage (ilm);
-			return new LoginModalPage (ilm);
+			Current = this;
+
+			var isLoggedIn = Properties.ContainsKey("IsLoggedIn")?(bool)Properties ["IsLoggedIn"]:false;
+
+			// we remember if they're logged in, and only display the login page if they're not
+			if (isLoggedIn)
+				MainPage = new LoginPattern.MainPage ();
+			else
+				MainPage = new LoginModalPage (this);
 		}
 
-		public static Page GetMainPage ()
+		public void ShowMainPage ()
 		{	
-			return new MainPage ();
+			MainPage = new MainPage ();
 		}
 
-		public static void Logout ()
+		public void Logout ()
 		{
-			loginManager.Logout();
+			Properties ["IsLoggedIn"] = false; // only gets set to 'true' on the LoginPage
+			MainPage = new LoginModalPage (this);
 		}
 	}
 }

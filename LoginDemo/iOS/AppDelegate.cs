@@ -7,42 +7,21 @@ using MonoTouch.UIKit;
 
 using Xamarin.Forms;
 using LoginPattern.iOS;
+using Xamarin.Forms.Platform.iOS;
 
 namespace LoginPattern.iOS
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate, ILoginManager
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
-		UIWindow window;
-
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Forms.Init ();
 
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			
-			window.RootViewController = App.GetLoginPage (this).CreateViewController ();
-			window.MakeKeyAndVisible ();
-			
-			return true;
+			LoadApplication (new App ());
+
+			return base.FinishedLaunching(app,options);
 		}
-
-		#region ILoginManager implementation
-
-		// https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/WindowAndScreenGuide/WindowScreenRolesinApp/WindowScreenRolesinApp.html
-		public void ShowMainPage ()
-		{
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			window.MakeKeyAndVisible ();
-		}
-
-		public void Logout ()
-		{
-			window.RootViewController = App.GetLoginPage (this).CreateViewController ();
-			window.MakeKeyAndVisible ();
-		}
-
-		#endregion
 	}
 }
 

@@ -156,7 +156,7 @@ namespace Xamarin.Forms
 
 			if (rowCount > 1) {
 				width = Math.Max(width, widthUsed);
-				height *= rowCount;  // take max height
+				height = (height + Spacing) * rowCount - Spacing; // via MitchMilam 
 			}
 
 			return new SizeRequest(new Size(width, height), new Size(minWidth,minHeight));

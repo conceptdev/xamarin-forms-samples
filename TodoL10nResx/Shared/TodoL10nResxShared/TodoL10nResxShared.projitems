@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{3E0757A9-D534-4E7F-966F-CBB18F511EF7}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>TodoL10nResxShared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ILocale.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ISQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ITextToSpeech.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)L10n.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TodoItemDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TodoItemCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TodoItemPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TodoListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TodoItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resx\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.de.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.es.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.fr.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.ja.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.pt-BR.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.ru.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.zh-Hans.resx" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resx\AppResources.zh-Hant.resx" />
+  </ItemGroup>
+</Project>

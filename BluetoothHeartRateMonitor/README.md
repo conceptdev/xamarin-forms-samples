@@ -14,3 +14,5 @@ You can buy a Bluetooth LE compatible monitor like the [Polar H7 from Polar dire
 ## Monkey.Robotics Source
 
 The component that contains the Bluetooth LE abstraction for Xamarin.Forms is open-source, and is [available on github](https://github.com/xamarin/Monkey.Robotics). As noted on the [component page](https://components.xamarin.com/view/Monkey.Robotics) it is still in *beta*.
+
+Change...

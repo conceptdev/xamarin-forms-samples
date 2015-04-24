@@ -8,6 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>HeartRateMonitor.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>XamarinRoboticsBluetoothLEExplorerFormsiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -90,10 +91,6 @@
     <AssemblyName>HeartRateMonitoriOS</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Components\Monkey.Robotics-0.5\lib\ios\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -103,6 +100,10 @@
     <Reference Include="Robotics.Mobile.Core.iOS">
       <HintPath>..\Components\Monkey.Robotics-0.5\lib\ios\Robotics.Mobile.Core.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
     <Reference Include="Xamarin.Forms.Platform.iOS">
       <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
     </Reference>

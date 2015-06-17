@@ -10,7 +10,7 @@ As with the old version, the text is obfuscated (since it's only a demo).
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/RestaurantGuide/Screenshots/android_sml.png "Android")
 
-![screenshot](Screenshots/windows-sml.png "Windows Store")
+![screenshot](Screenshots/winapp2-sml.png "Windows Store")
 
 History
 ------

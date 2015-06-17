@@ -39,29 +39,29 @@ namespace RestaurantGuide.WinApp
             LoadApplication(new RestaurantGuide.App());
         }
         
-        async Task<List<Restaurant>> LoadXml()
-        {
-            var restaurants = new List<Restaurant>();
-            #region load data from XML
+            async Task<List<Restaurant>> LoadXml()
+            {
+                var restaurants = new List<Restaurant>();
+                #region load data from XML
 
-            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
-            var localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+                var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+                var localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             
-            try {
-                var uri = new System.Uri("ms-appx:///restaurants.xml");
-                var f = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(uri).AsTask().ConfigureAwait(false);
-                var stream = await f.OpenStreamForReadAsync().ConfigureAwait(false);
+                try {
+                    var uri = new System.Uri("ms-appx:///restaurants.xml");
+                    var f = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(uri).AsTask().ConfigureAwait(false);
+                    var stream = await f.OpenStreamForReadAsync().ConfigureAwait(false);
 
-                var serializer = new XmlSerializer(typeof(List<Restaurant>));
+                    var serializer = new XmlSerializer(typeof(List<Restaurant>));
 
-                restaurants = (List<Restaurant>)serializer.Deserialize(stream.AsInputStream().AsStreamForRead());
-            }
-            catch (Exception e) {
-                Debug.WriteLine("cannot open " + e);
-            }
+                    restaurants = (List<Restaurant>)serializer.Deserialize(stream.AsInputStream().AsStreamForRead());
+                }
+                catch (Exception e) {
+                    Debug.WriteLine("cannot open " + e);
+                }
             
-            #endregion
-            return restaurants;
-        }
+                #endregion
+                return restaurants;
+            }
     }
 }

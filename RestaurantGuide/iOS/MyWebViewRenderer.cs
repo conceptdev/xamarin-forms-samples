@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using RestaurantGuide;
 using RestaurantGuide.iOS;
-using MonoTouch.Foundation;
+using Foundation;
 
 [assembly: ExportRenderer (typeof (MyWebView), typeof (MyWebViewRenderer))]
 

@@ -68,7 +68,4 @@ Global
 		{A1E14BEA-A9D9-46C5-83AA-8891A13E4837}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{A1E14BEA-A9D9-46C5-83AA-8891A13E4837}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = HeartRateMonitor.iOS\HeartRateMonitor.iOS.csproj
-	EndGlobalSection
 EndGlobal

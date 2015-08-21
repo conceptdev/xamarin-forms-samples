@@ -4,13 +4,13 @@ using Robotics.Mobile.Core.Bluetooth.LE;
 
 namespace HeartRateMonitor
 {
-	public class App
+	public class App : Application
 	{
 		static IAdapter Adapter;
 
-		public static Page GetMainPage ()
+		public App ()
 		{	
-			return new NavigationPage (new DeviceList (Adapter));
+			MainPage = new NavigationPage (new DeviceList (Adapter));
 		}
 
 		public static void SetAdapter (IAdapter adapter) {

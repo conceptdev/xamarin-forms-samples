@@ -1,34 +1,34 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 
 using Xamarin.Forms;
 using Robotics.Mobile.Core.Bluetooth.LE;
+using Xamarin.Forms.Platform.iOS;
 
 namespace HeartRateMonitor.iOS
 {
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : FormsApplicationDelegate
 	{
-		UIWindow window;
+		//UIWindow window;
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			Xamarin.Forms.Forms.Init ();
 
-			window = new UIWindow (UIScreen.MainScreen.Bounds);
+			//window = new UIWindow (UIScreen.MainScreen.Bounds);
 
 			App.SetAdapter (Adapter.Current);
 
-			window.RootViewController = App.GetMainPage ().CreateViewController ();
-			window.MakeKeyAndVisible ();
+			LoadApplication (new App ());
 
 			UINavigationBar.Appearance.TintColor = UIColor.Red;
 
-			return true;
+			return base.FinishedLaunching(app, options);
 		}
 	}
 }

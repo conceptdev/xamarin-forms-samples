@@ -16,7 +16,7 @@ namespace HeartRateMonitor.Droid
 	[Activity (Label = "HeartRateXF", 
 		MainLauncher = true, 
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity : FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -27,7 +27,7 @@ namespace HeartRateMonitor.Droid
 			var a = new Robotics.Mobile.Core.Bluetooth.LE.Adapter ();
 			App.SetAdapter (a);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 	}
 }

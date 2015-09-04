@@ -36,5 +36,9 @@
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.xamarin.restguide</string>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>

@@ -118,6 +118,12 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\restaurants.xml" />
     <BundleResource Include="Resources\X.png" />
+    <BundleResource Include="Resources\LaunchScreen-center.png" />
+    <BundleResource Include="Resources\LaunchScreen-center%402x.png" />
+    <BundleResource Include="Resources\LaunchScreen-left.png" />
+    <BundleResource Include="Resources\LaunchScreen-left%402x.png" />
+    <BundleResource Include="Resources\LaunchScreen-right.png" />
+    <BundleResource Include="Resources\LaunchScreen-right%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -133,4 +139,20 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Spotlight-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Spotlight-40%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
 </Project>

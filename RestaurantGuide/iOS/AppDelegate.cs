@@ -28,7 +28,12 @@ namespace RestaurantGuide.iOS
 			App.SetContent (LoadXml());
 
 			LoadApplication (new App ());
-			
+
+			// for debugging Properties
+			var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments); 
+			Console.WriteLine (documents);
+			// then look in /.config/.isolated-storage/PropertyStore.forms
+
 			return base.FinishedLaunching(app, options);
 		}
 

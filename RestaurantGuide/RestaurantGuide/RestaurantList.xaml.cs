@@ -27,14 +27,15 @@ namespace RestaurantGuide
 			Application.Current.Properties ["rid"] = "";
 		}
 
-		public void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {
+		public async void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {
 			var r = (Restaurant)e.SelectedItem;
 
 			Application.Current.Properties ["rid"] = r.Number;
+			await App.Current.SavePropertiesAsync ();
 
 			var rPage = new RestaurantDetail();
 			rPage.BindingContext = r;
-			Navigation.PushAsync(rPage);
+			await Navigation.PushAsync(rPage);
 		}
 	}
 }

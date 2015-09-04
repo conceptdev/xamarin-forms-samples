@@ -22,17 +22,28 @@ namespace RestaurantGuide
 		protected override void OnStart()
 		{
 			// Handle when your app starts
-			var r = "";
+			var startingRestId = " (not set)";
+
 			if (Application.Current.Properties.ContainsKey("rid")){
-				r = Application.Current.Properties ["rid"] as string;
-				if (!String.IsNullOrWhiteSpace(r)) {
-					var rPage = new RestaurantDetail();
+				var o = Application.Current.Properties ["rid"];
+				// contains the value (eg. 5)
+				var s = Application.Current.Properties ["rid"] as string;
+				// contains null (used to contain "5")
+				//var t = (string)Application.Current.Properties ["rid"];
+				// throws an invalid cast exception!
+
+				startingRestId = o.ToString ();
+				if (!String.IsNullOrWhiteSpace (startingRestId)) {
+					var rPage = new RestaurantDetail ();
 					// set BindingContext
-					MainPage.Navigation.PushAsync(rPage);
+					rPage.BindingContext = restaurants [Convert.ToInt32 (o)];
+					MainPage.Navigation.PushAsync (rPage);
+				} else {
+					startingRestId = "(set but not valid)";
 				}
 				
 			}
-			Debug.WriteLine ("OnStart:" + r);
+			Debug.WriteLine ("OnStart:" + startingRestId);
 		}
 
 		protected override void OnSleep()

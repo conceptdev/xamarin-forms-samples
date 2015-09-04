@@ -10,6 +10,7 @@ using RestaurantGuide;
 using System.IO;
 using System.Xml.Serialization;
 using Xamarin.Forms.Platform.iOS;
+using CoreSpotlight;
 
 
 namespace RestaurantGuide.iOS
@@ -18,6 +19,7 @@ namespace RestaurantGuide.iOS
 	public partial class AppDelegate : FormsApplicationDelegate
 	{
 		UIWindow window;
+		List<Restaurant> restaurants;
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
@@ -25,7 +27,9 @@ namespace RestaurantGuide.iOS
 
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-			App.SetContent (LoadXml());
+			restaurants = LoadXml ();
+
+			App.SetContent (restaurants);
 
 			LoadApplication (new App ());
 
@@ -33,6 +37,8 @@ namespace RestaurantGuide.iOS
 			var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments); 
 			Console.WriteLine (documents);
 			// then look in /.config/.isolated-storage/PropertyStore.forms
+
+			SearchModel = new iOS9SearchModel (restaurants);
 
 			return base.FinishedLaunching(app, options);
 		}
@@ -47,6 +53,28 @@ namespace RestaurantGuide.iOS
 			}
 			#endregion
 			return restaurants;
+		}
+
+		public iOS9SearchModel SearchModel {
+			get;
+			private set;
+		}
+
+		public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+		{
+			if (userActivity.ActivityType == CSSearchableItem.ActionType) {
+				var uuid = userActivity.UserInfo.ObjectForKey (CSSearchableItem.ActivityIdentifier);
+
+				System.Console.WriteLine ("Show the page for " + uuid);
+
+				var restaurantName = SearchModel.Lookup (new Guid (uuid.ToString()));
+
+				System.Console.WriteLine ("which is " + restaurantName);
+
+				MessagingCenter.Send<RestaurantGuide.App, string> (App.Current as RestaurantGuide.App, "show", restaurantName);
+
+			}
+			return true;
 		}
 	}
 }

@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace RestaurantGuide
 {
@@ -17,6 +18,21 @@ namespace RestaurantGuide
 		public App ()
 		{	
 			MainPage = new NavigationPage(new RestaurantList (restaurants));
+
+			MessagingCenter.Subscribe<RestaurantGuide.App, string> (this, "show", async (sender, arg) => {
+				// do something whenever the "Hi" message is sent
+				Debug.WriteLine("Search argument: " + arg);
+
+				var restaurant = from r in restaurants
+						where r.Name == arg
+						select r;
+
+				await MainPage.Navigation.PopToRootAsync ();
+				var rPage = new RestaurantDetail ();
+				// set BindingContext
+				rPage.BindingContext = restaurant.FirstOrDefault();
+				await MainPage.Navigation.PushAsync (rPage);
+			});
 		}
 
 		protected override void OnStart()
@@ -52,10 +68,13 @@ namespace RestaurantGuide
 			Debug.WriteLine ("OnSleep:" + Application.Current.Properties ["rid"]);
 		}
 
-		protected override void OnResume()
+		protected override async void OnResume()
 		{
+			var rid = Application.Current.Properties ["rid"];
 			// Handle when your app resumes
 			Debug.WriteLine ("OnResume:" + Application.Current.Properties ["rid"]);
+
+
 		}
 	}
 }

@@ -4,6 +4,17 @@ RestaurantGuide (Xamarin.Forms + Razor)
 This sample is an updated version of [RestaurantGuide](https://github.com/conceptdev/RestaurantGuide/).
 This version uses [Xamarin.Forms](http://xamarin.com/forms) and [Razor cshtml templates](http://blog.xamarin.com/sharper-html-hybrid-apps-with-razor/).
 
+
+Updated for iOS 9
+-----------------
+
+Implemented basic Search SDK (`CoreSpotlight`), thanks to Larry O'Brien (all hacks are mine).
+
+![](Screenshots/ios8-search-sml.png)
+
+Basic Features
+--------
+
 As with the old version, the text is obfuscated (since it's only a demo).
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/RestaurantGuide/Screenshots/ios_small.png "iOS")

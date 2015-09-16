@@ -26,10 +26,12 @@ As with the old version, the text is obfuscated (since it's only a demo).
 History
 ------
 
-Jun-15 - Now supports Windows Store and Windows Phone 8.1
+Sep-2015 - added CoreSpotlight API to iOS 9 app project
+
+Jun-2015 - Now supports Windows Store and Windows Phone 8.1
 
 Updated to use Xamarin.Forms.
 
-Mar-11 - Follow-up with [native Android](http://conceptdev.blogspot.com/2011/03/monodroid-meet-monotouch-windowsphone7.html).
+Mar-2011 - Follow-up with [native Android](http://conceptdev.blogspot.com/2011/03/monodroid-meet-monotouch-windowsphone7.html).
 
-Sep-10 - The original [blog post](http://conceptdev.blogspot.com/2010/09/monotouch-meet-windowsphone7.html) with iOS and Windows Phone 7.
+Sep-2010 - The original [blog post](http://conceptdev.blogspot.com/2010/09/monotouch-meet-windowsphone7.html) with iOS and Windows Phone 7.

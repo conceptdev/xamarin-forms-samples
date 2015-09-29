@@ -38,7 +38,13 @@ namespace RestaurantGuide.iOS
 			Console.WriteLine (documents);
 			// then look in /.config/.isolated-storage/PropertyStore.forms
 
-			SearchModel = new iOS9SearchModel (restaurants);
+			if (UIDevice.CurrentDevice.CheckSystemVersion (9, 0)) {
+				// Code that requires iOS 9, like CoreSpotlight or 3D Touch
+				SearchModel = new iOS9SearchModel (restaurants);
+			} else {
+				// Code for earlier versions
+				Console.WriteLine ("CoreSpotlight not supported");
+			}
 
 			return base.FinishedLaunching(app, options);
 		}
@@ -67,7 +73,7 @@ namespace RestaurantGuide.iOS
 
 				System.Console.WriteLine ("Show the page for " + uuid);
 
-				var restaurantName = SearchModel.Lookup (new Guid (uuid.ToString()));
+				var restaurantName = SearchModel.Lookup (uuid.ToString());
 
 				System.Console.WriteLine ("which is " + restaurantName);
 

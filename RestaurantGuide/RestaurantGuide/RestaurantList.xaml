@@ -10,8 +10,8 @@
 		    <DataTemplate>
 		      <ViewCell>
 		     	 <StackLayout Padding="20,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-		        	<Label Text="{Binding Name}" YAlign="Center" />
-		        	<Label Text="{Binding Cuisine}" YAlign="Center" />
+		        	<Label Text="{Binding Name}" Style="{DynamicResource ListItemTextStyle}" YAlign="Center" />
+		        	<Label Text="{Binding Cuisine}" Style="{DynamicResource ListItemDetailTextStyle}" YAlign="Center" />
 		         </StackLayout>
 		      </ViewCell>
 		    </DataTemplate>

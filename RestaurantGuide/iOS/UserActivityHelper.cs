@@ -3,10 +3,14 @@ using Foundation;
 
 namespace RestaurantGuide.iOS
 {
+	/// <summary>
+	/// Constants for the NSUserActivity, also embedded in Info.plist
+	/// </summary>
 	public static class ActivityTypes
 	{
 		public const string View = "co.conceptdev.restguide.activity.view";
 	}
+
 	/// <summary>
 	/// Extension methods for NSUserActivity
 	/// </summary>

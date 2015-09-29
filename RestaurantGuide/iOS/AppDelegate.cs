@@ -67,7 +67,7 @@ namespace RestaurantGuide.iOS
 		public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 		{
 			if (userActivity.ActivityType == CSSearchableItem.ActionType) {
-				// CORE SPOTLIGHT
+				#region Spotlight
 				var uuid = userActivity.UserInfo.ObjectForKey (CSSearchableItem.ActivityIdentifier);
 
 				System.Console.WriteLine ("Show the page for " + uuid);
@@ -77,9 +77,11 @@ namespace RestaurantGuide.iOS
 				System.Console.WriteLine ("which is " + restaurantName);
 
 				MessagingCenter.Send<RestaurantGuide.App, string> (App.Current as RestaurantGuide.App, "show", restaurantName);
-
+				#endregion
 			} else {
-				// NSUSERACTIVITY
+				#region NSUserActivity
+				// dang it, the userInfo is blank unless I hack the UserActivity_iOS.Start() method
+				// https://forums.developer.apple.com/thread/9690
 				if (userActivity.ActivityType == ActivityTypes.View)
 				{
 					var uid = "0";
@@ -87,7 +89,7 @@ namespace RestaurantGuide.iOS
 						// new item
 
 					} else {
-						uid = userActivity.UserInfo.ObjectForKey ((NSString)"id").ToString ();
+						uid = userActivity.UserInfo.ObjectForKey (ActivityKeys.Id).ToString ();
 						if (uid == "0") {
 							Console.WriteLine ("No userinfo found for " + ActivityTypes.View);
 						} else {
@@ -105,7 +107,7 @@ namespace RestaurantGuide.iOS
 					ContinueNavigation (uid);
 				}
 				completionHandler(null); // TODO: display UI in Forms somehow
-			
+				#endregion
 			}
 			return true;
 		}
@@ -150,7 +152,7 @@ namespace RestaurantGuide.iOS
 			case RestaurantGuide.iOS.ShortcutHelper.ShortcutIdentifiers.Random:
 				Console.WriteLine ("QUICKACTION: Choose Random Restaurant");
 
-				//HACK: show the detail viewcontroller
+				//HACK: show the detail with a random restaurant showing
 				ContinueNavigation ("-1");
 
 				handled = true;
@@ -163,41 +165,8 @@ namespace RestaurantGuide.iOS
 		}
 		#endregion
 
-//		#region NSUserActivity
-//		// http://www.raywenderlich.com/84174/ios-8-handoff-tutorial
-//		public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
-//		{
-//			Console.WriteLine ("ffffffff ContinueUserActivity");
-//
-//			if (userActivity.ActivityType == ActivityTypes.View)
-//			{
-//				var uid = "0";
-//				if (userActivity.UserInfo.Count == 0) {
-//					// new item
-//
-//				} else {
-//					uid = userActivity.UserInfo.ObjectForKey ((NSString)"id").ToString ();
-//					if (uid == "0") {
-//						Console.WriteLine ("No userinfo found for " + ActivityTypes.View);
-//					} else {
-//						Console.WriteLine ("Should display id " + uid);
-//						// handled in DetailViewController.RestoreUserActivityState
-//					}
-//				}
-//				ContinueNavigation (uid);
-//			}
-//			if (userActivity.ActivityType == CSSearchableItem.ActionType) {
-//				var uid = userActivity.UserInfo.ObjectForKey (CSSearchableItem.ActivityIdentifier).ToString();
-//
-//				System.Console.WriteLine ("Show the detail for id:" + uid);
-//
-//				ContinueNavigation (uid);
-//			}
-//			completionHandler(null); // TODO: display UI in Forms somehow
-//
-//			return true;
-//		}
-//		#endregion
+
+
 
 		void ContinueNavigation (string uid){
 			Console.WriteLine ("gggggggggg ContinueNavigation");

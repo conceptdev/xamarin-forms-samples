@@ -12,6 +12,9 @@ namespace RestaurantGuide.iOS
 			var w = RestaurantGuide.iOS.AppDelegate.Current.window;
 			Console.WriteLine ($" UserActivity.BecomeCurrent ({restaurant.Name})");
 			w.UserActivity = UserActivityHelper.CreateNSUserActivity (restaurant);
+			// HACK: not sure why, this awful/unnecessary hack call seems to force the userInfo to be preserved for AppDelegate.ContinueUserActivity
+			w.UpdateUserActivityState (UserActivityHelper.CreateNSUserActivity (restaurant));
+			// end hack https://forums.developer.apple.com/thread/9690
 		}
 		public void Stop() {
 			var w = RestaurantGuide.iOS.AppDelegate.Current.window;

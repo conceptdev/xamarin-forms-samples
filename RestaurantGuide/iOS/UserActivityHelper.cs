@@ -35,7 +35,7 @@ namespace RestaurantGuide.iOS
 			activity.EligibleForPublicIndexing = false;
 			activity.EligibleForHandoff = false;
 
-			activity.Title = "Restuarant " + userInfo.Name;
+			activity.Title = "Restaurant " + userInfo.Name;
 
 			//			var keywords = new NSString[] {new NSString("Add"), new NSString("Todo"), new NSString("Empty"), new NSString("Task") };
 			//			activity.Keywords = new NSSet<NSString>(keywords);

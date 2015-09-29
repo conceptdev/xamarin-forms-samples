@@ -6,17 +6,19 @@ using MobileCoreServices;
 
 namespace RestaurantGuide.iOS
 {
-	/// <summary>
-	/// original courtesy of Larry O'Brien
-	/// </summary>
 	public class SpotlightHelper
 	{
 		/// <returns>Restaurant Name</returns>
 		public string Lookup (string num) {
 			var res = from r in restaurants
 					where r.Number == Convert.ToInt32(num)
-				select r;
-			return res.FirstOrDefault ().Name;
+					select r;
+			var f = res.FirstOrDefault();
+			if (f != null) {
+				return f.Name;
+			} else {
+				return Random (); // HACK: deal with bad data from NSUserActivity (or CoreSpotlight)
+			}
 		}
 		public string Random () {
 			var r = new Random ();

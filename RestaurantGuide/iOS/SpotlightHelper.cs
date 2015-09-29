@@ -9,7 +9,7 @@ namespace RestaurantGuide.iOS
 	/// <summary>
 	/// original courtesy of Larry O'Brien
 	/// </summary>
-	public class iOS9SearchModel
+	public class SpotlightHelper
 	{
 		/// <returns>Restaurant Name</returns>
 		public string Lookup (string num) {
@@ -18,8 +18,14 @@ namespace RestaurantGuide.iOS
 				select r;
 			return res.FirstOrDefault ().Name;
 		}
+		public string Random () {
+			var r = new Random ();
+			var rn = r.Next (0, restaurants.Count - 1);
+			Console.WriteLine ($"Random number {rn} in {restaurants.Count}");
+			return restaurants[rn].Name;
+		}
 		List<Restaurant> restaurants;
-		public iOS9SearchModel (List<Restaurant> restaurants)
+		public SpotlightHelper (List<Restaurant> restaurants)
 		{
 			this.restaurants = restaurants;
 			var dataItems = new List<CSSearchableItem>();

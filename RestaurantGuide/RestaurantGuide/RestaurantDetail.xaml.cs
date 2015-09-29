@@ -28,6 +28,18 @@ namespace RestaurantGuide
 				html.BaseUrl = DependencyService.Get<IBaseUrl> ().Get ();
 			}
 			webView.Source = html;
+
+			if (Device.OS == TargetPlatform.iOS) {
+				DependencyService.Get<IUserActivity> ().Start (r);
+			}
+		}
+
+		protected override void OnDisappearing ()
+		{
+			if (Device.OS == TargetPlatform.iOS) {
+				DependencyService.Get<IUserActivity> ().Stop ();
+			}
+			base.OnDisappearing ();
 		}
 	}
 }

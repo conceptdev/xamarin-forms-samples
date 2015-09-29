@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>RestaurantGuide</string>
+	<string>RestGuide</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -11,7 +11,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>7.0</string>
+	<string>9.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -35,15 +35,28 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.xamarin.restguide</string>
+	<string>co.conceptdev.restguide</string>
 	<key>XSAppIconAssets</key>
 	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	    <key>NSAllowsArbitraryLoads</key>
-	    <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLocation</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Pick a random restaurant</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Choose one!</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>co.conceptdev.restguide.shortcut.random</string>
+		</dict>
+	</array>
 </dict>
 </plist>

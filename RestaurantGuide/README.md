@@ -12,6 +12,16 @@ Implemented basic Search SDK (`CoreSpotlight`), thanks to Larry O'Brien (all hac
 
 ![](Screenshots/ios8-search-sml.png)
 
+Also needed to [bypass ATS](http://developer.xamarin.com/guides/ios/platform_features/introduction_to_ios9/ats/#Opting-Out_of_ATS) so that all the restaurant URLs would work.
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
+
 Basic Features
 --------
 
@@ -26,7 +36,7 @@ As with the old version, the text is obfuscated (since it's only a demo).
 History
 ------
 
-Sep-2015 - added CoreSpotlight API to iOS 9 app project
+Sep-2015 - added ATS opt-out and CoreSpotlight API to iOS 9 app project
 
 Jun-2015 - Now supports Windows Store and Windows Phone 8.1
 

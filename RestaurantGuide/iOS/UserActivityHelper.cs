@@ -48,6 +48,11 @@ namespace RestaurantGuide.iOS
 
 			attributeSet.DisplayName = userInfo.Name;
 			attributeSet.ContentDescription = userInfo.Cuisine + " " + userInfo.Chef;
+
+			// Handoff https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/Handoff/AdoptingHandoff/AdoptingHandoff.html
+//			attributeSet.RelatedUniqueIdentifier = userInfo.Number.ToString(); // CoreSpotlight "id"
+
+
 			activity.AddUserInfoEntries(NSDictionary.FromObjectAndKey(new NSString(userInfo.Number.ToString()), ActivityKeys.Id));
 
 			activity.ContentAttributeSet = attributeSet;

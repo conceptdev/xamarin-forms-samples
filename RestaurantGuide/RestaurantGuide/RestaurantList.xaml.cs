@@ -11,12 +11,8 @@ namespace RestaurantGuide
 			InitializeComponent ();
 		}
 
-		//List<Restaurant> restaurants;
-
 		public RestaurantList (List<Restaurant> r) : this()
 		{
-			//restaurants = r;
-
 			listView.ItemsSource = r;
 		}
 
@@ -28,6 +24,9 @@ namespace RestaurantGuide
 		}
 
 		public async void OnItemSelected (object sender, SelectedItemChangedEventArgs e) {
+			if (e.SelectedItem == null)
+				return;
+			
 			var r = (Restaurant)e.SelectedItem;
 
 			Application.Current.Properties ["rid"] = r.Number;
@@ -36,6 +35,8 @@ namespace RestaurantGuide
 			var rPage = new RestaurantDetail();
 			rPage.BindingContext = r;
 			await Navigation.PushAsync(rPage);
+
+			((ListView)sender).SelectedItem = null;
 		}
 	}
 }

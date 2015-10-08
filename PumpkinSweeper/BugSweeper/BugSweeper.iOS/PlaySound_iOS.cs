@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using System.Diagnostics;
-using MonoTouch.AVFoundation;
+using AVFoundation;
 using BugSweeper.iOS;
-using MonoTouch.Foundation;
+using Foundation;
 
 
 [assembly: Xamarin.Forms.Dependency (typeof (PlaySound_iOS))]

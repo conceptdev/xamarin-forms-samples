@@ -25,11 +25,11 @@
 		<string>SF Hollywood Hills.ttf</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>6.0</string>
+	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>PknSweep</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.PupmkinSweeper</string>
+	<string>co.conceptdev.PumpkinSweeper</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>

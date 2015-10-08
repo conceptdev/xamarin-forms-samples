@@ -15,9 +15,9 @@ namespace Evolve13
 			return md;
 		}
 
-		static SQLite.Net.SQLiteConnection conn;
+		static SQLite.SQLiteConnection conn;
 		static EvolveDatabase database;
-		public static void SetDatabaseConnection (SQLite.Net.SQLiteConnection connection)
+		public static void SetDatabaseConnection (SQLite.SQLiteConnection connection)
 		{
 			conn = connection;
 			database = new EvolveDatabase (conn);

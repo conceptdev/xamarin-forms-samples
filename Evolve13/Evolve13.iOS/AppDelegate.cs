@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using Evolve13;
 using Xamarin.Forms;
 using System.IO;
@@ -43,8 +43,7 @@ namespace Evolve13
 				File.Copy (sqliteFilename, path);
 			}
 
-			var plat = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
-			var conn = new SQLite.Net.SQLiteConnection(plat, path);
+			var conn = new SQLite.SQLiteConnection(path);
 
 			// Set the database connection string
 			App.SetDatabaseConnection (conn);

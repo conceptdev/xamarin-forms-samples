@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
-using SQLite.Net.Attributes;
+using SQLite;
 
 namespace Evolve13
 {

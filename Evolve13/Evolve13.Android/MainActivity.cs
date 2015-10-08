@@ -42,8 +42,7 @@ namespace Evolve13
 			}
 
 
-			var plat = new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid();
-			var conn = new SQLite.Net.SQLiteConnection(plat, path);
+			var conn = new SQLite.SQLiteConnection(path);
 
 			// Set the database connection string
 			App.SetDatabaseConnection (conn);

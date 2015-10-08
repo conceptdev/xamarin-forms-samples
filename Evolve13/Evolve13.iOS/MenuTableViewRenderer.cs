@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
+using UIKit;
 
 [assembly:ExportRenderer(typeof(Evolve13.MenuTableView), typeof(Evolve13.MenuTableViewRenderer))]
 namespace Evolve13

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using MonoTouch.UIKit;
-using MonoTouch.Twitter;
+using UIKit;
+using Twitter;
 
 [assembly:ExportRenderer(typeof(Evolve13.TweetButton), typeof(Evolve13.TweetButtonRenderer))]
 

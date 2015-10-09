@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Todo;
 using Xamarin.Forms;
 using System.IO;
@@ -14,7 +14,7 @@ namespace Todo
 		}
 
 		#region ISQLite implementation
-		public global::SQLite.Net.SQLiteConnection GetConnection ()
+		public global::SQLite.SQLiteConnection GetConnection ()
 		{
 			var sqliteFilename = "TodoSQLite.db3";
 			string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal); // Documents folder
@@ -27,8 +27,7 @@ namespace Todo
 				File.Copy (sqliteFilename, path);
 			}
 
-			var plat = new global::SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
-			var conn = new global::SQLite.Net.SQLiteConnection(plat, path);
+			var conn = new global::SQLite.SQLiteConnection(path);
 
 			// Return the database connection 
 			return conn;

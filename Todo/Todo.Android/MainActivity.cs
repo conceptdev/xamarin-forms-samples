@@ -14,7 +14,7 @@ namespace Todo
 	[Activity (Label = "Todo", 
 			MainLauncher = true, 
 			ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
+	public class Activity1 : Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -26,13 +26,13 @@ namespace Todo
 			// http://forums.xamarin.com/discussion/21148/calabash-and-xamarin-forms-what-am-i-missing
 			Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
 				if (!string.IsNullOrWhiteSpace(e.View.StyleId)) {
-					Console.WriteLine("Style:" + e.View.StyleId);
+					//Console.WriteLine("Style:" + e.View.StyleId);
 					e.NativeView.ContentDescription = e.View.StyleId;
 				}
 			};
 			#endif
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 	}
 }

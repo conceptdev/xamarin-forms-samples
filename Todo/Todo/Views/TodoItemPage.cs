@@ -8,7 +8,11 @@ using System.Diagnostics;
 
 namespace Todo
 {
-	public class TodoItemPage : ContentPage
+	public class BasePage : ContentPage 
+	{
+	}
+
+	public class TodoItemPage : BasePage
 	{
 		public TodoItemPage ()
 		{

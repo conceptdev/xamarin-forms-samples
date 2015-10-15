@@ -32,7 +32,6 @@ namespace Evolve13
 			listView.ItemSelected += (sender, e) => {
 				var speaker = e.SelectedItem as Speaker;
 				var speakerPage = new SpeakerPage();
-				speaker.HeadshotUrl = "https://evolve.xamarin.com/assets/images/pages/evolve/craig.jpg";
 				speakerPage.BindingContext = speaker;
 				Navigation.PushAsync(speakerPage);
 			};

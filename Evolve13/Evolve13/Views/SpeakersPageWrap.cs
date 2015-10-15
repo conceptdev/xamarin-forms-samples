@@ -24,6 +24,8 @@ namespace Evolve13
 			var speakers = App.Database.GetSpeakers ();
 
 			foreach (var speaker in speakers) {
+
+				// configure cell for wrap
 				var cell = new StackLayout {
 					WidthRequest = 50,
 					HeightRequest = 50,
@@ -31,7 +33,7 @@ namespace Evolve13
 					Children = {
 						new Image {Source = speaker.HeadshotUrl, 
 							VerticalOptions = LayoutOptions.Start,
-							BackgroundColor = Color.Blue,
+							//BackgroundColor = Color.Blue,
 							WidthRequest=30,
 							HeightRequest=30},
 						new Label {Text = speaker.Name, 
@@ -40,8 +42,20 @@ namespace Evolve13
 							VerticalOptions = LayoutOptions.Start, 
 							HorizontalOptions = LayoutOptions.Center}
 					}
-					
 				};
+
+				// add touch handling to show next page
+				var tapGestureRecognizer = new TapGestureRecognizer();
+				tapGestureRecognizer.CommandParameter = speaker;
+				tapGestureRecognizer.Tapped += (sender, e) => {
+					var speakr = ((TappedEventArgs)e).Parameter as Speaker;
+					var sp = new SpeakerPage();
+					sp.BindingContext = speakr;
+					Navigation.PushAsync(sp);
+				};
+				cell.GestureRecognizers.Add(tapGestureRecognizer);
+
+				// add to wrap layout
 				layout.Children.Add (cell);
 			}
 

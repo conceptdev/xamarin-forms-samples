@@ -23,7 +23,7 @@ namespace Evolve13
 
 			var name = new Label { 
 				Text = "Name",
-				Font = Font.SystemFontOfSize(18)
+				FontSize = 18
 			};
 			name.SetBinding (Label.TextProperty, "Name");
 
@@ -37,7 +37,7 @@ namespace Evolve13
 
 			var bio = new Label { 
 				Text = "Bio",
-				Font = Font.SystemFontOfSize(12)
+				FontSize = 12
 			};
 			bio.SetBinding (Label.TextProperty, "Bio");
 

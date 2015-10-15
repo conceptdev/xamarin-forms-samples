@@ -3,16 +3,16 @@ using Xamarin.Forms;
 
 namespace Evolve13
 {
-	public static class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{
 			var md = new MasterDetailPage ();
 
 			md.Master = new MenuPage (md);
 			md.Detail = new NavigationPage(new SessionsPage ()) {Tint = App.NavTint};
 
-			return md;
+			MainPage = md;
 		}
 
 		static SQLite.SQLiteConnection conn;

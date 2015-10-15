@@ -16,7 +16,6 @@ namespace Evolve13
 
 			WrapLayout layout = new WrapLayout {
 				Spacing = 5,
-				Orientation = StackOrientation.Horizontal,
 				Padding = new Thickness(5,Device.OnPlatform(20,0,0),5,0),
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.Center,
@@ -28,13 +27,15 @@ namespace Evolve13
 				var cell = new StackLayout {
 					WidthRequest = 50,
 					HeightRequest = 50,
+					BackgroundColor = Color.FromRgb(222, 222, 222),
 					Children = {
 						new Image {Source = speaker.HeadshotUrl, 
 							VerticalOptions = LayoutOptions.Start,
+							BackgroundColor = Color.Blue,
 							WidthRequest=30,
 							HeightRequest=30},
 						new Label {Text = speaker.Name, 
-							Font = Font.SystemFontOfSize(9),
+							FontSize = 9,
 							LineBreakMode = LineBreakMode.TailTruncation,
 							VerticalOptions = LayoutOptions.Start, 
 							HorizontalOptions = LayoutOptions.Center}

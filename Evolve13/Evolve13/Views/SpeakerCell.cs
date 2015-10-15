@@ -61,7 +61,14 @@ namespace Evolve13
 
 			title.Text = speaker.Name;
 			label.Text = speaker.TwitterHandle;
-			photo.Source = speaker.HeadshotUrl;
+			try {
+				photo.Source = ImageSource.FromUri (new Uri(speaker.HeadshotUrl));
+				System.Diagnostics.Debug.WriteLine ("++ " + speaker.HeadshotUrl);
+			} catch {
+				photo.Source = "Icon";
+				System.Diagnostics.Debug.WriteLine ("-- " + speaker.HeadshotUrl);
+			}
+
 		}
 	}
 }

@@ -10,8 +10,9 @@ using Android.Content.PM;
 
 namespace Evolve13
 {
-	[Activity (Label = "Evolve13", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class Activity1 : Xamarin.Forms.Platform.Android.AndroidActivity
+	[Activity (Label = "Evolve13", 
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	public class Activity1 : Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		// I apologize in advance for this awful hack, I'm sure there's a better way...
 		public static Activity1 ShareActivityContext;
@@ -47,7 +48,7 @@ namespace Evolve13
 			// Set the database connection string
 			App.SetDatabaseConnection (conn);
 
-			SetPage (App.GetMainPage ());
+			LoadApplication (new App ());
 		}
 
 		void ReadWriteStream(Stream readStream, Stream writeStream)

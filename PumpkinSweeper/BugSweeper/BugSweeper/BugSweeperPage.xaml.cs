@@ -17,6 +17,7 @@ namespace BugSweeper
 
         bool isGameInProgress;
         DateTime gameStartTime;
+		Xamarin.ITrackHandle handle;
 
         public BugSweeperPage()
         {
@@ -26,6 +27,11 @@ namespace BugSweeper
                 {
                     isGameInProgress = true;
                     gameStartTime = DateTime.Now;
+
+					Xamarin.Insights.Track("GameStarted");
+
+					handle = Xamarin.Insights.TrackTime("GameLength");
+					handle.Start();
 
                     Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                     {
@@ -37,14 +43,18 @@ namespace BugSweeper
             board.GameEnded += (sender, hasWon) =>
                 {
                     isGameInProgress = false;
-
-                    if (hasWon)
+					
+					handle.Stop();
+                    
+					if (hasWon)
                     {
                         DisplayWonAnimation();
+						Xamarin.Insights.Track("Won");
                     }
                     else
                     {
                         DisplayLostAnimation();
+						Xamarin.Insights.Track("Lost");
                     }
                 };
 

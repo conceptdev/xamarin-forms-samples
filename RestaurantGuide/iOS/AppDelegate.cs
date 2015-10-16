@@ -69,7 +69,9 @@ namespace RestaurantGuide.iOS
 			if (userActivity.ActivityType == CSSearchableItem.ActionType) {
 				#region Spotlight
 				var uuid = userActivity.UserInfo.ObjectForKey (CSSearchableItem.ActivityIdentifier);
-
+				Xamarin.Insights.Track("SearchResult", new Dictionary<string, string> {
+					{"Type", "CoreSpotlight"}
+				});
 				System.Console.WriteLine ("Show the page for " + uuid);
 
 				var restaurantName = SearchModel.Lookup (uuid.ToString ());
@@ -84,6 +86,9 @@ namespace RestaurantGuide.iOS
 				// https://forums.developer.apple.com/thread/9690
 				if (userActivity.ActivityType == ActivityTypes.View)
 				{
+					Xamarin.Insights.Track("SearchResult", new Dictionary<string, string> {
+						{"Type", "NSUserActivity"}
+					});
 					var uid = "0";
 					if (userActivity.UserInfo.Count == 0) {
 						// new item
@@ -100,6 +105,9 @@ namespace RestaurantGuide.iOS
 					ContinueNavigation (uid);
 				}
 				if (userActivity.ActivityType == CSSearchableItem.ActionType) {
+					Xamarin.Insights.Track("SearchResult", new Dictionary<string, string> {
+						{"Type", "CoreSpotlight"}
+					});
 					var uid = userActivity.UserInfo.ObjectForKey (CSSearchableItem.ActivityIdentifier).ToString();
 
 					System.Console.WriteLine ("Show the detail for id:" + uid);
@@ -128,6 +136,10 @@ namespace RestaurantGuide.iOS
 
 			// Handle any shortcut item being selected
 			HandleShortcutItem(LaunchedShortcutItem);
+
+			Xamarin.Insights.Track("3DTouch", new Dictionary<string, string> {
+				{"Type", "Random"}
+			});
 
 			// Clear shortcut after it's been handled
 			LaunchedShortcutItem = null;

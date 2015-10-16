@@ -48,8 +48,14 @@ namespace RestaurantGuide.iOS
 			CSSearchableIndex.DefaultSearchableIndex.Index (dataItems.ToArray<CSSearchableItem> (), err => {
 				if (err != null) {
 					Console.WriteLine (err);
+					Xamarin.Insights.Report(new Exception("CoreSpotlight Index Failed"), new Dictionary <string, string> { 
+						{"Message", err.ToString()}
+					}, Xamarin.Insights.Severity.Error);
 				} else {
 					Console.WriteLine ("Indexed items successfully");
+					Xamarin.Insights.Track("CoreSpotlight", new Dictionary<string, string> {
+						{"Type", "Indexed successfully"}
+					});
 				}
 			});
 		}

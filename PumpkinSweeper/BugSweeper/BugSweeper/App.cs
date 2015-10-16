@@ -9,7 +9,8 @@ namespace BugSweeper
         {
             MainPage = new BugSweeperPage();
 
-			Xamarin.Insights.Identify(Xamarin.Insights.Traits.GuestIdentifier, null);
+			// Prefer to 'not identify' 
+//			Xamarin.Insights.Identify(Xamarin.Insights.Traits.GuestIdentifier, null);
         }
     }
 }

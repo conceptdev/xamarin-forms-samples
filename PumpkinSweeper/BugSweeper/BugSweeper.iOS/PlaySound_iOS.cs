@@ -30,11 +30,12 @@ namespace BugSweeper.iOS
 
 
 			try {
-				// HACK: just for Xamarin Insights testing
-				throw new PlatformNotSupportedException ("IPlaySound iOS");
+				// HACK: just for Xamarin Insights testing - PlatformNotSupportedException
+				throw new InvalidOperationException ("IPlaySound iOS 'invalid'");
 			} 
 			catch (Exception exception) { 
 				exception.Data["Type"] = "Pretend sound was not implemented";
+//				exception.Data["Alarm"] = "Bad char \a";	// BREAKS
 //				exception.Data["Long"] = "0123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789A123456789B123456789C123456789D123456789E123456789F123456789";
 //				exception.Data["0123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789A123456789B123456789C123456789D123456789E123456789F123456789"] = "was long?";
 //				exception.Data["Japanese"] = "レストラン–料理店–飲食店";
@@ -50,6 +51,11 @@ namespace BugSweeper.iOS
 
 				Xamarin.Insights.Report(exception, new Dictionary <string, string> { 
 					{"Some additional info", "0123456789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789A123456789B123456789C123456789D123456789E123456789F123456789"},
+//					{"Newline", "line 1\nline 2"}, //OK
+//					{"Newline", "line 1"+Environment.NewLine+"line 2"}, //OK
+//					{"Null", "null \0"}, //OK
+//					{"Backspace", "bs \b"}, //OK
+//					{"Alarm", "alarm \a"}, //BREAKS - report does not appear in dashboard
 //					{"Japanese", "レストラン–料理店–飲食店"},
 //					{"Korean", "레스토랑–레스토랑–요정"},
 //					{"Hebrew", "מסעדה"},

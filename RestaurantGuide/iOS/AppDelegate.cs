@@ -78,7 +78,8 @@ namespace RestaurantGuide.iOS
 
 				System.Console.WriteLine ("which is " + restaurantName);
 
-				MessagingCenter.Send<RestaurantGuide.App, string> (App.Current as RestaurantGuide.App, "show", restaurantName);
+				MessagingCenter.Send<RestaurantGuide.App, string> 
+				(App.Current as RestaurantGuide.App, "show", restaurantName);
 				#endregion
 			} else {
 				#region NSUserActivity

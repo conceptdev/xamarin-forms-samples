@@ -27,10 +27,16 @@ namespace RestaurantGuide
 						where r.Name == arg
 						select r;
 
+				// set initial state
 				await MainPage.Navigation.PopToRootAsync ();
+
+				// load screen
+
 				var rPage = new RestaurantDetail ();
 				// set BindingContext
 				rPage.BindingContext = restaurant.FirstOrDefault();
+
+				// display screen
 				await MainPage.Navigation.PushAsync (rPage);
 			});
 		}

@@ -42,6 +42,8 @@ namespace RestaurantGuide
 			}
 			webView.Source = html;
 
+			//
+			// NSUserActivity!
 			if (Device.OS == TargetPlatform.iOS) {
 				DependencyService.Get<IUserActivity> ().Start (r);
 			}

@@ -14,7 +14,7 @@ namespace Todo
 	[Activity (Label = "Todo", 
 			MainLauncher = true, 
 			ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class Activity1 : Xamarin.Forms.Platform.Android.FormsApplicationActivity
+	public class Activity1 : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

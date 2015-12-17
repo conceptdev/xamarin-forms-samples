@@ -2431,32 +2431,32 @@ namespace Todo
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090047
-			public const int abc_background_cache_hint_selector_material_dark = 2131296327;
+			// aapt resource value: 0x7f09004b
+			public const int abc_background_cache_hint_selector_material_dark = 2131296331;
 			
-			// aapt resource value: 0x7f090048
-			public const int abc_background_cache_hint_selector_material_light = 2131296328;
+			// aapt resource value: 0x7f09004c
+			public const int abc_background_cache_hint_selector_material_light = 2131296332;
 			
-			// aapt resource value: 0x7f090049
-			public const int abc_color_highlight_material = 2131296329;
+			// aapt resource value: 0x7f09004d
+			public const int abc_color_highlight_material = 2131296333;
 			
 			// aapt resource value: 0x7f09000d
 			public const int abc_input_method_navigation_guard = 2131296269;
 			
-			// aapt resource value: 0x7f09004a
-			public const int abc_primary_text_disable_only_material_dark = 2131296330;
-			
-			// aapt resource value: 0x7f09004b
-			public const int abc_primary_text_disable_only_material_light = 2131296331;
-			
-			// aapt resource value: 0x7f09004c
-			public const int abc_primary_text_material_dark = 2131296332;
-			
-			// aapt resource value: 0x7f09004d
-			public const int abc_primary_text_material_light = 2131296333;
-			
 			// aapt resource value: 0x7f09004e
-			public const int abc_search_url_text = 2131296334;
+			public const int abc_primary_text_disable_only_material_dark = 2131296334;
+			
+			// aapt resource value: 0x7f09004f
+			public const int abc_primary_text_disable_only_material_light = 2131296335;
+			
+			// aapt resource value: 0x7f090050
+			public const int abc_primary_text_material_dark = 2131296336;
+			
+			// aapt resource value: 0x7f090051
+			public const int abc_primary_text_material_light = 2131296337;
+			
+			// aapt resource value: 0x7f090052
+			public const int abc_search_url_text = 2131296338;
 			
 			// aapt resource value: 0x7f09000e
 			public const int abc_search_url_text_normal = 2131296270;
@@ -2467,11 +2467,14 @@ namespace Todo
 			// aapt resource value: 0x7f090010
 			public const int abc_search_url_text_selected = 2131296272;
 			
-			// aapt resource value: 0x7f09004f
-			public const int abc_secondary_text_material_dark = 2131296335;
+			// aapt resource value: 0x7f090053
+			public const int abc_secondary_text_material_dark = 2131296339;
 			
-			// aapt resource value: 0x7f090050
-			public const int abc_secondary_text_material_light = 2131296336;
+			// aapt resource value: 0x7f090054
+			public const int abc_secondary_text_material_light = 2131296340;
+			
+			// aapt resource value: 0x7f090049
+			public const int accent = 2131296329;
 			
 			// aapt resource value: 0x7f090011
 			public const int accent_material_dark = 2131296273;
@@ -2620,6 +2623,12 @@ namespace Todo
 			// aapt resource value: 0x7f090034
 			public const int material_grey_900 = 2131296308;
 			
+			// aapt resource value: 0x7f090047
+			public const int primary = 2131296327;
+			
+			// aapt resource value: 0x7f090048
+			public const int primaryDark = 2131296328;
+			
 			// aapt resource value: 0x7f090035
 			public const int primary_dark_material_dark = 2131296309;
 			
@@ -2668,17 +2677,20 @@ namespace Todo
 			// aapt resource value: 0x7f090044
 			public const int switch_thumb_disabled_material_light = 2131296324;
 			
-			// aapt resource value: 0x7f090051
-			public const int switch_thumb_material_dark = 2131296337;
+			// aapt resource value: 0x7f090055
+			public const int switch_thumb_material_dark = 2131296341;
 			
-			// aapt resource value: 0x7f090052
-			public const int switch_thumb_material_light = 2131296338;
+			// aapt resource value: 0x7f090056
+			public const int switch_thumb_material_light = 2131296342;
 			
 			// aapt resource value: 0x7f090045
 			public const int switch_thumb_normal_material_dark = 2131296325;
 			
 			// aapt resource value: 0x7f090046
 			public const int switch_thumb_normal_material_light = 2131296326;
+			
+			// aapt resource value: 0x7f09004a
+			public const int window_background = 2131296330;
 			
 			static Color()
 			{
@@ -4502,6 +4514,12 @@ namespace Todo
 			
 			// aapt resource value: 0x7f080006
 			public const int CardView_Light = 2131230726;
+			
+			// aapt resource value: 0x7f080144
+			public const int MyTheme = 2131231044;
+			
+			// aapt resource value: 0x7f080145
+			public const int MyTheme_Base = 2131231045;
 			
 			// aapt resource value: 0x7f080025
 			public const int Platform_AppCompat = 2131230757;

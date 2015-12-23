@@ -44,7 +44,7 @@ namespace Xamarin.Forms
 
 			double lastX;
 			double lastY;
-			var layout = NaiveLayout (widthConstraint, heightConstraint, out lastX, out lastY);
+			NaiveLayout (widthConstraint, heightConstraint, out lastX, out lastY);
 
 			return new SizeRequest (new Size (lastX, lastY));
 		}

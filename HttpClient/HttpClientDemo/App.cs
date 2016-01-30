@@ -7,7 +7,14 @@ namespace HttpClientDemo
 	{
 		public App ()
 		{	
-			MainPage = new EarthquakesPage ();
+			var tabs = new TabbedPage ();
+			var tabE = new EarthquakesPage () {Title="Earthquakes"};
+			var tabA = new AirportsPage() {Title="Airports"};
+
+			tabs.Children.Add(tabE);
+			tabs.Children.Add(tabA);
+
+			MainPage = tabs;
 		}
 	}
 }

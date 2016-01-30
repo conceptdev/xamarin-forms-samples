@@ -4,7 +4,6 @@ using System.Diagnostics;
 
 namespace HttpClientDemo
 {
-
 	public class EarthquakesPage : ContentPage
 	{
 		ListView lv;
@@ -12,7 +11,9 @@ namespace HttpClientDemo
 
 		public EarthquakesPage ()
 		{
-			l = new Label { Text = "Earthquakes", Font = Font.BoldSystemFontOfSize(NamedSize.Large) };
+			l = new Label { Text = "Earthquakes", 
+				FontAttributes = FontAttributes.Bold, 
+				FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)) };
 
 			var b = new Button { Text = "Get Earthquakes" };
 			b.Clicked += async (sender, e) => {

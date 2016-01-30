@@ -3,11 +3,11 @@ using Xamarin.Forms;
 
 namespace HttpClientDemo
 {
-	public class App
+	public class App : Application
 	{
-		public static Page GetMainPage ()
+		public App ()
 		{	
-			return new EarthquakesPage ();
+			MainPage = new EarthquakesPage ();
 		}
 	}
 }

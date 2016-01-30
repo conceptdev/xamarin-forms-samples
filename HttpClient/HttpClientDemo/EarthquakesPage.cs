@@ -28,9 +28,9 @@ namespace HttpClientDemo
 			lv = new ListView ();
 			lv.ItemTemplate = new DataTemplate(typeof(TextCell));
 			lv.ItemTemplate.SetBinding(TextCell.TextProperty, "Summary");
-			lv.ItemSelected += (sender, e) => {
+			lv.ItemSelected += async (sender, e) => {
 				var eq = (Earthquake)e.SelectedItem;
-				DisplayAlert("Earthquake info", eq.ToString(), "OK", null);
+				await DisplayAlert("Earthquake info", eq.ToString(), "OK");
 			};
 
 			Content = new StackLayout {

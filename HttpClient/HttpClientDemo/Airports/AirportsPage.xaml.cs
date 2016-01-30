@@ -24,12 +24,10 @@ namespace HttpClientDemo
 		public async Task<string> GetEarthquakesAsync (string code) {
 
 			var client = new System.Net.Http.HttpClient ();
+			client.DefaultRequestHeaders.Add("Accept", "application/json");
+			var address = $"http://services.faa.gov/airport/status/{code}"; //?format=application/json";
 
-			var address = $"http://services.faa.gov/airport/status/{code}?format=application/json";
-
-			client.BaseAddress = new Uri(address);
-
-			var response = await client.GetAsync("");
+			var response = await client.GetAsync(address);
 
 			var airportJson = response.Content.ReadAsStringAsync().Result;
 

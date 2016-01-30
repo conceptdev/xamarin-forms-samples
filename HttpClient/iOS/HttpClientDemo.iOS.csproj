@@ -104,6 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\sample-401-globe.png" />
+    <BundleResource Include="Resources\38-airplane.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

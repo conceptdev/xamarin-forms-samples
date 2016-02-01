@@ -26,7 +26,7 @@ Many of the Xamarin.Forms samples in this repo are discussed in **Intro_To_Xamar
 
 * **TodoL10nResx** - todo list that is localized/globalized using RESX files.
 
-* **TodoL10nVernacular** - todo list that is localized/globalized using [Vernacular](http://github.com/rdio/vernacular/).
+* **TodoL10nVernacular** - todo list that is localized/globalized using [Vernacular](https://github.com/rdio/vernacular/).
 
 * **TodoMvvm** - same todo list application logic, demonstrating Mvvm architecture with Xamarin.Forms. Uses data-binding and the command pattern to wire up model, view and view model objects (uses SQLite.Net-PCL Nuget).
 
@@ -56,7 +56,7 @@ Also the Azure ones, and the Parse Xamarin Store Component.
 Other Interesting Repos
 -----------------------
 
-###[XForms](https://github.com/XForms/Xamarin-Forms-Labs)
+###[XForms](https://github.com/XLabs/Xamarin-Forms-Labs)
 Community-driven controls and extensions for Xamarin.Forms
 
 ###[acr-xamarin-forms](https://github.com/aritchie/acr-xamarin-forms#acr-xamarin-forms)

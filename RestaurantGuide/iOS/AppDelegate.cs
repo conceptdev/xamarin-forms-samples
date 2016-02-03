@@ -35,11 +35,12 @@ namespace RestaurantGuide.iOS
 
 			LoadApplication (new App ());
 
-			// for debugging Properties
+			// for debugging Application.Properties
 			var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments); 
 			Console.WriteLine (documents);
 			// then look in /.config/.isolated-storage/PropertyStore.forms
 
+			// Index content for CoreSpotlight search!
 			if (UIDevice.CurrentDevice.CheckSystemVersion (9, 0)) {
 				// Code that requires iOS 9, like CoreSpotlight or 3D Touch
 				SearchModel = new SpotlightHelper (restaurants);

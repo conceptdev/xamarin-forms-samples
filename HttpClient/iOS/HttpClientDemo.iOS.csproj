@@ -101,6 +101,12 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Forms.Maps.iOS.Classic">
+      <HintPath>..\packages\Xamarin.Forms.Maps.2.0.1.6505\lib\MonoTouch10\Xamarin.Forms.Maps.iOS.Classic.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\packages\Xamarin.Forms.Maps.2.0.1.6505\lib\MonoTouch10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

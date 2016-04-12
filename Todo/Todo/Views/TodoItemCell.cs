@@ -11,7 +11,7 @@ namespace Todo
 
 			var label = new Label {
 				StyleId = "CellLabel",
-				YAlign = TextAlignment.Center,
+				VerticalTextAlignment = TextAlignment.Center,
 				HorizontalOptions = LayoutOptions.StartAndExpand
 			};
 			label.SetBinding (Label.TextProperty, "Name");

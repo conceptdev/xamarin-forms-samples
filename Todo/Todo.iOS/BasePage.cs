@@ -2,13 +2,12 @@
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using Todo;
-using Todo.iOS;
 using UIKit;
 using Foundation;
 
 [assembly: ExportRenderer (typeof (BasePage), typeof (BasePageRenderer))]
 
-namespace Todo.iOS
+namespace Todo
 {
 	public class BasePageRenderer : PageRenderer, IUIViewControllerPreviewingDelegate
 	{

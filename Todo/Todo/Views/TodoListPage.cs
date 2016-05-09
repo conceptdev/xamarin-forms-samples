@@ -54,6 +54,12 @@ namespace Todo
 			};
 			newImage.GestureRecognizers.Add (tap);
 
+
+			AccessibilityEffect.SetIsAccessible(newImage, true);
+			AccessibilityEffect.SetAccessibilityTraits(newImage, AccessibilityTrait.Button);
+			AccessibilityEffect.SetAccessibilityLabel(newImage, "Add new item");
+
+
 			layout = new RelativeLayout ();
 			layout.Children.Add (listView, 
 				xConstraint: Constraint.Constant(0), 
@@ -83,6 +89,11 @@ namespace Todo
 			//tbiAdd.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbiAdd);
 
+			AccessibilityEffect.SetIsAccessible(tbiAdd, true);
+			AccessibilityEffect.SetAccessibilityLabel(tbiAdd, "Add new item");
+			;
+
+
 			var tbiSpeak = new ToolbarItem ("?", "chat.png", () => {
 				var todos = App.Database.GetItemsNotDone();
 				var tospeak = "";
@@ -93,10 +104,13 @@ namespace Todo
 				DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 			}, 0, 0);
-			tbiAdd.StyleId = "ToolbarSpeak";
+			tbiSpeak.StyleId = "ToolbarSpeak";
 			// demonstrate toolbar/optionmenu
 			//tbiSpeak.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbiSpeak);
+
+			AccessibilityEffect.SetIsAccessible(tbiSpeak, true);
+			AccessibilityEffect.SetAccessibilityLabel(tbiSpeak, "Speak item list");
 
 			#endregion
 		}

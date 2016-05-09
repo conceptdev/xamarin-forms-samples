@@ -32,6 +32,20 @@ namespace Todo
 			var doneEntry = new Switch  { StyleId = "TodoDone" };
 			doneEntry.SetBinding (Switch.IsToggledProperty, "Done");
 
+
+			AccessibilityEffect.SetIsAccessible(nameLabel, true);
+			AccessibilityEffect.SetInAccessibleTree(nameLabel, false);
+
+			AccessibilityEffect.SetIsAccessible(notesLabel, true);
+			AccessibilityEffect.SetInAccessibleTree(notesLabel, false);
+
+			AccessibilityEffect.SetIsAccessible(doneLabel, true);
+			AccessibilityEffect.SetInAccessibleTree(doneLabel, false);
+
+			AccessibilityEffect.SetIsAccessible(doneEntry, true);
+			AccessibilityEffect.SetAccessibilityLabel (doneEntry, "whether todo item is done");
+
+
 			var saveButton = new Button { Text = "Save", 
 				BackgroundColor = Color.Green, 
 				BorderRadius = 0, 

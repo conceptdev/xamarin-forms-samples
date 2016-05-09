@@ -7,7 +7,7 @@
 //
 //[assembly: ExportRenderer (typeof (TodoItemCell), typeof (TodoItemCellRenderer))]
 //
-//namespace Todo.iOS
+//namespace Todo
 //{
 //	public class TodoItemCellRenderer : Xamarin.Forms.Platform.iOS.ViewCellRenderer
 //	{

@@ -7,7 +7,12 @@ namespace Todo
 	{
 		public App ()
 		{
-			MainPage = new NavigationPage (new TodoListPage ());
+			var tp = new TabbedPage();
+
+			tp.Children.Add (new NavigationPage (new TodoListPage ()) {Title = "C#" } );
+			tp.Children.Add (new NavigationPage (new TodoListXaml ()) {Title = "XAML"} );
+
+			MainPage = tp;
 		}
 
 		static TodoItemDatabase database;

@@ -2974,12 +2974,6 @@ namespace Todo
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070027
-			public const int ApplicationName = 2131165223;
-			
-			// aapt resource value: 0x7f070026
-			public const int Hello = 2131165222;
-			
 			// aapt resource value: 0x7f070012
 			public const int abc_action_bar_home_description = 2131165202;
 			
@@ -3037,8 +3031,8 @@ namespace Todo
 			// aapt resource value: 0x7f070024
 			public const int abc_toolbar_collapse_description = 2131165220;
 			
-			// aapt resource value: 0x7f070029
-			public const int app_name = 2131165225;
+			// aapt resource value: 0x7f070027
+			public const int app_name = 2131165223;
 			
 			// aapt resource value: 0x7f07000f
 			public const int appbar_scrolling_view_behavior = 2131165199;
@@ -3049,8 +3043,8 @@ namespace Todo
 			// aapt resource value: 0x7f070011
 			public const int character_counter_pattern = 2131165201;
 			
-			// aapt resource value: 0x7f070028
-			public const int hello = 2131165224;
+			// aapt resource value: 0x7f070026
+			public const int hello = 2131165222;
 			
 			// aapt resource value: 0x7f070000
 			public const int mr_button_content_description = 2131165184;

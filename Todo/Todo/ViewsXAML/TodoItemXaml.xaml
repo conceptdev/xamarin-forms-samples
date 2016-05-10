@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:a="clr-namespace:Todo;assembly=Todo"
+    x:Class="Todo.TodoItemXaml"
+	Padding="20">
+    <ContentPage.Content>
+
+    	<StackLayout VerticalOptions="StartAndExpand">
+
+	        <Label Text="Name" 
+				a:AccessibilityEffect.IsAccessible="true" 
+				a:AccessibilityEffect.InAccessibleTree="false" />
+	        <Entry Text="{Binding Path=Name}" x:Name="nameEntry" Placeholder="task name" />
+
+			<Label Text="Notes"
+				a:AccessibilityEffect.IsAccessible="true" 
+				a:AccessibilityEffect.InAccessibleTree="false" />
+	        <Entry Text="{Binding Path=Notes}" x:Name="notesEntry" />
+
+	        <Label Text="Done" 
+				a:AccessibilityEffect.IsAccessible="true" 
+				a:AccessibilityEffect.InAccessibleTree="false"/>
+	        <Switch IsToggled="{Binding Path=Done}" 
+				x:Name="DoneSwitch" 
+				a:AccessibilityEffect.IsAccessible="true" 
+				a:AccessibilityEffect.AccessibilityLabel="Whether item is done"/>
+
+	        <Button Text="Save" Clicked="OnSaveActivated" />
+			
+			<Button Text="Delete" Clicked="OnDeleteActivated" />
+
+	        <Button Text="Cancel" Clicked="OnCancelActivated" />
+
+	        <Button Text="Speak" Clicked="OnSpeakActivated" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>	

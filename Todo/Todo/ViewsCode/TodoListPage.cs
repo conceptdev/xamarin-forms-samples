@@ -89,11 +89,6 @@ namespace Todo
 			//tbiAdd.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbiAdd);
 
-			AccessibilityEffect.SetIsAccessible(tbiAdd, true);
-			AccessibilityEffect.SetAccessibilityLabel(tbiAdd, "Add new item");
-			;
-
-
 			var tbiSpeak = new ToolbarItem ("?", "chat.png", () => {
 				var todos = App.Database.GetItemsNotDone();
 				var tospeak = "";
@@ -108,9 +103,6 @@ namespace Todo
 			// demonstrate toolbar/optionmenu
 			//tbiSpeak.Order = ToolbarItemOrder.Secondary;
 			ToolbarItems.Add (tbiSpeak);
-
-			AccessibilityEffect.SetIsAccessible(tbiSpeak, true);
-			AccessibilityEffect.SetAccessibilityLabel(tbiSpeak, "Speak item list");
 
 			#endregion
 		}

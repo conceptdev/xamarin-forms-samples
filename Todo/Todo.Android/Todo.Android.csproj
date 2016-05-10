@@ -115,6 +115,8 @@
     <AndroidResource Include="Resources\values\Colors.xml" />
     <AndroidResource Include="Resources\values\Style.xml" />
     <AndroidResource Include="Resources\values-v21\Style.xml" />
+    <AndroidResource Include="Resources\drawable\csharp.png" />
+    <AndroidResource Include="Resources\drawable\xaml.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\SQLitePCL.raw_basic.0.8.4\build\MonoAndroid\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.8.4\build\MonoAndroid\SQLitePCL.raw_basic.targets')" />

@@ -4,6 +4,9 @@ using Xamarin.Forms;
 
 namespace  Todo
 {
+	/// <summary>
+	/// These are mainly for iOS - there are more traits but for now just experimenting with two
+	/// </summary>
 	[Flags]
 	public enum AccessibilityTrait { 
 		None = 0,
@@ -17,23 +20,20 @@ namespace  Todo
 	public static class AccessibilityEffect
 	{
 		public static readonly BindableProperty AccessibilityLabelProperty =
-					BindableProperty.CreateAttached("AccessibilityLabel", typeof(string), typeof(AccessibilityEffect), "");
+			BindableProperty.CreateAttached("AccessibilityLabel", typeof(string), typeof(AccessibilityEffect), "", propertyChanged:OnAccessibilityLabelChanged);
 		
 		public static readonly BindableProperty AccessibilityHintProperty =
-					BindableProperty.CreateAttached("AccessibilityHint", typeof(string), typeof(AccessibilityEffect), "");
+			BindableProperty.CreateAttached("AccessibilityHint", typeof(string), typeof(AccessibilityEffect), "", propertyChanged:OnAccessibilityHintChanged);
 
 		public static readonly BindableProperty AccessibilityIDProperty =
-					BindableProperty.CreateAttached("AccessibilityID", typeof(string), typeof(AccessibilityEffect), "");
+			BindableProperty.CreateAttached("AccessibilityID", typeof(string), typeof(AccessibilityEffect), "", propertyChanged:OnAccessibilityIDChanged);
 		
 		public static readonly BindableProperty InAccessibleTreeProperty =
-					BindableProperty.CreateAttached("InAccessibleTree", typeof(bool), typeof(AccessibilityEffect), true);
+			BindableProperty.CreateAttached("InAccessibleTree", typeof(bool), typeof(AccessibilityEffect), true, propertyChanged: OnInAccessibleTreeChanged);
 
 		public static readonly BindableProperty AccessibilityTraitsProperty =
-					BindableProperty.CreateAttached("AccessibilityTraits", typeof(AccessibilityTrait), typeof(AccessibilityEffect), AccessibilityTrait.None);
+			BindableProperty.CreateAttached("AccessibilityTraits", typeof(AccessibilityTrait), typeof(AccessibilityEffect), AccessibilityTrait.None, propertyChanged:OnAccessibilityTraitsChanged);
 		
-		public static readonly BindableProperty IsAccessibleProperty =
-					BindableProperty.CreateAttached("IsAccessible", typeof(bool), typeof(AccessibilityEffect), false, propertyChanged: OnIsAccessibleChanged);
-
 		#region AccessibilityLabel
 		public static string GetAccessibilityLabel(BindableObject view)
 		{
@@ -42,6 +42,11 @@ namespace  Todo
 		public static void SetAccessibilityLabel(BindableObject view, string value)
 		{
 			view.SetValue (AccessibilityLabelProperty, value);
+		}
+		static void OnAccessibilityLabelChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var hasLabel = !string.IsNullOrEmpty(newValue as string);
+			AddRemoveEffect(bindable, hasLabel);
 		}
 		#endregion
 
@@ -54,6 +59,11 @@ namespace  Todo
 		{
 			view.SetValue(AccessibilityHintProperty, value);
 		}
+		static void OnAccessibilityHintChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var hasHint = !string.IsNullOrEmpty(newValue as string);
+			AddRemoveEffect(bindable, hasHint);
+		}
 		#endregion
 
 		#region AccessibilityID
@@ -64,6 +74,11 @@ namespace  Todo
 		public static void SetAccessibilityID(BindableObject view, string value)
 		{
 			view.SetValue(AccessibilityIDProperty, value);
+		}
+		static void OnAccessibilityIDChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var hasId = !string.IsNullOrEmpty(newValue as string);
+			AddRemoveEffect(bindable, hasId);
 		}
 		#endregion
 
@@ -76,6 +91,12 @@ namespace  Todo
 		{
 			view.SetValue(InAccessibleTreeProperty, value);
 		}
+		static void OnInAccessibleTreeChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			//var inTree = (bool)newValue;
+			var add = newValue != null;
+			AddRemoveEffect(bindable, add);
+		}
 		#endregion
 
 		#region AccessibilityTraits
@@ -87,30 +108,45 @@ namespace  Todo
 		{
 			view.SetValue(AccessibilityTraitsProperty, value);
 		}
+		static void OnAccessibilityTraitsChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var traits = (AccessibilityTrait)newValue;
+			var hasTraits = traits == AccessibilityTrait.None;
+			AddRemoveEffect(bindable, hasTraits);
+		}
 		#endregion
 
-		#region IsAccessible
-		public static bool GetIsAccessible(BindableObject view)
-		{
-			return (bool)view.GetValue(IsAccessibleProperty);
-		}
-		public static void SetIsAccessible(BindableObject view, bool value)
-		{
-			view.SetValue(IsAccessibleProperty, value);
-		}
-
-		static void OnIsAccessibleChanged(BindableObject bindable, object oldValue, object newValue)
+		/// <summary>
+		/// Adds or removes the effect on the control
+		/// </summary>
+		/// <remarks>
+		/// So... I'm still figuring out the semantics for when to remove
+		/// and what the most efficient way is to check before adding.
+		/// </remarks>
+		static void AddRemoveEffect(BindableObject bindable, bool add)
 		{
 			var view = bindable as View;
 			if (view == null)
 			{
 				return;
 			}
-
-			bool isAccessible = (bool)newValue;
-			if (isAccessible)
+			if (add)
 			{
-				view.Effects.Add(new AddAccessibilityEffect());
+				if (view.Effects.Count == 0)
+				{
+					// shortcut to add if there are none already
+					view.Effects.Add(new AddAccessibilityEffect());	
+				}
+				else 
+				{ 
+					// more expensive check to see if it exists before adding
+					var exists = view.Effects.First(e => e is AddAccessibilityEffect);
+					if (exists == null)
+					{ 
+						view.Effects.Add(new AddAccessibilityEffect());
+					}
+				}
+
 			}
 			else
 			{
@@ -121,7 +157,6 @@ namespace  Todo
 				}
 			}
 		}
-		#endregion
 
 		public class AddAccessibilityEffect : RoutingEffect
 		{

@@ -54,8 +54,6 @@ namespace Todo
 			};
 			newImage.GestureRecognizers.Add (tap);
 
-
-			AccessibilityEffect.SetIsAccessible(newImage, true);
 			AccessibilityEffect.SetAccessibilityTraits(newImage, AccessibilityTrait.Button);
 			AccessibilityEffect.SetAccessibilityLabel(newImage, "Add new item");
 

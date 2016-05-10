@@ -9,30 +9,39 @@
     	<StackLayout VerticalOptions="StartAndExpand">
 
 	        <Label Text="Name" 
-				a:AccessibilityEffect.IsAccessible="true" 
 				a:AccessibilityEffect.InAccessibleTree="false" />
-	        <Entry Text="{Binding Path=Name}" x:Name="nameEntry" Placeholder="task name" />
+	        <Entry Text="{Binding Path=Name}" x:Name="nameEntry" Placeholder="task name"
+				a:AccessibilityEffect.AccessibilityLabel="todo name"
+				a:AccessibilityEffect.AccessibilityHint="Todo task"
+				/>
 
 			<Label Text="Notes"
-				a:AccessibilityEffect.IsAccessible="true" 
 				a:AccessibilityEffect.InAccessibleTree="false" />
-	        <Entry Text="{Binding Path=Notes}" x:Name="notesEntry" />
+	        <Entry Text="{Binding Path=Notes}" x:Name="notesEntry" 
+				a:AccessibilityEffect.AccessibilityHint="Additional information"
+				/>
 
 	        <Label Text="Done" 
-				a:AccessibilityEffect.IsAccessible="true" 
 				a:AccessibilityEffect.InAccessibleTree="false"/>
 	        <Switch IsToggled="{Binding Path=Done}" 
 				x:Name="DoneSwitch" 
-				a:AccessibilityEffect.IsAccessible="true" 
-				a:AccessibilityEffect.AccessibilityLabel="Whether item is done"/>
+				a:AccessibilityEffect.AccessibilityLabel="{Binding Path=DoneText}"
+				a:AccessibilityEffect.AccessibilityHint="Toggle to indicate whether item is complete"
+				/>
 
-	        <Button Text="Save" Clicked="OnSaveActivated" />
+	        <Button Text="Save" Clicked="OnSaveActivated"
+				a:AccessibilityEffect.AccessibilityHint="Save changes"/>
 			
-			<Button Text="Delete" Clicked="OnDeleteActivated" />
+			<Button Text="Delete" Clicked="OnDeleteActivated"
+				a:AccessibilityEffect.AccessibilityHint="Permanently deletes this item"
+				/>
 
-	        <Button Text="Cancel" Clicked="OnCancelActivated" />
+	        <Button Text="Cancel" Clicked="OnCancelActivated" 
+				a:AccessibilityEffect.AccessibilityHint="Return to list"/>
 
-	        <Button Text="Speak" Clicked="OnSpeakActivated" />
+	        <Button Text="Speak" Clicked="OnSpeakActivated"
+				a:AccessibilityEffect.AccessibilityHint="Speaks this item"
+				/>
 
         </StackLayout>
     </ContentPage.Content>

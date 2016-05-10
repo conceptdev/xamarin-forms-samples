@@ -20,12 +20,12 @@ namespace Todo
 
 			NavigationPage.SetHasNavigationBar (this, true);
 			var nameLabel = new Label { Text = "Name" };
-			var nameEntry = new Entry { StyleId = "TodoName" };
+			var nameEntry = new Entry { StyleId = "TodoName", Placeholder="Todo action" };
 
 			nameEntry.SetBinding (Entry.TextProperty, "Name");
 
 			var notesLabel = new Label { Text = "Notes" };
-			var notesEntry = new Entry { StyleId = "TodoNotes" };
+			var notesEntry = new Entry { StyleId = "TodoNotes", Placeholder = "More info" };
 			notesEntry.SetBinding (Entry.TextProperty, "Notes");
 
 			var doneLabel = new Label { Text = "Done" };
@@ -33,16 +33,14 @@ namespace Todo
 			doneEntry.SetBinding (Switch.IsToggledProperty, "Done");
 
 
-			AccessibilityEffect.SetIsAccessible(nameLabel, true);
 			AccessibilityEffect.SetInAccessibleTree(nameLabel, false);
+			AccessibilityEffect.SetAccessibilityHint(nameEntry, "Todo name");
 
-			AccessibilityEffect.SetIsAccessible(notesLabel, true);
 			AccessibilityEffect.SetInAccessibleTree(notesLabel, false);
+			AccessibilityEffect.SetAccessibilityHint(notesEntry, "Additional notes");
 
-			AccessibilityEffect.SetIsAccessible(doneLabel, true);
 			AccessibilityEffect.SetInAccessibleTree(doneLabel, false);
 
-			AccessibilityEffect.SetIsAccessible(doneEntry, true);
 			AccessibilityEffect.SetAccessibilityLabel (doneEntry, "whether todo item is done");
 
 

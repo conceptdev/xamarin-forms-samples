@@ -39,7 +39,7 @@ namespace Todo
 			if (args.PropertyName == AccessibilityEffect.AccessibilityLabelProperty.PropertyName)
 			{
 				Control.AccessibilityLabel = AccessibilityEffect.GetAccessibilityLabel(Element);
-			} 
+			}
 			else if (args.PropertyName == AccessibilityEffect.AccessibilityHintProperty.PropertyName)
 			{
 				Control.AccessibilityHint = AccessibilityEffect.GetAccessibilityHint(Element);
@@ -56,6 +56,10 @@ namespace Todo
 			{
 				SetTraits();
 			}
+			else 
+			{
+				base.OnElementPropertyChanged(args);
+			}
 		}
 
 		void SetTraits() 
@@ -64,9 +68,9 @@ namespace Todo
 
 			var newTraits = AccessibilityEffect.GetAccessibilityTraits(Element);
 
-			if ((newTraits | AccessibilityTrait.Button) > 0) tempTraits = tempTraits | UIAccessibilityTrait.Button;
+			if ((newTraits & AccessibilityTrait.Button) > 0) tempTraits = tempTraits | UIAccessibilityTrait.Button;
 
-			if ((newTraits | AccessibilityTrait.Header) > 0) tempTraits = tempTraits | UIAccessibilityTrait.Header;
+			if ((newTraits & AccessibilityTrait.Header) > 0) tempTraits = tempTraits | UIAccessibilityTrait.Header;
 
 			Control.AccessibilityTraits = tempTraits;
 		}

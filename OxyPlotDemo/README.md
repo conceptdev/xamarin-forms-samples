@@ -1,6 +1,8 @@
 # [OxyPlot](http://oxyplot.org) Demo (Xamarin.Forms)
 
-Uses source from [oxyplot.codeplex.com](https://oxyplot.codeplex.com/SourceControl/latest) to build:
+## OUT OF DATE (2014) - use [OxyPlot component](https://components.xamarin.com/view/oxyplot) instead
+
+This example uses source from [oxyplot.codeplex.com](https://oxyplot.codeplex.com/SourceControl/latest) to build:
 
 * PCL core
 * Xamarin.iOS assembly
@@ -52,8 +54,8 @@ This sample code to get started came from the [WPF demo](http://oxyplot.org/doc/
 			};
 
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/iOS-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/Android-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/WinPhone-sml.png "Android")
+![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/iOS-sml.png "iOS") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/Android-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/WinPhone-sml.png "WinPhone")
 
 ##WARNING
 
-This isn't finished yet - currently just playing around...
+This is only an "example" - I would recommend using the [OxyPlot component](https://components.xamarin.com/view/oxyplot) or investigating commercial charting controls for Xamarin.Forms (from Telerik or others).

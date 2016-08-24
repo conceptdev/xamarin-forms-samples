@@ -6,6 +6,13 @@ using MonoTouch.Foundation;
 
 namespace Todo.iOS
 {
+	/// <remarks>
+	/// iOS supported languages
+	/// http://www.ibabbleon.com/iOS-Language-Codes-ISO-639.html
+	/// 
+	/// .NET supported cultures
+	/// http://www.localeplanet.com/dotnet/
+	/// </remarks>
 	public class Locale_iOS : Todo.ILocale
 	{
 		/// <remarks>
@@ -13,7 +20,7 @@ namespace Todo.iOS
 		/// </remarks>
 		public string GetCurrent ()
 		{
-			#region not sure why this isn't working for me (in simulator at least)
+			#region output all the values for testing - not needed in production code
 			var iosLocaleAuto = NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier;
 			var iosLanguageAuto = NSLocale.AutoUpdatingCurrentLocale.LanguageCode;
 			Console.WriteLine ("nslocaleid:" + iosLocaleAuto);
@@ -34,12 +41,23 @@ namespace Todo.iOS
 
 			#endregion
 
-			// HACK: not sure why NSLocale isn't ever returning correct data
-			if (NSLocale.PreferredLanguages.Length > 0) {
+			if (NSLocale.PreferredLanguages.Length > 0) 
+			{
 				var pref = NSLocale.PreferredLanguages [0];
 				netLanguage = pref.Replace ("_", "-");
 				Console.WriteLine ("preferred:" + netLanguage);
+
+
+				// -- Handling unsupported langauge codes --
+				// Schwiizertüütsch (Swiss German)
+				if (NSLocale.AutoUpdatingCurrentLocale.LanguageCode == "gsw")
+				{
+					netLanguage = "de-CH"; // TODO: attempt to detect/use locale set by user too
+				}
+
 			}
+
+			Console.WriteLine("preferred now:" + netLanguage); 
 			return netLanguage;
 		}
 	}

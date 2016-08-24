@@ -8,6 +8,8 @@ using Xamarin.Forms;
 using System.IO;
 using System.Threading;
 
+using System.Globalization;
+
 namespace Todo
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
@@ -46,6 +48,10 @@ namespace Todo
 			var netLanguage = iosLanguage.Replace ("_", "-");
 			Console.WriteLine ("ios:" + iosLanguage + " " + iosLocale);
 			Console.WriteLine ("net:" + netLanguage + " " +  netLocale);
+
+				
+			//Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("de-AT");
+
 
 			Console.WriteLine ("culture:" + Thread.CurrentThread.CurrentCulture);
 			Console.WriteLine ("uiculture:" + Thread.CurrentThread.CurrentUICulture);

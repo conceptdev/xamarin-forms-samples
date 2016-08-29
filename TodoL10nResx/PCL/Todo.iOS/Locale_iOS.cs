@@ -44,9 +44,9 @@ namespace Todo.iOS
 			if (NSLocale.PreferredLanguages.Length > 0) 
 			{
 				var pref = NSLocale.PreferredLanguages [0];
-				netLanguage = pref.Replace ("_", "-");
-				Console.WriteLine ("preferred:" + netLanguage);
+				Console.WriteLine("NSLocale.PreferredLanguages [0]:" + NSLocale.PreferredLanguages[0]);
 
+				netLanguage = pref.Replace ("_", "-"); // for .NET-ification
 
 				// -- Handling unsupported langauge codes --
 				// Schwiizertüütsch (Swiss German)

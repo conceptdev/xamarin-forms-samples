@@ -76,6 +76,7 @@
     <EmbeddedResource Include="Resx\AppResources.ru.resx" />
     <EmbeddedResource Include="Resx\AppResources.zh-Hans.resx" />
     <EmbeddedResource Include="Resx\AppResources.zh-Hant.resx" />
+    <EmbeddedResource Include="Resx\AppResources.pt-PT.resx" />
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

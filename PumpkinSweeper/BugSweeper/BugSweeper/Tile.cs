@@ -44,8 +44,8 @@ namespace BugSweeper
                 Text = " ",
 				TextColor = ColorEx.Orange,
 				BackgroundColor = Color.Gray,
-                XAlign = TextAlignment.Center,
-                YAlign = TextAlignment.Center,
+				HorizontalTextAlignment = TextAlignment.Center,
+				VerticalTextAlignment = TextAlignment.Center,
             };
 
             flagImage = new Image

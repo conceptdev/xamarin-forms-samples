@@ -34,7 +34,7 @@ Many of the Xamarin.Forms samples in this repo are discussed in **Intro_To_Xamar
 
 * **TodoXaml** - same todo list application logic, but using XAML to declaratively build the screen layouts (rather than C# code, uses SQLite.Net-PCL Nuget). 
 
-##Unfinished
+## Unfinished
 
 * **TicTacForms** - simple tic tac toe game ~ still under development...
 
@@ -56,9 +56,9 @@ Also the Azure ones, and the Parse Xamarin Store Component.
 Other Interesting Repos
 -----------------------
 
-###[XForms](https://github.com/XForms/Xamarin-Forms-Labs)
+### [XForms](https://github.com/XForms/Xamarin-Forms-Labs)
 Community-driven controls and extensions for Xamarin.Forms
 
-###[acr-xamarin-forms](https://github.com/aritchie/acr-xamarin-forms#acr-xamarin-forms)
+### [acr-xamarin-forms](https://github.com/aritchie/acr-xamarin-forms#acr-xamarin-forms)
 Another source of controls written by Allan Ritchie
 

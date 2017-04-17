@@ -19,7 +19,7 @@ The core can be used in Xamarin.Forms and the platform-specific assemblies used 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/pieseries-sml.png "Pie")
 
 
-##Simple demo
+## Simple demo
 
 This sample code to get started came from the [WPF demo](http://oxyplot.org/doc/HelloWpfXaml.html).
 
@@ -56,6 +56,6 @@ This sample code to get started came from the [WPF demo](http://oxyplot.org/doc/
 
 ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/iOS-sml.png "iOS") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/Android-sml.png "Android") ![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/master/OxyPlotDemo/Screenshots/WinPhone-sml.png "WinPhone")
 
-##WARNING
+## WARNING
 
 This is only an "example" - I would recommend using the [OxyPlot component](https://components.xamarin.com/view/oxyplot) or investigating commercial charting controls for Xamarin.Forms (from Telerik or others).

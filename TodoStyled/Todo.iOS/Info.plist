@@ -13,7 +13,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>8.1</string>
+	<string>10.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -65,5 +65,7 @@
 			<string>{414, 736}</string>
 		</dict>
 	</array>
+	<key>CFBundleName</key>
+	<string>Todo</string>
 </dict>
 </plist>

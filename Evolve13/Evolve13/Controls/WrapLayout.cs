@@ -76,7 +76,7 @@ namespace Xamarin.Forms
 			var result = new List<List<Tuple<View, Rectangle>>> ();
 			var currentList = new List<Tuple<View, Rectangle>> ();
 
-			foreach (var child in Children) {
+			foreach (var child in Children.Where(c => c.IsVisible)) {
 				SizeRequest sizeRequest;
 				if (!layoutCache.TryGetValue (child, out sizeRequest)) {
 					layoutCache[child] = sizeRequest = child.GetSizeRequest (double.PositiveInfinity, double.PositiveInfinity);

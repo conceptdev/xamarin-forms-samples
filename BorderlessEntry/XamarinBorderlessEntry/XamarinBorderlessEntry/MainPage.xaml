@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinBorderlessEntry"
+             xmlns:Controls="clr-namespace:XamarinBorderlessEntry.Controls"
+             x:Class="XamarinBorderlessEntry.MainPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Image Aspect="Fill"  x:Name="imgBanner" HeightRequest="100" WidthRequest="100"></Image>
+                <Button Text="Take" x:Name="btnTakeImage" Clicked="btnTakeImage_Clicked"></Button>
+                <Button Text="Pick" x:Name="btnPickImage" Clicked="btnPickImage_Clicked"></Button>
+
+                <Label Text="Result" x:Name="lblLanguage"></Label>
+                <Entry x:Name="txtInput" Placeholder="Enter text to speak"></Entry>
+                <Button Text="Speak" x:Name="btnSpeak" Clicked="btnSpeak_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

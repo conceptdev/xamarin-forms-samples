@@ -11,7 +11,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>12.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -36,5 +36,7 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>HttpClient</string>
+	<key>CFBundleIdentifier</key>
+	<string>co.conceptdev.httpclient</string>
 </dict>
 </plist>

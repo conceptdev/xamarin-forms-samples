@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dstemplate.DetailView"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="CommentStyle" TargetType="Label"> 
+                
+                <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+         <Grid
+            RowSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="{Binding Comment}"
+                Style="{StaticResource CommentStyle}"/>
+             <WebView
+                Grid.Row="1"
+                Grid.Column="0"
+                Source="{Binding Url}"
+                />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:dstemplate"
+    x:Class="dstemplate.DefaultTheme"
+    >
+
+    <!-- COLORS -->
+    <Color x:Key="BlackColor">#150303</Color>
+    <Color x:Key="WhiteColor">#f8f8ff</Color>
+
+    <!-- CONVERTERS -->
+    <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+
+    <!-- FONT SIZES -->
+    <OnPlatform x:Key="LittleSize" x:TypeArguments="x:Double" iOS="9" Android="9" />
+    <OnPlatform x:Key="MidMediumSize" x:TypeArguments="x:Double" iOS="12" Android="14" />
+    <OnPlatform x:Key="MediumSize" x:TypeArguments="x:Double" iOS="14" Android="16" />
+    <OnPlatform x:Key="LargeSize" x:TypeArguments="x:Double" iOS="16" Android="18"/>
+    <OnPlatform x:Key="LargerSize" x:TypeArguments="x:Double" iOS="18" Android="20" />
+    <OnPlatform x:Key="BigSize" x:TypeArguments="x:Double" iOS="20" Android="24" />
+    <OnPlatform x:Key="ExtraBigSize" x:TypeArguments="x:Double" iOS="24" Android="32" />
+    <OnPlatform x:Key="HugeSize" x:TypeArguments="x:Double" iOS="32" Android="48" />
+
+    <!-- SIZES -->
+    <x:Double x:Key="TopBarHeight">44</x:Double>
+    <x:Double x:Key="TopBarVideoplayerHeight">48</x:Double>
+    <x:Int32 x:Key="DefaultMarginPadding">12</x:Int32>
+
+    <!-- STYLES -->
+    <Style TargetType="ActivityIndicator">
+        <Setter Property="IsRunning" Value="True" />
+        <Setter Property="HeightRequest" Value="60" />
+        <Setter Property="WidthRequest" Value="60" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="Frame">
+        <Setter Property="BorderColor" Value="{StaticResource BlackColor}" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="0"></Setter>
+        <Setter Property="Padding" Value="0"></Setter>
+    </Style>
+
+</ResourceDictionary>

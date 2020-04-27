@@ -4,15 +4,15 @@
              BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentView.Resources>
         <ResourceDictionary>
-            <Style x:Key="EditStyle" TargetType="Label"> 
+            <Style x:Key="EditStyle" TargetType="Editor"> 
                 <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
                 <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="PlaceholderColor" Value="{DynamicResource TextSecondaryColor}" />
             </Style>
-            
         </ResourceDictionary>
     </ContentView.Resources>
     <ContentView.Content>
-        <StackLayout Margin="20">
+        <StackLayout Margin="20,80,20,20">
             <Editor Placeholder="Enter your note"
                     Text="{Binding Text}"
                     HeightRequest="100"
@@ -25,7 +25,8 @@
                 <Button Text="Save" 
                         Clicked="OnSaveButtonClicked" />
                 <Button Grid.Column="1"
-                        Text="Delete" 
+                        Text="Delete"
+                        IsVisible="{Binding CanDelete}"
                         Clicked="OnDeleteButtonClicked"/>
             </Grid>
         </StackLayout>

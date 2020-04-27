@@ -10,7 +10,7 @@ using Xamarin.Forms.DualScreen;
 
 namespace dstemplate.Droid
 {
-    [Activity(Label = "Notes",
+    [Activity(Label = "Duo Notes",
         Icon = "@mipmap/icon",
         Theme = "@style/MainTheme",
         MainLauncher = true,

@@ -79,9 +79,9 @@
                       </DataTemplate>
                   </CollectionView.ItemTemplate>
               </CollectionView>
-              <ActivityIndicator
+              <!--<ActivityIndicator
                   Color="{DynamicResource TextPrimaryColor}"
-                  IsVisible="{Binding IsBusy}"/>
+                  IsVisible="{Binding IsBusy}"/>-->
           </Grid>
     </ContentView.Content>
 </ContentView>

@@ -33,14 +33,14 @@ namespace dstemplate
             App._mainPage.OnNoteAddedClicked(sender, e);
         }
 
-        bool _isBusy = false;
-        public bool IsBusy
-        {
-            get => _isBusy;
-            set {
-                _isBusy = value;
-                OnPropertyChanged("IsBusy");
-            }
-        }   
+        //bool _isBusy = false;
+        //public bool IsBusy
+        //{
+        //    get => _isBusy;
+        //    set {
+        //        _isBusy = value;
+        //        OnPropertyChanged("IsBusy");
+        //    }
+        //}   
     }
 }

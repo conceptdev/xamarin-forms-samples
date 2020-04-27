@@ -123,7 +123,6 @@ namespace dstemplate
                 (_pane1 as NotesView).BindingContext = notes
                     .OrderByDescending(d => d.Date)
                     .ToList();
-                (_pane1 as NotesView).IsBusy = false;
                 twoPaneView.PanePriority = TwoPaneViewPriority.Pane1;
             }
         }

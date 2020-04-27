@@ -33,7 +33,7 @@ namespace dstemplate
         }
         void GitHub_Clicked(System.Object sender, System.EventArgs e)
         {
-            string url = "https://github.com/microsoft/surface-duo-sdk-xamarin-samples";
+            string url = "https://github.com/conceptdev/xamarin-forms-samples/";
             Browser.OpenAsync(new Uri(url));
         }
 

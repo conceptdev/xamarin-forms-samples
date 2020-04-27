@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dstemplate.ListingCellTemplate"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="AvatarStyle" TargetType="Image"> 
+                <Setter Property="Aspect" Value="AspectFill" />
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="WidthRequest" Value="20" />
+            </Style>
+
+            <Style x:Key="UsernameStyle" TargetType="Label"> 
+                <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+                <Setter Property="FontSize" Value="{StaticResource MediumSize}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+             <Style x:Key="DateStyle" TargetType="Label"> 
+                <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+             </Style>
+
+            <Style x:Key="CommentStyle" TargetType="Label"> 
+                <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+                <Setter Property="FontSize" Value="{StaticResource LargerSize}" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid
+            RowSpacing="0"
+            Margin="0, 12, 40, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Column="1"
+                Text="{Binding Text}"
+                Style="{StaticResource CommentStyle}"/>
+            <Label
+                Grid.Column="2"
+                Text="{Binding Date}"
+                Style="{StaticResource DateStyle}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dstemplate.NotesEntryView"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EditStyle" TargetType="Label"> 
+                <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+                <Setter Property="FontSize" Value="{StaticResource LargeSize}" />
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <StackLayout Margin="20">
+            <Editor Placeholder="Enter your note"
+                    Text="{Binding Text}"
+                    HeightRequest="100"
+                    Style="{StaticResource EditStyle}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" 
+                        Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                        Text="Delete" 
+                        Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

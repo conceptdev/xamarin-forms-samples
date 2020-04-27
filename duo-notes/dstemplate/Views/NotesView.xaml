@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:dstemplate"
+             x:Class="dstemplate.NotesView"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentView.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+            <Style x:Key="HeadingStyle" TargetType="Label"> 
+                <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+                <Setter Property="FontSize" Value="{StaticResource HugeSize}" />
+            </Style>
+        <Style x:Key="SettingsImageStyle" TargetType="Image">
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="6, 8" />
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid Margin="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"
+                   Text="Notes"
+                   Style="{StaticResource HeadingStyle}"/>
+              <Image
+                Grid.Row="2" Grid.Column="1"
+                Source="newitem.png"
+                WidthRequest="40"
+                Opacity="0.6">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="AddTapGestureRecognizer_Tapped"/>
+                </Image.GestureRecognizers>
+              </Image>
+              <Image
+                  Grid.Row="0" Grid.Column="1"
+                    Source="settings.png"
+                    Style="{StaticResource SettingsImageStyle}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                             Tapped="TapGestureRecognizer_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+              <CollectionView
+                  Grid.Row="1"
+                  Grid.ColumnSpan="2"
+                  ItemsSource="{Binding .}"
+                  SelectionMode="Single"
+                  SelectionChanged="OnCollectionViewSelectionChanged">
+                  <CollectionView.ItemsLayout>
+                      <GridItemsLayout
+                          Orientation="Vertical"
+                          VerticalItemSpacing="6"/>
+                  </CollectionView.ItemsLayout>
+                  <CollectionView.ItemTemplate>
+                      <DataTemplate>
+                          <templates:ListingCellTemplate />
+                      </DataTemplate>
+                  </CollectionView.ItemTemplate>
+              </CollectionView>
+              <ActivityIndicator
+                  Color="{DynamicResource TextPrimaryColor}"
+                  IsVisible="{Binding IsBusy}"/>
+          </Grid>
+    </ContentView.Content>
+</ContentView>

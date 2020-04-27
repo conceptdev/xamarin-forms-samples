@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="dstemplate.DarkTheme"
+    Source="DefaultTheme.xaml">
+
+    <!--COLORS -->
+    <Color x:Key="BackgroundColor">#FF150303</Color>
+    <Color x:Key="RecentSearchBackgroundColor">#FF200707</Color>
+    <Color x:Key="AccentColor">#FFFFFFFF</Color>
+    <Color x:Key="TextPrimaryColor">#B0FFFFFF</Color>
+    <Color x:Key="TextSecondaryColor">#B0FFFFFF</Color>
+
+</ResourceDictionary>

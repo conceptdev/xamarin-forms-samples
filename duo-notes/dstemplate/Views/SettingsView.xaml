@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dstemplate.SettingsView"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="HeaderStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+                <Setter Property="Margin" Value="12, 12, 12, 0" />
+            </Style>
+
+            <Style x:Key="SelectedThemeStyle" TargetType="BoxView">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="HeightRequest" Value="12" />
+                <Setter Property="WidthRequest" Value="12" />
+                <Setter Property="CornerRadius" Value="24" />
+                <Setter Property="Margin" Value="6" />
+            </Style>
+
+            <Style x:Key="ThemeNameStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+            </Style>
+
+            <Style x:Key="CloseStyle" TargetType="ImageButton">
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+             <Style x:Key="ChooseThemeSelectorStyle" TargetType="Frame">
+                 <Setter Property="CornerRadius" Value="8"/>
+                 <Setter Property="IsClippedToBounds" Value="True" />
+                 <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                 <Setter Property="VerticalOptions" Value="Start" />
+            </Style>
+            
+            <Style x:Key="DescriptionTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+                <Setter Property="Margin" Value="12, 0" />
+            </Style>
+
+            <Style x:Key="SettingsButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="{DynamicResource TextPrimaryColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+                <Setter Property="BorderRadius" Value="24"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="CornerRadius" Value="24"/>
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="Margin" Value="112, 12"/>
+            </Style>
+
+         </ResourceDictionary>
+    </ContentView.Resources>
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0" Grid.Row="0"
+                        Text="Theming"
+                        HorizontalOptions="FillAndExpand"
+                        FontAttributes="Bold"
+                        Style="{StaticResource HeaderStyle}" />
+                    <ImageButton
+                        Command="{Binding CloseCommand}"
+                        Grid.Column="1" Grid.Row="0"
+                        Source="close.png"
+                        BackgroundColor="Transparent"
+                        Style="{StaticResource CloseStyle}"
+                        Clicked="Close_Clicked">
+                    </ImageButton>
+                </Grid>
+                <Grid
+                    Margin="16, 0"
+                    RowSpacing="16"
+                    ColumnSpacing="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Column="0">
+                    <Grid>
+                        <Image
+                            Aspect="AspectFill"
+                            Source="darktheme.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ThemeDark_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <BoxView
+                            IsVisible="{Binding IsDarkMode}"
+                            Color="{StaticResource WhiteColor}"
+                            Style="{StaticResource SelectedThemeStyle}"/>
+                    </Grid>
+                    </Frame>
+
+                    <Label
+                        Grid.Row="1"
+                        Text="Dark"
+                        Style="{StaticResource ThemeNameStyle}"/>
+
+                    <Frame Grid.Column="1">                   
+                    <Grid>
+                        <Image
+                            Aspect="AspectFill"
+                            Source="lighttheme.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ThemeLight_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <BoxView
+                            IsVisible="{Binding IsDarkMode, Converter={StaticResource InverseBoolConverter}}"
+                            Color="{StaticResource BlackColor}"
+                            Style="{StaticResource SelectedThemeStyle}"/>
+                    </Grid>
+                    </Frame>
+                    
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Light"
+                        Style="{StaticResource ThemeNameStyle}"/>
+                </Grid>
+            </StackLayout>
+
+            <Label
+                Text="More information"
+                HorizontalOptions="FillAndExpand"
+                FontAttributes="Bold"
+                Style="{StaticResource HeaderStyle}" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label
+                    Grid.Row="0" 
+                    Text="This app showcases the possibilities of Xamarin to develop apps for Surface Duo. This app is available as open source project on GitHub."
+                    Style="{StaticResource DescriptionTextStyle}"/>
+                <Button
+                    Grid.Row="1"
+                    Visual="Material"
+                    Text="Visit GitHub"
+                    Style="{StaticResource SettingsButtonStyle}"
+                    Clicked="GitHub_Clicked"/>
+                </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentView>

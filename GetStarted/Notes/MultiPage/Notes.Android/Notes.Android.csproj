@@ -52,6 +52,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ItemDragAndDropEffect.cs" />
+    <Compile Include="DragAndDropEffect.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

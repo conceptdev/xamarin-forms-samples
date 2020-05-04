@@ -17,7 +17,7 @@ namespace Notes.Droid.Effects
         protected override void OnAttached()
         {
             Control.SetOnLongClickListener(new LongClickListen(this));
-            Control.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+            //Control.SetBackgroundColor(Android.Graphics.Color.LightGreen); // HACK: show it's bound
         }
 
         protected override void OnDetached()

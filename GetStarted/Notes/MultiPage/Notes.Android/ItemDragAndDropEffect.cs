@@ -19,7 +19,7 @@ namespace Notes.Droid.Effects
         {
             (Control as AView).OnItemLongClickListener = new ItemLongClickListen(this);
             (Control as LView).LongClickable = true;
-            Control.SetBackgroundColor(Android.Graphics.Color.LightGreen);
+            //Control.SetBackgroundColor(Android.Graphics.Color.LightGreen); // HACK: show it's bound
         }
 
         protected override void OnDetached()

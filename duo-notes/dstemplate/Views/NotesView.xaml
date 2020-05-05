@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:templates="clr-namespace:dstemplate"
+             xmlns:effects="clr-namespace:dstemplate"
              x:Class="dstemplate.NotesView"
              BackgroundColor="{DynamicResource BackgroundColor}">
     <ContentView.Resources>
@@ -12,7 +13,7 @@
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
                                 <Setter Property="BackgroundColor"
-                                        Value="LightSkyBlue" />
+                                        Value="LightGray" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -27,6 +28,16 @@
             <Setter Property="HorizontalOptions" Value="End" />
             <Setter Property="VerticalOptions" Value="Center" />
             <Setter Property="Margin" Value="6, 8" />
+        </Style>
+        <Style x:Key="DateStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource TextSecondaryColor}" />
+            <Setter Property="FontSize" Value="{StaticResource MediumSize}" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+        <Style x:Key="CommentStyle" TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource TextPrimaryColor}" />
+            <Setter Property="FontSize" Value="{StaticResource LargerSize}" />
         </Style>
     </ContentView.Resources>
     <ContentView.Content>
@@ -75,8 +86,33 @@
                   </CollectionView.ItemsLayout>
                   <CollectionView.ItemTemplate>
                       <DataTemplate>
-                          <templates:ListingCellTemplate />
-                      </DataTemplate>
+                        <Grid
+                            RowSpacing="0"
+                            Margin="0, 12, 40, 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding Text}"
+                                Style="{StaticResource CommentStyle}"
+                                >
+                                <Label.Effects>
+                                    <effects:DragAndDropEffect />
+                                </Label.Effects>
+                            </Label>
+                            <Label
+                                Grid.Column="2"
+                                Text="{Binding Date}"
+                                Style="{StaticResource DateStyle}"/>
+                        </Grid>
+                    </DataTemplate>
                   </CollectionView.ItemTemplate>
               </CollectionView>
               <!--<ActivityIndicator

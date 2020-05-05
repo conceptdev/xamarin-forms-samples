@@ -23,6 +23,14 @@ namespace dstemplate
         {
             InitializeComponent();
             _pane1 = new NotesView();
+            DualScreenInfo.Current.PropertyChanged += Current_PropertyChanged;
+        }
+
+        private void Current_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            Console.WriteLine("PropertyChanged");
+            Console.WriteLine(DualScreenInfo.Current.SpanMode);
+            Console.WriteLine(DualScreenInfo.Current.SpanningBounds);
         }
 
         ContentView _pane1, _pane2;
@@ -48,7 +56,7 @@ namespace dstemplate
         }
 
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
-
+        
         public void UpdateLayouts()
         {
             if (_pane1 == null) return;

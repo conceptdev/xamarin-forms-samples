@@ -22,14 +22,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\DetailView.xaml.cs">
+    <Compile Update="Views\NotesEntryView.xaml.cs">
       <DependentUpon>NotesEntryView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ListingCellTemplate.xaml.cs">
-      <DependentUpon>ListingCellTemplate.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\ListingView.xaml.cs">
+    <Compile Update="Views\NotesView.xaml.cs">
       <DependentUpon>NotesView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +39,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </None>
     <None Include="Views\NotesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </None>
+    <None Include="Views\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </None>

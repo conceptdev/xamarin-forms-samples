@@ -12,7 +12,7 @@
               Margin="20"
               ItemSelected="OnListViewItemSelected">
         <ListView.Effects>
-            <effects:ItemDragAndDropEffect Uri="https://docs.microsoft.com" Description="Test drag"/>
+            <effects:ItemDragAndDropEffect />
         </ListView.Effects>
         <ListView.ItemTemplate>
             <DataTemplate>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:effects="clr-namespace:Notes"
+             mc:Ignorable="d"
+             x:Class="Notes.NotesView">
+  <ContentView.Content>
+        <ListView x:Name="listView"
+              Margin="20"
+              ItemSelected="OnListViewItemSelected"
+              ItemsSource="{Binding .}">
+            <ListView.Effects>
+                <effects:ItemDragAndDropEffect Uri="https://docs.microsoft.com" Description="Test drag"/>
+            </ListView.Effects>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Text}"
+                          Detail="{Binding Date}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentView.Content>
+</ContentView>

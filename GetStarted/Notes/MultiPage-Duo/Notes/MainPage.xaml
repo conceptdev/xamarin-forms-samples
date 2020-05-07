@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="clr-namespace:Notes"
+             xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen"
+             mc:Ignorable="d"
+             Title="Notes"
+             x:Class="Notes.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="OnNoteAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <dualScreen:TwoPaneView
+         x:Name="twoPaneView"
+         MinWideModeWidth="800"
+         PanePriority="Pane1">
+            <!--Pane 1-->
+            <dualScreen:TwoPaneView.Pane1>
+                <templates:NotesView />
+            </dualScreen:TwoPaneView.Pane1>
+            <!--Pane 2-->
+            <dualScreen:TwoPaneView.Pane2>
+                <StackLayout
+                Padding="40,40,40,40"
+                BackgroundColor="Transparent">
+                    <Label Text="Pick a note" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane2>
+        </dualScreen:TwoPaneView>
+    </ContentPage.Content>
+</ContentPage>

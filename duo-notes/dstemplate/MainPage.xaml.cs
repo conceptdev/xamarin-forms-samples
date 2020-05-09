@@ -31,6 +31,7 @@ namespace dstemplate
             Console.WriteLine("PropertyChanged");
             Console.WriteLine(DualScreenInfo.Current.SpanMode);
             Console.WriteLine(DualScreenInfo.Current.SpanningBounds);
+            UpdateLayouts();
         }
 
         ContentView _pane1, _pane2;
@@ -57,6 +58,7 @@ namespace dstemplate
 
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
         
+        // TODO: Update layouts based on views
         public void UpdateLayouts()
         {
             if (_pane1 == null) return;
@@ -152,6 +154,7 @@ namespace dstemplate
             twoPaneView.PanePriority = TwoPaneViewPriority.Pane2;
         }
 
+        // TODO: Back button handling
         protected override bool OnBackButtonPressed()
         {
             if (twoPaneView.PanePriority == TwoPaneViewPriority.Pane1)

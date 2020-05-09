@@ -8,7 +8,6 @@ using AView = Android.Views.View;
 using ADragFlags = Android.Views.DragFlags;
 using AUri = Android.Net.Uri;
 
-[assembly: ResolutionGroupName("Notes")]
 [assembly: ExportEffect(typeof(DragAndDropEffect), "DragAndDropEffect")]
 namespace Notes.Droid.Effects
 {

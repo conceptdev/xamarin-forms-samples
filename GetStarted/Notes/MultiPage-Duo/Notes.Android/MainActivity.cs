@@ -19,6 +19,7 @@ namespace Notes.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            DualScreenService.Init(this);
             LoadApplication(new App());
         }
     }

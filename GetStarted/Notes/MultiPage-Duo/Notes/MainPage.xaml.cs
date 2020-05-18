@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.DualScreen;
 using Xamarin.Forms.Xaml;
@@ -61,9 +58,6 @@ namespace Notes
             BindingContext = notes
                     .OrderByDescending(d => d.Date)
                     .ToList();
-            //listView.ItemsSource = notes
-            //    .OrderBy(d => d.Date)
-            //    .ToList();
         }
 
         public void OnListViewItemSelected(Note note)
@@ -77,22 +71,15 @@ namespace Notes
 
         protected override bool OnBackButtonPressed()
         {
-            return true; // TODO: update this later
-            if (twoPaneView.PanePriority == TwoPaneViewPriority.Pane1)
-            {
-                //
-            }
-            if (twoPaneView.PanePriority == TwoPaneViewPriority.Pane2)
-            {
-                if (twoPaneView.Pane2?.GetType() == typeof(NotesEntryView))
-                {
-                    twoPaneView.Pane1 = new NotesView();
+            if (!DeviceIsSpanned)
+            { // single-screen
+                if (twoPaneView.PanePriority == TwoPaneViewPriority.Pane2)
+                { //showing detail, back goes to master (list)
                     twoPaneView.PanePriority = TwoPaneViewPriority.Pane1;
-                    RefreshData();
                     return true;
                 }
             }
-            return false;
+            return base.OnBackButtonPressed();
         }
 
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
@@ -101,24 +88,16 @@ namespace Notes
         {
             if (twoPaneView.Pane1 == null) return;
 
-            //twoPaneView.MinTallModeHeight = 0;
-            //twoPaneView.MinWideModeWidth = 600;
-            //twoPaneView.Pane1Length = new GridLength(1, GridUnitType.Star);
-            //twoPaneView.Pane2Length = new GridLength(1, GridUnitType.Star);
-            //twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.TopBottom;
-            //twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.LeftRight;
-
-            //if (DeviceIsSpanned)
-            //{
-            //    twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.TopBottom;
-            //    twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.LeftRight;
-            //}
-            //else
-            //{
-            //    twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.SinglePane;
-            //    twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.SinglePane;
-            //}
-            
+            if (DeviceIsSpanned)
+            {
+                twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.LeftRight;
+                twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.TopBottom;
+            }
+            else
+            {   // single screen!
+                twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.SinglePane;
+                twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.SinglePane;
+            }
         }
     }
 }

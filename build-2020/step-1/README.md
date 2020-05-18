@@ -2,7 +2,7 @@
 
 **Microsoft Build 2020**
 
-This code sample was used in the Microsoft Build 2020 session [_Enhancing apps for Surface Duo with Xamarin_](http://aka.ms/M365sk123).
+This code sample was used in the Microsoft Build 2020 session [_How to bring your Android apps to Surface Duo with Xamarin_](http://aka.ms/M365sk123).
 
 The session begins with the code for this [quickstart documentation](https://docs.microsoft.com/xamarin/get-started/quickstarts/multi-page). It's been copied from the [Xamarin samples GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/Notes/MultiPage) to this folder for reference.
 

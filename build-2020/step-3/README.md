@@ -2,7 +2,7 @@
 
 **Microsoft Build 2020**
 
-This code sample is used in the Microsoft Build 2020 session [_Enhancing apps for Surface Duo with Xamarin_](http://aka.ms/M365sk123).
+This code sample was used in the Microsoft Build 2020 session [_Enhancing apps for Surface Duo with Xamarin_](http://aka.ms/M365sk123).
 
 In this step the sample is modified to support dual-screen display using the `TwoPaneView`. These files are added/changed:
 

@@ -1,8 +1,6 @@
-# Surface Duo + Xamarin step 3
+# Surface Duo + Xamarin at Microsoft Build 2020
 
-**Microsoft Build 2020**
-
-This code sample is used in the Microsoft Build 2020 session [_Enhancing apps for Surface Duo with Xamarin_](http://aka.ms/M365sk123).
+These code samples were used in the Microsoft Build 2020 session [_Enhancing apps for Surface Duo with Xamarin_](http://aka.ms/M365sk123).
 
 ## [Step 1](step-1/)
 

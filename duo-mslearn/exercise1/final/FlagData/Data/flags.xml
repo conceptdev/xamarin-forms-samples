@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<flags>
+  <flag country="Nepal"
+        imageUrl="nepal.png"
+        adopted="12-16-1962"
+        hasShield="true"
+        url="https://en.wikipedia.org/wiki/Flag_of_Nepal">
+    This is the only country that does not have a standard rectangular flag; it's also the oldest official flag in the world - with the basic design going back over 2000 years. The blue frame stands for harmony and peace, reminiscent of Buddha, who was born here. Crimson, on the other hand, is the national color. Some people compare the triangles with the Himalayan summits, but they are actually a Hindu symbol.
+  </flag>
+
+  <flag country="Greece"
+        imageUrl="greece.png"
+        adopted="01-13-1822"
+        hasShield="false"
+        url="https://en.wikipedia.org/wiki/Flag_of_Greece">
+    The blue in the Greek flag is thought to represent the Mediterranean Sea and the white – the white houses along the shore, while others think that the five stripes on the flag stand for the national slogan ‘Freedom or Death’. All agree on one thing – the cross represents Orthodox Christianity.
+  </flag>
+
+  <flag country="Brazil"
+        imageUrl="brazil.png"
+        adopted="11-15-1889"
+        hasShield="true"
+        url="https://en.wikipedia.org/wiki/Flag_of_Brazil">
+    The green background and the yellow rhombus symbolize the former colonial government, the Braganza-Habsburg dynasty. The former coat of arms was replaced by a blue circle with 27 white stars, with the identical positioning of the stars above Rio on the 15th November 1889, each star representing a state. The slogan in the middle means ‘order and progress’.
+  </flag>
+
+  <flag country="Canada"
+        imageUrl="canada.png"
+        adopted="02-15-1965"
+        hasShield="true"
+        url="https://en.wikipedia.org/wiki/Flag_of_Canada">
+    The red colour is reminiscent of the cross of St. George, the protector of the state, and white is taken from the French royal Coat of arms. The maple leaf represents the beautiful Canadian nature, at least during the summer.
+  </flag>
+
+  <flag country="Bhutan"
+        imageUrl="bhutan.png"
+        adopted="01-01-1947"
+        hasShield="true"
+        url="https://en.wikipedia.org/wiki/Flag_of_Bhutan">
+    The Bhutan flag stands out for one feature – the dragon. The name of the country means ’dragon’ so it is logical to be placed on the flag. The dragon originates from the Bhutan mythology, and holds jewels in his paws, that represent wealth.
+  </flag>
+
+  <flag country="United States"
+      imageUrl="usa.png"
+      adopted="06-14-1777"
+      hasShield="false"
+      url="https://en.wikipedia.org/wiki/Flag_of_the_United_States">
+    The popular nickname for USA’s flag is Betsy Ross, after the woman that made the first flag. The interesting facts about flags of USA is that it consists of thirteen horizontal red and white stripes that symbolize the first thirteen states that declared independence in 1776. The blue rectangular with the white stars represent the number of states. Today there are 50 of them, lined up in formations of 6-5-6-5-6-5-6-5-6.
+  </flag>
+
+  <flag country="Australia"
+      imageUrl="australia.png"
+      adopted="02-11-1903"
+      hasShield="false"
+      url="https://en.wikipedia.org/wiki/Flag_of_Australia">
+    Few Australians know the unique and proud story of our flag –the only national flag to fly over an entire continent, but also the first to be chosen in an open public competition. Union Jack represents Australia’s historical links with the United Kingdom. The white 7-pointed Commonwealth Star stands for the unity of the six states and the territories of the Commonwealth of Australia. The Southern Cross, a constellation of five stars that can only be seen in the night skies of the Southern hemisphere, symbolizes Australia’s position in the southern hemisphere. The formal name of the Southern Cross is “Crux Australis” and the individual stars are named by the first five letters of the Greek alphabet in order of brightness – Alpha, Beta, Gamma, Delta and Epsilon.
+  </flag>
+
+  <flag country="Indonesia"
+      imageUrl="indonesia.png"
+      adopted="08-17-1945"
+      hasShield="false"
+      url="https://en.wikipedia.org/wiki/Flag_of_Indonesia">
+    The Indonesian flag consists of two horizontal stripes, red and white. The colors are traditional, used by different dynasties throughout history. It was introduced to the public at the Indonesian Independence declaration ceremony on August 17th, 1945. The design of the flag has remained unchanged since. The flag of Indonesia is graphically identical to the Flag of Monaco, with a slight difference only in its dimension ratio (2:3).
+  </flag>
+  
+  <flag country="Mozambique"
+      imageUrl="mozambique.png"
+      adopted="05-01-1983"
+      hasShield="true"
+      url="https://en.wikipedia.org/wiki/Flag_of_Mozambique">
+    For someone that is not acquainted with Mozambique’s history would consider the country’s flag unusual, but for the nationals the symbolism is obvious. Green stands for the riches of the land, black for the African continent, yellow for the abundance of minerals, and the red for the fight for independence. The coat of arms is unique and deeply symbolic. The red star stands for socialism; the book for education and progress; the hoe stands for agriculture, and the weapon (an AK-47) represents the battle for freedom.
+  </flag>
+  
+  <flag country="Bikini Atoll"
+      imageUrl="bikini-atoll.png"
+      adopted="03-22-1985"
+      hasShield="false"
+      url="https://en.wikipedia.org/wiki/Flag_of_Bikini_Atoll">
+    The Bikini Atoll’s flag is similar to the USA flag, but with black stars representing islands destroyed by nuclear testing, to serve as a reminder of the debt the US still owes them for nuclear fallout and radiation poisoning. The Marshallese language words on the bottom of the flag, "MEN OTEMJEJ REJ ILO BEIN ANIJ"  translates as "Everything is in the hands of God."
+  </flag>
+  
+  <flag country="Denmark"
+      imageUrl="denmark.png"
+      adopted="01-01-1854"
+      hasShield="false"
+      url="https://en.wikipedia.org/wiki/Flag_of_Denmark">
+    The Flag of Denmark is red with a white Scandinavian cross that extends to the edges of the flag; the vertical part of the cross is shifted to the hoist side. Denmark’s flag is the oldest flag currently in use, designed originally in 1219 in the Battle of Lyndanisse and generally unchanged since. Interestingly, in Denmark, it is illegal to burn foreign flags, but not illegal to burn the Danish flag.
+  </flag>
+  
+  <flag country="Germany"
+      imageUrl="germany.png"
+      adopted="05-23-1949"
+      hasShield="false"
+      url="https://en.wikipedia.org/wiki/Flag_of_Germany">
+    The national flag of Germany consists of three equal horizontal bands of black (top), red, and gold. Flags used by German government for official purposes are defaced with the Bundesschild ("Federal Shield"), which overlaps with up to one fifth of the black and gold bands.
+  </flag>
+
+</flags>

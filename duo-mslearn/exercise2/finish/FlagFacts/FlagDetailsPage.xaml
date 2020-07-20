@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:FlagFacts"
+             mc:Ignorable="d"
+             x:Class="FlagFacts.FlagDetailsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Previous"
+                     Clicked="OnPrevious" Icon="ic_arrow_drop_up.png" />
+        <ToolbarItem Text="Next" 
+                     Clicked="OnNext" Icon="ic_arrow_drop_down.png" />
+        <ToolbarItem Text="Show" 
+                     Clicked="OnShow" Icon="ic_action_search.png" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <views:FlagDetailsView />
+    </ContentPage.Content>
+</ContentPage>

@@ -2,17 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Fun with Flags"
+             xmlns:views="clr-namespace:FlagFacts"
              x:Class="FlagFacts.AllFlagsPage">
 
-    <ListView ItemsSource="{Binding Flags}" SelectedItem="{Binding CurrentFlag, Mode=TwoWay}" ItemTapped="ListView_ItemTapped">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ImageCell DetailColor="Gray"
-                           ImageSource="{Binding ImageUrl, Converter={StaticResource irConverter}}"
-                           Text="{Binding Country}"
-                           Detail="{Binding DateAdopted, StringFormat='Adopted on {0:d}'}"/>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <views:AllFlagsView FlagTapped="ListView_FlagTapped" />
 
 </ContentPage>

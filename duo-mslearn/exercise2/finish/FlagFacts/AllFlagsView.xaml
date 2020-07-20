@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="FlagFacts.AllFlagsView">
-    <ListView ItemsSource="{Binding Flags}" SelectedItem="{Binding CurrentFlag, Mode=TwoWay}" ItemTapped="ListView_ItemTapped">
+    <ListView ItemsSource="{Binding Flags}" 
+              SelectedItem="{Binding CurrentFlag, Mode=TwoWay}"
+              ItemTapped="ListView_ItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ImageCell DetailColor="Gray"

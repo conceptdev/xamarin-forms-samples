@@ -11,7 +11,7 @@ namespace FlagFacts
             InitializeComponent();
         }
 
-        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ListView_FlagTapped(object sender, ItemTappedEventArgs e)
         {
             await this.Navigation.PushAsync(new FlagDetailsPage());
         }

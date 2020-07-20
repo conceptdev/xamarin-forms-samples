@@ -12,13 +12,16 @@ namespace FlagFacts
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AllFlagsView : ContentView
     {
+        public event EventHandler<ItemTappedEventArgs> FlagTapped;
+
         public AllFlagsView()
         {
             InitializeComponent();
         }
-        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await this.Navigation.PushAsync(new FlagDetailsPage());
+            //await this.Navigation.PushAsync(new FlagDetailsPage());
+            FlagTapped?.Invoke(sender, e);
         }
     }
 }

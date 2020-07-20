@@ -1,7 +1,5 @@
 using FlagData;
-using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace FlagFacts
 {
@@ -13,7 +11,9 @@ namespace FlagFacts
 
             InitializeComponent();
 
+            // TODO: if not dual-screen device, use old nav style
             //MainPage = new NavigationPage(new AllFlagsPage());
+            // TODO: else use dual-screen mainpage
             MainPage = new NavigationPage(new MainPage());
         }
 

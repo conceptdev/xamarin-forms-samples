@@ -10,11 +10,14 @@
 
     <dualScreen:TwoPaneView
         x:Name="twoPaneView"
-        MinWideModeWidth="550"
+        TallModeConfiguration="SinglePane"
+        WideModeConfiguration="SinglePane"
         >
         <!-- App always starts in single-screen, so defaults to SinglePane -->
         <dualScreen:TwoPaneView.Pane1>
-            <ListView ItemsSource="{Binding Flags}" SelectedItem="{Binding CurrentFlag, Mode=TwoWay}" ItemTapped="ListView_ItemTapped">
+            <ListView ItemsSource="{Binding Flags}" 
+                      SelectedItem="{Binding CurrentFlag, Mode=TwoWay}" 
+                      ItemTapped="ListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell DetailColor="Gray"

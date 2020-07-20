@@ -1,9 +1,5 @@
 ﻿using FlagData;
-using System;
-using System.ComponentModel;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.DualScreen;
 
 namespace FlagFacts
 {

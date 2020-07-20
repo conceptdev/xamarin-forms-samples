@@ -1,10 +1,6 @@
 ﻿using FlagData;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.DualScreen;
@@ -15,10 +11,25 @@ namespace FlagFacts
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        // can never be Spanned when first viewed...
+        bool wasSpanned = false;
+
         public MainPage()
         {
             BindingContext = DependencyService.Get<FlagDetailsViewModel>();
             InitializeComponent();
+        }
+
+        private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (DeviceIsSpanned)
+            {   // no-op
+                twoPaneView.PanePriority = TwoPaneViewPriority.Pane2;
+            }
+            else
+            {   // use Navigation
+                await this.Navigation.PushAsync(new FlagDetailsPage());
+            }
         }
 
         protected override void OnAppearing()
@@ -28,8 +39,8 @@ namespace FlagFacts
         }
         protected override void OnDisappearing()
         {
-            //unsub
             base.OnDisappearing();
+            DualScreenInfo.Current.PropertyChanged -= Current_PropertyChanged;
         }
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
 
@@ -41,7 +52,7 @@ namespace FlagFacts
             UpdateLayouts();
         }
 
-        public void UpdateLayouts()
+        public async void UpdateLayouts()
         {
             Console.WriteLine($"DeviceIsSpanned: {DeviceIsSpanned}");
             if (DeviceIsSpanned)
@@ -49,27 +60,19 @@ namespace FlagFacts
                 twoPaneView.PanePriority = TwoPaneViewPriority.Pane1; // no-op??
                 twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.TopBottom;
                 twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.LeftRight;
+                wasSpanned = true;
             }
             else
             {   // single-screen
-                twoPaneView.PanePriority = TwoPaneViewPriority.Pane2;
+                if (wasSpanned)
+                {
+                    await this.Navigation.PushAsync(new FlagDetailsPage());
+                }
+                twoPaneView.PanePriority = TwoPaneViewPriority.Pane1;
                 twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.SinglePane;
                 twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.SinglePane;
+                wasSpanned = false;
             }
-        }
-
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            twoPaneView.PanePriority = TwoPaneViewPriority.Pane2;
-        }
-        protected override bool OnBackButtonPressed()
-        {
-            if (twoPaneView.PanePriority == TwoPaneViewPriority.Pane2)
-            {
-                twoPaneView.PanePriority = TwoPaneViewPriority.Pane1;
-                return true;
-            }
-            return false;
         }
 
         private void OnMoreInformation(object sender, EventArgs e)

@@ -17,7 +17,6 @@ namespace FlagFacts
         public MainPage()
         {
             BindingContext = DependencyService.Get<FlagDetailsViewModel>();
-            DualScreenInfo.Current.PropertyChanged += Current_PropertyChanged;
             InitializeComponent();
         }
 
@@ -41,16 +40,17 @@ namespace FlagFacts
             }
         }
 
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //    DualScreenInfo.Current.PropertyChanged += Current_PropertyChanged;
-        //}
-        //protected override void OnDisappearing()
-        //{
-        //    DualScreenInfo.Current.PropertyChanged -= Current_PropertyChanged;
-        //    base.OnDisappearing();
-        //}
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            DualScreenInfo.Current.PropertyChanged += Current_PropertyChanged;
+            UpdateLayouts();
+        }
+        protected override void OnDisappearing()
+        {
+            DualScreenInfo.Current.PropertyChanged -= Current_PropertyChanged;
+            base.OnDisappearing();
+        }
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
         //public bool DeviceIsSpanned => DualScreenInfo.Current.SpanningBounds.Length > 0;
 

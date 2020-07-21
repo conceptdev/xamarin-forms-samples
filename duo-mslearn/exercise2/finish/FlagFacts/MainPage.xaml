@@ -12,14 +12,12 @@
     <dualScreen:TwoPaneView
         x:Name="twoPaneView"
         >
-        <!--MinWideModeWidth="550"
-        TallModeConfiguration="SinglePane"
-        WideModeConfiguration="SinglePane"-->
         <!-- App always starts in single-screen, so defaults to SinglePane -->
         <dualScreen:TwoPaneView.Pane1>
             <views:AllFlagsView FlagTapped="ListView_FlagTapped" />
         </dualScreen:TwoPaneView.Pane1>
         <dualScreen:TwoPaneView.Pane2>
+            <!-- details view is shared with FlagDetailsPage -->
             <views:FlagDetailsView />
         </dualScreen:TwoPaneView.Pane2>
     </dualScreen:TwoPaneView>

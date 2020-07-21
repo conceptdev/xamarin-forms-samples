@@ -11,7 +11,7 @@ namespace FlagFacts
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
-        // can never be Spanned when first viewed...
+        // can never be spanned when first viewed...
         bool wasSpanned = false;
 
         public MainPage()
@@ -22,21 +22,9 @@ namespace FlagFacts
 
         private async void ListView_FlagTapped(object sender, ItemTappedEventArgs e)
         {
-            if (DeviceIsSpanned)
-            {   // no-op?
-                // uses databinding
-            }
-            else
-            {
-                if (DualScreenInfo.Current.IsLandscape)
-                {
-                    // no-op?
-                    // uses databinding
-                }
-                else {
-                    // use Navigation
-                    await this.Navigation.PushAsync(new FlagDetailsPage());
-                }
+            if (!DeviceIsSpanned)
+            {   // use Navigation
+                await this.Navigation.PushAsync(new FlagDetailsPage());
             }
         }
 
@@ -44,7 +32,7 @@ namespace FlagFacts
         {
             base.OnAppearing();
             DualScreenInfo.Current.PropertyChanged += Current_PropertyChanged;
-            UpdateLayouts();
+            UpdateLayouts(); // for first page load
         }
         protected override void OnDisappearing()
         {
@@ -52,7 +40,6 @@ namespace FlagFacts
             base.OnDisappearing();
         }
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
-        //public bool DeviceIsSpanned => DualScreenInfo.Current.SpanningBounds.Length > 0;
 
         private void Current_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -62,7 +49,7 @@ namespace FlagFacts
             UpdateLayouts();
         }
 
-        public void UpdateLayouts()
+        public async void UpdateLayouts()
         {
             Console.WriteLine($"DeviceIsSpanned: {DeviceIsSpanned}");
             if (DeviceIsSpanned)
@@ -76,21 +63,12 @@ namespace FlagFacts
                 twoPaneView.PanePriority = TwoPaneViewPriority.Pane1;
                 twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.SinglePane;
                 twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.SinglePane;
-                //if (wasSpanned)
-                //{
-                ////    await this.Navigation.PushAsync(new FlagDetailsPage());
-                //}
-
-                //if (DualScreenInfo.Current.IsLandscape)
-                //{
-                //    twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.LeftRight;
-                //}
-                //else
-                //{
-                //    twoPaneView.PanePriority = TwoPaneViewPriority.Pane1;
-                //    twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.SinglePane;
-                //    twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.SinglePane;
-                //}
+                // wasSpanned check is needed, or this will open on first-run or rotation
+                // stack count is needed, or we might push multiple on rotation
+                if (wasSpanned && Navigation.NavigationStack.Count == 1)
+                {   // open the detail page
+                    await Navigation.PushAsync(new FlagDetailsPage());
+                }
                 wasSpanned = false;
             }
         }

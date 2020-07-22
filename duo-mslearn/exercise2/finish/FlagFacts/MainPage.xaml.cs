@@ -32,8 +32,19 @@ namespace FlagFacts
         {
             base.OnAppearing();
             DualScreenInfo.Current.PropertyChanged += Current_PropertyChanged;
+            DualScreenInfo.Current.HingeAngleChanged += Current_HingeAngleChanged;
             UpdateLayouts(); // for first page load
         }
+
+        private void Current_HingeAngleChanged(object sender, HingeAngleChangedEventArgs e)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                Title = e.HingeAngleInDegrees.ToString();
+            });
+            
+        }
+
         protected override void OnDisappearing()
         {
             DualScreenInfo.Current.PropertyChanged -= Current_PropertyChanged;

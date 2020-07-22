@@ -68,11 +68,12 @@ namespace FlagFacts
             UpdateLayouts();
         }
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
+        public bool DeviceIsBigScreen => (Device.Idiom == TargetIdiom.Tablet) || (Device.Idiom == TargetIdiom.Desktop);
 
         public async void UpdateLayouts()
         {
             Console.WriteLine($"DeviceIsSpanned: {DeviceIsSpanned}");
-            if (DeviceIsSpanned)
+            if (DeviceIsSpanned || DeviceIsBigScreen)
             {  // the detail view should never be showing when spanned
                if (Navigation.NavigationStack.Count > 1)
                {

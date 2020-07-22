@@ -73,7 +73,7 @@ namespace FlagFacts
         public async void UpdateLayouts()
         {
             Console.WriteLine($"DeviceIsSpanned: {DeviceIsSpanned}");
-            if (DeviceIsSpanned || DeviceIsBigScreen)
+            if (DeviceIsSpanned)
             {  // the detail view should never be showing when spanned
                if (Navigation.NavigationStack.Count > 1)
                {

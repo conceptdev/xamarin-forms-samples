@@ -23,7 +23,7 @@ namespace FlagFacts
         private async void ListView_FlagTapped(object sender, ItemTappedEventArgs e)
         {
             if (!DeviceIsSpanned && !DeviceIsBigScreen)
-            {   // use Navigation
+            {   // use Navigation only on phone-size single-screens
                 await this.Navigation.PushAsync(new FlagDetailsPage());
             }
         }
@@ -60,9 +60,7 @@ namespace FlagFacts
                 wasSpanned = true;
 
                 if (DeviceIsBigScreen)
-                {
-                    //twoPaneView.MinWideModeWidth = 600;
-                    //twoPaneView.MinTallModeHeight = 600;
+                {   // layout 1/3 for list, 2/3 for details
                     twoPaneView.Pane1Length = new GridLength(1, GridUnitType.Star);
                     twoPaneView.Pane2Length = new GridLength(2, GridUnitType.Star);
                 }

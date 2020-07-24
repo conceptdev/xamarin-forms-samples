@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\countries.csv" />
+    <None Remove="Data\flags.xml" />
+    <None Remove="Images\australia.png" />
+    <None Remove="Images\bhutan.png" />
+    <None Remove="Images\bikini-atoll.png" />
+    <None Remove="Images\brazil.png" />
+    <None Remove="Images\canada.png" />
+    <None Remove="Images\denmark.png" />
+    <None Remove="Images\germany.png" />
+    <None Remove="Images\greece.png" />
+    <None Remove="Images\indonesia.png" />
+    <None Remove="Images\mozambique.png" />
+    <None Remove="Images\nepal.png" />
+    <None Remove="Images\usa.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\countries.csv" />
+    <EmbeddedResource Include="Data\flags.xml" />
+    <EmbeddedResource Include="Images\australia.png" />
+    <EmbeddedResource Include="Images\bhutan.png" />
+    <EmbeddedResource Include="Images\bikini-atoll.png" />
+    <EmbeddedResource Include="Images\brazil.png" />
+    <EmbeddedResource Include="Images\canada.png" />
+    <EmbeddedResource Include="Images\denmark.png" />
+    <EmbeddedResource Include="Images\germany.png" />
+    <EmbeddedResource Include="Images\greece.png" />
+    <EmbeddedResource Include="Images\indonesia.png" />
+    <EmbeddedResource Include="Images\mozambique.png" />
+    <EmbeddedResource Include="Images\nepal.png" />
+    <EmbeddedResource Include="Images\usa.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.968" />
+  </ItemGroup>
+
+</Project>

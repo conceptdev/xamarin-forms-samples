@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlagFacts.FlagDetailsPage"
+             Title="Fun with Flags">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Previous"
+                     Clicked="OnPrevious" Icon="ic_arrow_drop_up.png" />
+        <ToolbarItem Text="Next" 
+                     Clicked="OnNext" Icon="ic_arrow_drop_down.png" />
+        <ToolbarItem Text="Show" 
+                     Clicked="OnShow" Icon="ic_action_search.png" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout Spacing="10">
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="5,20,5,5" />
+                    <On Platform="Android" Value="5,0,5,5" />
+                    <On Platform="UWP" Value="10" />
+                </OnPlatform>
+            </StackLayout.Padding>
+
+            <Image HeightRequest="200" 
+                    Source="{Binding CurrentFlag.ImageUrl, Mode=OneWay, Converter={StaticResource irConverter}}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Aspect="AspectFit" />
+
+            <Picker ItemsSource="{Binding Countries}"
+                    SelectedItem="{Binding CurrentFlag.Country, Mode=TwoWay}" />
+
+            <Label Text="Current Design was Adopted on" FontAttributes="Bold" />
+            <DatePicker MinimumDate="01/01/1700" HorizontalOptions="Start" 
+                        Date="{Binding CurrentFlag.DateAdopted, Mode=TwoWay}" />
+
+            <Label Text="Has Shield" FontAttributes="Bold" />
+            <Switch IsToggled="{Binding CurrentFlag.IncludesShield, Mode=TwoWay}" />
+
+            <Label Text="Fun Fact" FontAttributes="Bold" />
+            <Label Text="{Binding CurrentFlag.Description}" />
+
+            <Label Text="More Information" Margin="0,0,10,0"
+                   TextColor="Blue" HorizontalOptions="End" TextDecorations="Underline">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMoreInformation" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

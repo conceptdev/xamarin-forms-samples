@@ -68,6 +68,7 @@ namespace FlagFacts
             UpdateLayouts();
         }
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
+        public bool DeviceIsBigScreen => (Device.Idiom == TargetIdiom.Tablet) || (Device.Idiom == TargetIdiom.Desktop);
 
         public async void UpdateLayouts()
         {

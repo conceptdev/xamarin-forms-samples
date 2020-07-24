@@ -22,8 +22,8 @@ namespace FlagFacts
 
         private async void ListView_FlagTapped(object sender, ItemTappedEventArgs e)
         {
-            if (!DeviceIsSpanned)
-            {   // use Navigation
+            if (!DeviceIsSpanned && !DeviceIsBigScreen)
+            {   // use Navigation only on phone-size single-screens
                 await this.Navigation.PushAsync(new FlagDetailsPage());
             }
         }
@@ -40,6 +40,7 @@ namespace FlagFacts
             base.OnDisappearing();
         }
         public bool DeviceIsSpanned => DualScreenInfo.Current.SpanMode != TwoPaneViewMode.SinglePane;
+        public bool DeviceIsBigScreen => (Device.Idiom == TargetIdiom.Tablet) || (Device.Idiom == TargetIdiom.Desktop) ;
 
         private void Current_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -52,11 +53,17 @@ namespace FlagFacts
         public async void UpdateLayouts()
         {
             Console.WriteLine($"DeviceIsSpanned: {DeviceIsSpanned}");
-            if (DeviceIsSpanned)
+            if (DeviceIsSpanned || DeviceIsBigScreen)
             {
                 twoPaneView.TallModeConfiguration = TwoPaneViewTallModeConfiguration.TopBottom;
                 twoPaneView.WideModeConfiguration = TwoPaneViewWideModeConfiguration.LeftRight;
                 wasSpanned = true;
+
+                if (DeviceIsBigScreen)
+                {   // layout 1/3 for list, 2/3 for details
+                    twoPaneView.Pane1Length = new GridLength(1, GridUnitType.Star);
+                    twoPaneView.Pane2Length = new GridLength(2, GridUnitType.Star);
+                }
             }
             else
             {   // single-screen

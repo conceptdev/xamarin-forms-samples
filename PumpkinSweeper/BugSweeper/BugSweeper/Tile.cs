@@ -38,7 +38,7 @@ namespace BugSweeper
             this.Col = col;
 
             this.BackgroundColor = Color.Black; // Color.Yellow
-            this.OutlineColor = ColorEx.Orange; // Color.Blue
+            this.BorderColor = Color.Orange; // Color.Blue
 
             this.Padding = 2;
 

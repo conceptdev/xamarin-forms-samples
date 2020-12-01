@@ -1,7 +1,8 @@
-﻿#define FIX_ANDROID_DOUBLE_TAPS         // Double-taps don't work on Android in 1.2.3.6257
-#define FIX_WINDOWS_PHONE_NULL_CONTENT  // Set Content of Frame to null doesn't work in Windows Phone in 1.2.3.6257
+﻿#define FIX_UWP_DOUBLE_TAPS   // Double-taps don't work well on UWP as of 2.3.0
+#define FIX_UWP_NULL_CONTENT  // Set Content of Frame to null doesn't work in UWP as of 2.3.0
 
 using System;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace BugSweeper
@@ -26,67 +27,64 @@ namespace BugSweeper
 
         static Tile()
         {
-            flagImageSource = ImageSource.FromResource("BugSweeper.Images.007-pumpkin.png");
-            bugImageSource = ImageSource.FromResource("BugSweeper.Images.002-dracula.png");
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            flagImageSource = ImageSource.FromResource("BugSweeper.Images.007-pumpkin.png", assembly);
+            bugImageSource = ImageSource.FromResource("BugSweeper.Images.002-dracula.png", assembly);
         }
 
         public Tile(int row, int col)
         {
             this.Row = row;
-            this.Col = col; 
+            this.Col = col;
 
-            this.BackgroundColor = Color.Black;
-			this.OutlineColor = ColorEx.Orange;
+            this.BackgroundColor = Color.Black; // Color.Yellow
+            this.OutlineColor = ColorEx.Orange; // Color.Blue
+
             this.Padding = 2;
 
-            label = new Label
-            {
+            label = new Label {
                 Text = " ",
-				TextColor = ColorEx.Orange,
-				BackgroundColor = Color.Gray,
-				HorizontalTextAlignment = TextAlignment.Center,
-				VerticalTextAlignment = TextAlignment.Center,
+                TextColor = Color.Orange, //Yellow,
+                BackgroundColor = Color.Gray, //Blue,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
             };
 
-            flagImage = new Image
-            {
+            flagImage = new Image {
                 Source = flagImageSource,
-                
+
             };
 
-            bugImage = new Image
-            {
+            bugImage = new Image {
                 Source = bugImageSource
             };
 
-            TapGestureRecognizer singleTap = new TapGestureRecognizer
-            {
+            TapGestureRecognizer singleTap = new TapGestureRecognizer {
                 NumberOfTapsRequired = 1
             };
             singleTap.Tapped += OnSingleTap;
             this.GestureRecognizers.Add(singleTap);
 
-#if FIX_ANDROID_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
-            if (Device.OS != TargetPlatform.Android)
-            {
+            if (Device.RuntimePlatform != Device.UWP) {
 
 #endif
 
-                TapGestureRecognizer doubleTap = new TapGestureRecognizer
-                {
+                TapGestureRecognizer doubleTap = new TapGestureRecognizer {
                     NumberOfTapsRequired = 2
                 };
                 doubleTap.Tapped += OnDoubleTap;
                 this.GestureRecognizers.Add(doubleTap);
 
-#if FIX_ANDROID_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
             }
 
 #endif
 
         }
+
         public int Row { private set; get; }
 
         public int Col { private set; get; }
@@ -95,23 +93,18 @@ namespace BugSweeper
 
         public int SurroundingBugCount { set; get; }
 
-        public TileStatus Status 
-        { 
-            set
-            {
-                if (tileStatus != value)
-                {
+        public TileStatus Status {
+            set {
+                if (tileStatus != value) {
                     tileStatus = value;
 
-                    switch (tileStatus)
-                    {
+                    switch (tileStatus) {
                         case TileStatus.Hidden:
                             this.Content = null;
 
-#if FIX_WINDOWS_PHONE_NULL_CONTENT
+#if FIX_UWP_NULL_CONTENT
 
-                            if (Device.OS == TargetPlatform.WinPhone)
-                            {
+                            if (Device.RuntimePlatform == Device.UWP) {
                                 this.Content = new Label { Text = " " };
                             }
 
@@ -123,28 +116,23 @@ namespace BugSweeper
                             break;
 
                         case TileStatus.Exposed:
-                            if (this.IsBug)
-                            {
+                            if (this.IsBug) {
                                 this.Content = bugImage;
-                            }
-                            else
-                            {
+                            } else {
                                 this.Content = label;
                                 label.Text =
-                                    (this.SurroundingBugCount > 0) ?
-                                        this.SurroundingBugCount.ToString() : " ";
+                                        (this.SurroundingBugCount > 0) ?
+                                            this.SurroundingBugCount.ToString() : " ";
                             }
                             break;
                     }
 
-                    if (!doNotFireEvent && TileStatusChanged != null)
-                    {
+                    if (!doNotFireEvent && TileStatusChanged != null) {
                         TileStatusChanged(this, tileStatus);
                     }
                 }
             }
-            get
-            {
+            get {
                 return tileStatus;
             }
         }
@@ -159,7 +147,7 @@ namespace BugSweeper
             doNotFireEvent = false;
         }
 
-#if FIX_ANDROID_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
         bool lastTapSingle;
         DateTime lastTapTime;
@@ -169,41 +157,36 @@ namespace BugSweeper
         void OnSingleTap(object sender, object args)
         {
 
-#if FIX_ANDROID_DOUBLE_TAPS
+#if FIX_UWP_DOUBLE_TAPS
 
-            if (Device.OS == TargetPlatform.Android)
-            {
-                if (lastTapSingle && DateTime.Now - lastTapTime < TimeSpan.FromMilliseconds(500))
-                {
-                    OnDoubleTap(sender, args);
+            if (Device.RuntimePlatform == Device.UWP) {
+                if (lastTapSingle && DateTime.Now - lastTapTime < TimeSpan.FromMilliseconds (500)) {
+                    OnDoubleTap (sender, args);
                     lastTapSingle = false;
-                }
-                else
-                {
+                } else {
                     lastTapTime = DateTime.Now;
                     lastTapSingle = true;
                 }
-            }
+        	}
 
 #endif
 
-            switch (this.Status)
-            {
-                case TileStatus.Hidden:
-                    this.Status = TileStatus.Flagged;
-                    break;
+            switch (this.Status) {
+            case TileStatus.Hidden:
+                this.Status = TileStatus.Flagged;
+                break;
 
-                case TileStatus.Flagged:
-                    this.Status = TileStatus.Hidden;
-                    break;
+            case TileStatus.Flagged:
+                this.Status = TileStatus.Hidden;
+                break;
 
-                case TileStatus.Exposed:
+            case TileStatus.Exposed:
                     // Do nothing
-                    break;
+                break;
             }
         }
 
-        void OnDoubleTap(object sender, object args)
+        void OnDoubleTap (object sender, object args)
         {
             this.Status = TileStatus.Exposed;
         }

@@ -4,15 +4,15 @@ This sample uses the [Monkey.Robotics component](https://components.xamarin.com/
 
 Here's a device shown next to the app running on an iPhone 6:
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/main/BluetoothTISensor/Screenshots/phone_plus_tag-sml.jpg "device and phone")
+![screenshot](Screenshots/phone_plus_tag-sml.jpg "device and phone")
 
 The complete screenflow for the iOS app (showing the Magnometer sensor) is below. The app works like a 'browser', first locating Bluetooth LE devices to connect to, then connecting and discovering services and their characteristics, finally allowing you to set and query specific characteristics. This app example has hardcoded references to the characteristics exposed by the [TI SensorTag](http://www.ti.com/ww/en/wireless_connectivity/sensortag/index.shtml).
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/main/BluetoothTISensor/Screenshots/ios-all-sml.png "iOS screen flow")
+![screenshot](Screenshots/ios-all-sml.png "iOS screen flow")
 
 Here is the complete screenflow for the Android app (showing the Magnometer sensor):
 
-![screenshot](https://github.com/conceptdev/xamarin-forms-samples/raw/main/BluetoothTISensor/Screenshots/android-all-sml.png "Android screen flow")
+![screenshot](Screenshots/android-all-sml.png "Android screen flow")
 
 The Xamarin.Forms common code has a direct assembly reference to **Robotics.Mobile.Core.dll** in the **Components** directory, because components cannot be added to PCL projects.
 

@@ -1,8 +1,8 @@
-<Project Sdk="MSBuild.Sdk.Extras">
+﻿<Project Sdk="MSBuild.Sdk.Extras">
 	<PropertyGroup>
-		<RootNamespace>Xamarin.Forms.DualScreen</RootNamespace>
-		<AssemblyName>Xamarin.Forms.DualScreen</AssemblyName>
-		<PackageId>Xamarin.Forms.DualScreen</PackageId>
+		<RootNamespace>Xamarin.Forms.Foldable</RootNamespace>
+		<AssemblyName>Xamarin.Forms.Foldable</AssemblyName>
+		<PackageId>Xamarin.Forms.Foldable</PackageId>
 		<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);$(AndroidTargetFrameworks);netstandard1.0;netstandard2.0</TargetFrameworks>
 		<TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">$(AndroidTargetFrameworks);netstandard1.0;netstandard2.0</TargetFrameworks>
 		<SkipMicrosoftUIXamlCheckTargetPlatformVersion>true</SkipMicrosoftUIXamlCheckTargetPlatformVersion>
@@ -36,27 +36,22 @@
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
 		<Compile Include="**\*.uwp.cs" />
 		<Compile Include="**\*.uwp.*.cs" />
-		<ProjectReference Include="..\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.csproj">
-		</ProjectReference>
+		<PackageReference Include="Xamarin.Forms.Platform.UAP" />
 		<PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.10" />
 	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
 		<Compile Include="**\*.android.cs" />
 		<Compile Include="**\*.android.*.cs" />
 		<AndroidResource Include="Resources\xml\*.xml" />
-		<PackageReference Include="Xamarin.DuoSdk" Version="0.0.3.4" />
-		<ProjectReference Include="..\Xamarin.Forms.Platform.Android.FormsViewGroup\Xamarin.Forms.Platform.Android.FormsViewGroup.csproj">
-		</ProjectReference>
-		<ProjectReference Include="..\Xamarin.Forms.Platform.Android\Xamarin.Forms.Platform.Android.csproj">
-		</ProjectReference>
+		<PackageReference Include="Xamarin.AndroidX.Window.WindowJava" version="1.0.0.3-beta02" />
+		<PackageReference Include="Xamarin.Forms" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Xamarin.Forms.Core\Xamarin.Forms.Core.csproj">
-		</ProjectReference>
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid10.0'">
 		<PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.3.1.1" />
-		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.2" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.3.0.1" />
 		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.8" />
 	</ItemGroup>
 </Project>
